@@ -6,7 +6,7 @@ Overview
 
 This text should be populated with a brief overview of what content the guidance document contains and may include information on the intended audience, the intended outcome of the guide, and any other information that would help the user to understand the guide.
 
-Assumptions
+## Assumptions
 
   * This text will be a bullet explaining a precondition or assumption before the user begins to follow the steps outlined in this document
 The asterisk symbol denotes a bulleted item, and an indented asterisk denotes a second level bullet
