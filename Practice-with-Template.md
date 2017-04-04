@@ -8,7 +8,7 @@ This text should be populated with a brief overview of what content the guidance
 
 Assumptions
 
-This text will be a bullet explaining a precondition or assumption before the user begins to follow the steps outlined in this document
+  * This text will be a bullet explaining a precondition or assumption before the user begins to follow the steps outlined in this document
 The asterisk symbol denotes a bulleted item, and an indented asterisk denotes a second level bullet
 This is a second level bullet
 Before you get started
