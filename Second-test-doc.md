@@ -3,7 +3,7 @@ This page serves as the template for creating your own guidance document that yo
 <script> $(function() { $( "#accordion" ).accordion({ heightStyle: "content", collapsible: "true", active: "false" }); }); </script>
 Difficulty: Advanced Overview
 
-This text should be populated with a brief overview of what content the guidance document contains, and may include information on the intended audience, the outcome of the guide, and any other information that would help the user to understand the guide.
+This text should be populated with a brief overview of what content the guidance document contains.  It may include information on the intended audience, the intended outcome of the guide, and any other information that would help the user to understand the guide.
 
 Assumptions
 
