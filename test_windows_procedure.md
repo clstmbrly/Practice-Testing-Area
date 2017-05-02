@@ -19,7 +19,7 @@ In order for these steps to work, you'll need the following equipment and applic
 
 
 Installing PuTTY-CAC
-1.	Launch Software Center from the Start menu (Start > All Programs > Microsoft System Center > Software Center). 
+1.	From the Start menu (Start > <--! Programs and Features for Windows 10? --> All Programs > Microsoft System Center > Software Center). 
 2.	Click the “Find additional applications from the Application Catalog” link. From the internet page that opens, search PuTTY-CAC and click Install.
 Note: You cannot use Internet Explorer 11 to access the Application Catalog. You must use IE 9, Firefox, or Chrome.
 3.	Verify the version of PuTTY that was installed by opening the application and clicking About in the lower left corner.
