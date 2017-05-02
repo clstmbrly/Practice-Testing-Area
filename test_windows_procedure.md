@@ -1,16 +1,22 @@
 
-How To – PuTTY-CAC – Install, set up, and log on
-Question: How do I set up and log in to Putty-CAC?
-Environment:
-DC1 Jumpbox
-DC 2 Jumpbox
-AWS Jumpbox
-Putty-CAC
-Pageant
+## How do I install, set up, and log into Putty-CAC?
 
-Background
-Most Unix-like systems are configured to use the SSH protocol for remote access, but most SSH client applications do not support PIV as required by Federal policy. PuTTY-CAC, a fork of the Open Source PuTTY SSH client, resolves this issue.
-Van Dyke Secure CRT, a commercial product, also supports PIV SSH login for multiple platforms, including Windows and Mac.
+The majority of Unix-like systems are configured to use the **Secure Shell (SSH) protocol** for remote access; however, most SSH client applications do not support PIV, as required by Federal Government policy <!-- Which policy? -->. **PuTTY-CAC**, a GitHub fork of the Open Source PuTTY SSH client, resolves this issue.
+
+> **Note:** Van Dyke Software's SecureCRT® (a commercial, remote-access client) also supports **an PIV SSH login capability** for Windows, Mac, and Linux. <!-- Modified this based on review of product on company website. Doesn't say PIV SSH on website.-->
+
+### Required environment: 
+
+In order for these steps to work, you'll need the following equipment and applications <!-- Is this wording correct? -->:
+
+  * **Domain Controller 1 (DC1) Jumpbox** (also referred to as a jump server, jump host, or secure administrative host)
+  * **DC2 Jumpbox**
+  * **Amazon Web Services (AWS) Jumpbox**
+  * **PuTTY-CAC** - PuTTY is a terminal emulator and authentication agent that can use several protocols and can transfer files. [1 - From www.file.net].  PuTTY-CAC is an SSH open-source client for Windows that supports PIV authentication, particularly using the U.S. Department of Defense (DoD) Common Access Card (CAC). [1 - mostly quoted from Risacher.org] <!-- So PIV works the same as CAC? -->  
+  * **Pageant** - Pageant is a secure method for connecting to Unix or Linux machines by using PuTTY. [2 - sentences mostly quoted from www.file.net] <!-- How is Pageant used for Windows-based systems? -->
+
+
+
 
 Installing PuTTY-CAC
 1.	Launch Software Center from the Start menu (Start > All Programs > Microsoft System Center > Software Center). 
