@@ -16,7 +16,14 @@ Duplicated footnote reference[^second].
 [^second]: Footnote text.
 
 
+Trying an Information box using html from LL .md file:
 
+<div class="usa-alert usa-alert-info">
+  <div class="usa-alert-body">
+    <h3 class="usa-alert-heading">{{include.heading}}</h3>
+    <p class="usa-alert-text">{{include.content}}</p>
+  </div>
+</div>
 
 
 This page serves as the template for creating your own guidance document that you can add to one of the FICAM Playbooks. For an example of a completed guidance document, visit the 'How do I PIV enable my network logon?' page here [note that this link goes to a 404 Error page]. To create your own page, copy this file, save it with a new name (such as mypage.md instead of template.md, as you should not save your information within the template.md file), and change the title and permalink in the top section of this file. The title should be what you want to appear at the top of the page on the site, and the permalink text should match the name of the file, but in the format /mypage/ instead of mypage.md. Throughout this file, you will see text that explains how to correctly use this template and comments explaining the nature of the code that you will encounter.
