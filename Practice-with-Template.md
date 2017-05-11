@@ -11,6 +11,24 @@ This page serves as the template for creating your own guidance document that yo
    3. Also need to put a separating newline above and below the fenced block.
 
 
+Fenced code blocks inside ordered and unordered lists
+
+This is a numbered list.
+
+I'm going to include a fenced code block as part of this bullet:
+
+Code
+More Code
+We can put fenced code blocks inside nested bullets, too.
+
+Like this:
+
+printf("Hello, World!");
+The key is to indent your fenced block by (4 * bullet_indent_level) spaces.
+
+Also need to put a separating newline above and below the fenced block.
+
+
 
 
 We can put fenced code blocks inside nested bullets, too.
