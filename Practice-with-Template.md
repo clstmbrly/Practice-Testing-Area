@@ -1,5 +1,27 @@
 This page serves as the template for creating your own guidance document that you can add to one of the FICAM Playbooks. For an example of a completed guidance document, visit the 'How do I PIV enable my network logon?' page here [note that this link goes to a 404 Error page]. To create your own page, copy this file, save it with a new name (such as mypage.md instead of template.md, as you should not save your information within the template.md file), and change the title and permalink in the top section of this file. The title should be what you want to appear at the top of the page on the site, and the permalink text should match the name of the file, but in the format /mypage/ instead of mypage.md. Throughout this file, you will see text that explains how to correctly use this template and comments explaining the nature of the code that you will encounter.
 
+3. We can put fenced code blocks inside nested bullets, too.
+   1. Like this:
+
+        ```c
+        printf("Hello, World!");
+        ```
+
+   2. The key is to indent your fenced block by **(4 * bullet_indent_level)** spaces.
+   3. Also need to put a separating newline above and below the fenced block.
+
+
+
+
+We can put fenced code blocks inside nested bullets, too.
+
+Like this:
+
+printf("Hello, World!");
+The key is to indent your fenced block by (4 * bullet_indent_level) spaces.
+
+Also need to put a separating newline above and below the fenced block.
+
 <script> $(function() { $( "#accordion" ).accordion({ heightStyle: "content", collapsible: "true", active: "false" }); }); </script>
 Difficulty: Advanced
 Overview
