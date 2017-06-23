@@ -49,18 +49,18 @@ These steps will help you to:
   2. Open **Windows Explorer**.
   3. Open **Pageant** and go to **C: &gt; Program Files &gt; PuTTY &gt; Pageant**.
 
-  > A window will not open, but the **Pageant** icon will appear at the bottom of the screen in the Windows taskbar.
+    > A window will not open, but the **Pageant** icon will appear at the bottom of the screen in the Windows taskbar.
 
   4. Right-click on the **Pageant** icon and select **View Keys &amp; Certs**.
 
-  > _The Pageant **Key/CAPI Cert List** window will open._
+    > _The Pageant **Key/CAPI Cert List** window will open._
 
   5. Click on **Add Cert**.
   6. Select your **Smart Card Logon** certificate from the **Windows Security** window.
   7. To ensure that this is the correct certificate, click on **Click here to view certificate properties &gt; Details**.
   8. Locate and click on **Enhanced Key Usage**. You should see the **Smart Card Logon**. (This means that the certificate is the right type.) Click on **OK** to close the window.
 
-  > _**Note:**  If multiple certificates exist, you may want to clear the expired or revoked certificates._
+    > _**Note:**  If multiple certificates exist, you may want to clear the expired or revoked certificates._
 
   9. Click on the **Smart Card certificate** to highlight it. Then click on **OK** and **Close**.
 
