@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use PIV for Secure Shell (SSH)
-permalink: /devconfig/ssh
+permalink: /devconfig/ssh-all-test
 collection: devconfig
 ---
 
