@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use PIV for Secure Shell (SSH)
-permalink: /devconfig/ssh-all-test
+permalink: /devconfig/ssh
 collection: devconfig
 ---
 
@@ -13,7 +13,7 @@ Select the link for your operating system (OS). (Also, please review _Configure 
   * [Use PIV for SSH from a Linux Computer](#use-piv-for-ssh-from-a-linux-computer)
   * [Use PIV for SSH from a Mac Computer](#use-piv-for-ssh-from-a-mac-computer)
   * [Configure a UNIX-like Server](#configure-a-unix-like-server)
-  
+
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}&nbsp;
 
 ## Use PIV for SSH from a Windows Computer
@@ -42,25 +42,25 @@ These steps will help you to:
   2. Open PuTTY and click on **About** (lower left-hand corner of the **PuTTY Configuration** window) to ensure that the correct version was installed.
 
 #### Use PIV to insert Microsoft CAPI key into Pageant
- 
-  > **Note:**  The **CAPI key** is the "Smart Card certificate" discussed in Step 9. 
+
+     > **Note:**  The **CAPI key** is the "Smart Card certificate" discussed in Step 9.
 
   1. Insert your **PIV** into the smartcard reader.
   2. Open **Windows Explorer**.
   3. Open **Pageant** and go to **C: &gt; Program Files &gt; PuTTY &gt; Pageant**.
 
-    > A window will not open, but the **Pageant** icon will appear at the bottom of the screen in the Windows taskbar.
+     > A window will not open, but the **Pageant** icon will appear at the bottom of the screen in the Windows taskbar.
 
   4. Right-click on the **Pageant** icon and select **View Keys &amp; Certs**.
 
-    > _The Pageant **Key/CAPI Cert List** window will open._
+     > _The Pageant **Key/CAPI Cert List** window will open._
 
   5. Click on **Add Cert**.
   6. Select your **Smart Card Logon** certificate from the **Windows Security** window.
   7. To ensure that this is the correct certificate, click on **Click here to view certificate properties &gt; Details**.
   8. Locate and click on **Enhanced Key Usage**. You should see the **Smart Card Logon**. (This means that the certificate is the right type.) Click on **OK** to close the window.
 
-    > _**Note:**  If multiple certificates exist, you may want to clear the expired or revoked certificates._
+     > _**Note:**  If multiple certificates exist, you may want to clear the expired or revoked certificates._
 
   9. Click on the **Smart Card certificate** to highlight it. Then click on **OK** and **Close**.
 
@@ -139,7 +139,7 @@ These steps will help you to:
 
   > _The **remote-host shell prompt** appears._
 
-{% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %}&nbsp; 
+{% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %}&nbsp;
 
 ## Use PIV for SSH from a Mac (macOS 10.12 Sierra) Computer
 
