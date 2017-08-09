@@ -7,13 +7,18 @@ permalink: networkconfig/AMA/
 
 # Authentication Mechanism Assurance (AMA)
 
-A high-level login risk, like logging into a government system from your favorite coffee shop, home, or the internet, means your system needs more stringent authentication mechanisms than for a low-risk logins, like using a PIV card to log into a federal, on-premises LAN.
+A high-level login risk, like logging into a government system from your favorite coffee shop, home, or the internet, means your system needs more stringent authentication mechanisms than for a low-risk logins, like logging in at the office.
 
 You can increase your protections for high-risk logins to sensitive federal resources by using Microsoft’s Windows Active Directory (AD) Domain Service’s (DS) _Authentication Mechanism Assurance (AMA)_.
+
 AMA adds a group membership to a user’s security identifier attributes (SIDs). When you log in with a PIV card, ______? sees that you belong to the group and gives you access.
+
 Microsoft offers AMA with several Windows Server versions. Use these guidelines to configure your Windows Server:
+
 ## Specific Implementations
+
 ### Windows Server 2012
+
 * **Windows Server® 2012 and Later &mdash;** No patch is required.  Enable _AMA Priority_ above _Most Recently Issued Superior Certificate Heuristic_ by using the Windows Registry Editor:
 
             [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\kdc]
