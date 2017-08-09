@@ -17,9 +17,9 @@ You can increase your protections for high-risk logins to sensitive federal reso
 
 ## Specific Implementations
 
-### Windows Server 2012
+### Windows Server® 2012 and Later
 
-* **Windows Server® 2012 and Later &mdash;** No patch is required.  Enable _AMA Priority_ above _Most Recently Issued Superior Certificate Heuristic_ by using the Windows Registry Editor:
+* No patch is required.  Enable _AMA Priority_ above _Most Recently Issued Superior Certificate Heuristic_ by using the Windows Registry Editor:
 
             [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\kdc]
             "ChainWithIssuancePolicyOIDs"=dword:00000001
