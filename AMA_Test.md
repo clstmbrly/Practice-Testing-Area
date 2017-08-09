@@ -9,11 +9,9 @@ permalink: networkconfig/AMA/
 
 A high-level login risk, like logging into a government system from your favorite coffee shop, home, or the internet, means your system needs more stringent authentication mechanisms than for a low-risk logins, like logging in at the office.
 
-You can increase your protections for high-risk logins to sensitive federal resources by using Microsoft’s Windows Active Directory (AD) Domain Service’s (DS) _Authentication Mechanism Assurance (AMA)_.
+You can increase your protections for high-risk logins to sensitive federal resources by using Microsoft’s Windows Active Directory (AD) Domain Service’s (DS) _Authentication Mechanism Assurance (AMA)_, which adds a group membership to a user’s security identifier attributes (SIDs). 
 
-* AMA adds a group membership to a user’s security identifier attributes (SIDs). When you log in with a PIV card, ______? sees that you belong to the group and gives you access.
-
-* Microsoft offers AMA with several Windows Server versions. Use these guidelines to configure your Windows Server:
+Microsoft offers AMA with several Windows Server versions. Use these guidelines to configure your Windows Server:
 
 ## Specific Implementations
 
