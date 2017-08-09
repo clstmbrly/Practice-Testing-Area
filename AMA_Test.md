@@ -6,7 +6,7 @@ permalink: networkconfig/AMA/
 ---
 
 # Authentication Mechanism Assurance
-What is the Federal Government problem that is being solved with AMA?  Can Federal Government and contractors without a PIV card or approved “sensitive resource” access currently log in to sensitive resources?  Physical proximity of federal/contractor computers to unauthorized users or the public?
+
 Requiring PIV login for all users who access sensitive resources is essential for information security. 
 You can protect sensitive resources even more by using Windows Active Directory (AD) domain service’s Authentication Mechanism Assurance (AMA).
 AMA, when used with PIV login, adds a group membership to a user's security identifier attributes (SIDs). The group membership grants that user access to a sensitive resource.
