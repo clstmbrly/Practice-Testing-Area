@@ -17,17 +17,20 @@ You can increase your protections for high-risk logins to sensitive federal reso
 
 ## Specific Implementations
 
-### Windows Server® 2012 and Later
+### Windows Server® 2012 AD DS and Later
 
 * No patch is required.  Enable _AMA Priority_ above _Most Recently Issued Superior Certificate Heuristic_ by using the Windows Registry Editor:
 
             [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\kdc]
             "ChainWithIssuancePolicyOIDs"=dword:00000001
 
-* The Power Shell Script below for the Federal Common and DoD Certificate Policies simplifies the Microsoft TechNet steps for the Windows Server 2012:    
+* The Power Shell Script below for the Federal Common and DoD Certificate Policies simplifies the Microsoft TechNet steps for the Windows Server 2012: 
+
     https://github.com/GSA/piv-guides/files/621976/CertificateIssuanceOIDs.ps1.txt
     
-* **Windows Server® 2008 R2 AD DS** &mdash; Set the _domain functional level_ to _Windows Server 2008 R2_:
+### Windows Server® 2008 R2 AD DS 
+
+Set the _domain functional level_ to _Windows Server 2008 R2_:
     https://technet.microsoft.com/en-us/library/dd378897(v=WS.10).aspx
 
 AMA gives you the option to add a global group membership to a user’s Kerberos token. The user’s authenticated PIV login activates the group membership.
