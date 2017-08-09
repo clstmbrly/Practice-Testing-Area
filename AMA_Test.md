@@ -35,6 +35,6 @@ You can increase your protections for high-risk logins to sensitive federal reso
 
 * AMA gives you the option to add a global group membership to a user’s Kerberos token. The user’s authenticated PIV login activates the group membership.
 
-The Windows Server® 2008 R2 Patch corrects the Key Distribution Center (KDC) error: 
+* The Windows Server® 2008 R2 Patch corrects the Key Distribution Center (KDC) error: 
 
     http://support.microsoft.com/kb/2771254 
