@@ -30,10 +30,11 @@ You can increase your protections for high-risk logins to sensitive federal reso
     
 ### Windows Server® 2008 R2 AD DS 
 
-Set the _domain functional level_ to _Windows Server 2008 R2_:
+* Set the _domain functional level_ to _Windows Server 2008 R2_:
     https://technet.microsoft.com/en-us/library/dd378897(v=WS.10).aspx
 
-AMA gives you the option to add a global group membership to a user’s Kerberos token. The user’s authenticated PIV login activates the group membership.
+* AMA gives you the option to add a global group membership to a user’s Kerberos token. The user’s authenticated PIV login activates the group membership.
+
 The Windows Server® 2008 R2 Patch corrects the Key Distribution Center (KDC) error: 
 
     http://support.microsoft.com/kb/2771254 
