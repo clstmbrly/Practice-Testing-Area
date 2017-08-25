@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Use PIV to SSH to a UNIX-like Server
+title: Using a PIV Card for SSH to a UNIX-like Server
 permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-Administrators often use Secure Shell (SSH) to remotely access UNIX-like servers on their network. The biggest security risk when using SSH is using a weak login method, like unencrypted passwords and usernames. An attacker can easily capture these through traffic sniffing. 
+You often need to use Secure Shell (SSH) to remotely access a UNIX-like server on your network. Your PIV is the most secure authentication method to use for SSH. It provides strong security measures and prevent capture and impersonation of your identity through traffic sniffing during SSH is using a weak login method, like unencrypted passwords and usernames. An attacker can easily capture these through traffic sniffing. 
 
 The most secure login method for SSH is to use a PIV card for authentication. PIVs provide key pairs, encyption, xxxxx, and Transport Layer Security [TLS]/Secure Sockets Layer [SSL], which prevents "packet sniffing)."<!--SSL is on the way out...?-->. 
   
