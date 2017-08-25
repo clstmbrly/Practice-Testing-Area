@@ -5,7 +5,7 @@ permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-You often need to use Secure Shell (SSH) to remotely access a UNIX-like server on your network. Your PIV is the most secure authentication method to use for SSH. It provides strong security measures and prevent capture and impersonation of your identity through traffic sniffing during SSH is using a weak login method, like unencrypted passwords and usernames. An attacker can easily capture these through traffic sniffing. 
+When you use Secure Shell (SSH) to remotely access a UNIX-like server on your network, authenticating with your PIV is the most secure method. It provides strong security measures that protect your username and password from exposure through malicious activities like traffic sniffing. 
 
 The most secure login method for SSH is to use a PIV card for authentication. PIVs provide key pairs, encyption, xxxxx, and Transport Layer Security [TLS]/Secure Sockets Layer [SSL], which prevents "packet sniffing)."<!--SSL is on the way out...?-->. 
   
