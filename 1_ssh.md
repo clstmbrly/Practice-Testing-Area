@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using a PIV Card for SSH to a UNIX-like Server
+title: PIV Authentication for SSH to a UNIX-like Server
 permalink: /userconfig/ssh
 collection: userconfig
 ---
@@ -13,20 +13,26 @@ The most secure login method for SSH is to use a PIV card for authentication. PI
   
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-You can SSH with your PIV from Windows, Linux, or MacOS. This guide will help you to:
+From Basics of a PIV Credential (PIV-Guides): "PIV credentials also contain at least one security feature that aids in reducing counterfeiting, is resistant to tampering, and provides visual evidence of tampering attempts such as optical varying structures or inks, laser etching, holographic images, and watermark."
+
+You can authenticate with you PIV to SSH from Windows, Linux, or MacOS. This guide will help you to:
 
 <!--Is this the correct order for what this guide will help the admin do?-->
 1. Ensure that your OS recognizes and authenticates your PIV.
 2. Enable the correct drivers on your computer for SSH.
 3. Configure a UNIX-like server.
-3. SSH to a remote UNIX-like server.
+3. SSH to the UNIX-like server.
 
 Click the link for your OS-specific steps. Please also review the section, _Configure a UNIX-like Server_.
 
-* [Use PIV to SSH from Windows](#use-piv-to-ssh-from-windows)
+**CELESTE -- Change "Use" to "PIV Authentication for SSH from OS," etc.???  Really first about Getting OS to Recognize your card reader and PIV--- then using PIV for authentication to SSH to server**
+
+* [Use PIV to SSH from Windows](#use-piv-to-ssh-from-windows) 
 * [Use PIV to SSH from Linux](#use-piv-to-ssh-from-linux)
 * [Use PIV to SSH from macOS](#use-piv-to-ssh-from-macOS)
 * [Configure a UNIX-like Server](#configure-a-unix-like-server)
+
+**Change to Here for PIV Authentication** CELESTE
 
 ## Use PIV to SSH from Windows
 
