@@ -5,19 +5,14 @@ permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-When you use Secure Shell (SSH) to remotely access a UNIX-like server on your network, your PIV is the most secure method of authentication. Your PIV provides strong security measures (e.g., encryption) that protect your username and password from being cracked if captured through activities like malicious traffic sniffing. A PIV chip is very difficult to counterfeit, and impersonation would require the attacker to both possess your PIV and know your PIN). Clearly, a PIV protects your identity in ways that software options, which are more vulnerable to attack, cannot. 
+Using a PIV card is the most secure way to authenticate for Secure Shell (SSH) remote access to a UNIX-like server on your network. Your PIV offers security features (e.g., protected private keys, encryption, biometrics, etc.) that well surpass software authentication methods, which are far more vulnerable to attack.  
 
-Other methods of authentication are available, such as Linux' Pluggable Authentication Modules (PAM) tied to directories.
-
-The most secure login method for SSH is to use a PIV card for authentication. PIVs provide key pairs, encyption, xxxxx, and Transport Layer Security [TLS]/Secure Sockets Layer [SSL], which prevents "packet sniffing)."<!--SSL is on the way out...?-->. 
+Other methods of authentication are available, such as tying Pluggable Authentication Modules (PAM) to directories (Linux).
   
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-From Basics of a PIV Credential (PIV-Guides): "PIV credentials also contain at least one security feature that aids in reducing counterfeiting, is resistant to tampering, and provides visual evidence of tampering attempts such as optical varying structures or inks, laser etching, holographic images, and watermark."
+This guide will help you to use your PIV to authenticate and SSH from Windows, Linux, or macOS:
 
-You can authenticate with you PIV to SSH from Windows, Linux, or MacOS. This guide will help you to:
-
-<!--Is this the correct order for what this guide will help the admin do?-->
 1. Ensure that your OS recognizes and authenticates your PIV.
 2. Enable the correct drivers on your computer for SSH.
 3. Configure a UNIX-like server.
