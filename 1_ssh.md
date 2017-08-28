@@ -22,9 +22,9 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 **CELESTE -- Change "Use" to "PIV Authentication for SSH from OS," etc.???  Really first about Getting OS to Recognize your card reader and PIV--- then using PIV for authentication to SSH to server**
 
-* [Use PIV to SSH from Windows](#use-piv-to-ssh-from-windows) 
-* [Use PIV to SSH from Linux](#use-piv-to-ssh-from-linux)
-* [Use PIV to SSH from macOS](#use-piv-to-ssh-from-macOS)
+* [Authenticate PIV for SSH from Windows](#authenticate-piv-for-ssh-from-windows) 
+* [Authenticate PIV for SSH from Linux](#authenticate-piv-for-ssh-from-linux)
+* [Authenticate PIV for SSH from macOS](#authenticate-piv-for-ssh-from-macOS)
 * [Configure a UNIX-like Server](#configure-a-unix-like-server)
 
 **Change to Here for PIV Authentication** CELESTE
