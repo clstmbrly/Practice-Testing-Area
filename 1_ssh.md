@@ -45,8 +45,6 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 * PuTTY-CAC application (an open-source SSH client that supports PIV authentication)
 * Pageant application (an SSH authentication agent used with PuTTY-CAC)
 
-> _You will download **PuTTY-CAC** and **Pageant** in the steps below._
-
 ### Install PuTTY-CAC
 
 1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_. 
