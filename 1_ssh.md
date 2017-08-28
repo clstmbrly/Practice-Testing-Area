@@ -1,22 +1,22 @@
 ---
 layout: default
-title: PIV Authentication for SSH to a UNIX-like Server
+title: PIV Authentication for SSH to UNIX-like Servers
 permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-Authenticating with your PIV card is the most secure way to Secure Shell (SSH) to a UNIX-like server on your network. Your PIV chip offers strong security features (e.g., tamper-resistance, protected private keys, encryption, biometrics, etc.) that are difficult to exploit. Software methods of authentication (e.g., username and password login) are much more vulnerable and often targeted by attackers.
-  
+You often need to remotely access UNIX-like servers on your network by using SSH. Authenticating with your PIV is the most secure way to do this. Your PIV chip offers strong security features (e.g., tamper-resistance, protected private keys, encryption, biometrics, etc.) that are difficult to exploit. Attackers are much more likely to target software methods of authentication (e.g., username and password login).
+
+**Note:**  Other authentication methods are available, such as Linux' solution that ties Pluggable Authentication Modules (PAM) to directories.
+
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-**Note:**  Other authentication methods are available, such as tying Pluggable Authentication Modules (PAM) to directories (Linux).
-
-This guide will help you to use your PIV to authenticate and SSH from Windows, Linux, or macOS:
+For Windows, Linux, and macOS, this guide will help you to:
 
 1. Ensure that your OS recognizes and authenticates your PIV.
 2. Enable the correct drivers on your computer for SSH.
 3. Configure a UNIX-like server.
-3. SSH to the UNIX-like server.
+3. SSH to a UNIX-like server.
 
 Click the link for your OS-specific steps. Please also review the section, _Configure a UNIX-like Server_.
 
@@ -29,7 +29,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 **Change to Here for PIV Authentication** CELESTE
 
-## Use PIV to SSH from Windows
+## Use PIV Authentication to SSH from Windows
 
 * [Hardware and software requirements](#hardware-and-software-requirements)
 * [Install PuTTY-CAC](#install-putty-cac)
