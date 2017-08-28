@@ -29,8 +29,6 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 * [Authenticate PIV for SSH from macOS](#authenticate-piv-for-ssh-from-macOS)
 * [Configure a UNIX-like Server](#configure-a-unix-like-server)
 
-**Change to Here for PIV Authentication** CELESTE
-
 ## Authenticate PIV for SSH from Windows
 
 * [Hardware and software requirements](#hardware-and-software-requirements)
@@ -55,7 +53,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
   
 > _PuTTY will normally be installed at **C:\Program Files\PuTTY**._
      
-2. To ensure that the correct version was installed, open PuTTY and click **About** (lower left corner of **PuTTY Configuration** window).
+2. Ensure that the correct version was installed:  open PuTTY and click **About**.
 
 ### Use PIV to insert Microsoft CAPI key into Pageant 
 
@@ -64,7 +62,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 3. Right-click on the **Pageant** icon at the bottom of the screen, and select **View Keys &amp; Certs**.
 4. From the Pageant **Key/CAPI Cert List** window, click on **Add Cert**.
 5. From the **Windows Security** window, select your **Smart Card Logon** certificate.
-6. To ensure that this is the correct certificate, click **Click here to view certificate properties &gt; Details**.
+6. Ensure that this is the right certificate:  go to: **Click here to view certificate properties &gt; Details**.
 7. Locate and click **Enhanced Key Usage**. 
 
 > _When you see the **Smart Card Logon**, it means that the certificate is the right type. Click **OK**._
@@ -80,50 +78,48 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 #### Set up a PIV login profile
 
 1. From the Windows taskbar, click the **Pageant** icon and select **New Session** to launch **PuTTY**.
-
-> _Use PuTTY to set up a new PIV login profile for a UNIX-like server. <!--This said "SSH server." Meant "UNIX-like server"?--> 
-
-2. To create new profiles for multiple UNIX-like servers, repeat Steps 3-6 for each one. <!--Also said "SSH servers."-->
-3. Enter the server's **IP address** in the **Host Name (or IP address)** textbox. (If you already have a profile for a server, select it, click the **Load** button, and follow Steps 4-6 to set up the profile.)
-4. Enter a session name into the **Saved Sessions** textbox.
-5. From the left **Category**: panel, select **Connection &gt; SSH &gt; CAPI**. Then, click the checkbox for **Attempt "CAPI Certificate" (Key-only) auth (SSH-2)**.
-6. From within the **PuTTY Configuration** window, select **Connection &gt; SSH &gt; Auth**. Next, click the checkboxes for **Allow agent forwarding** and **Allow attempted changes of username in SSH-2** and save your session.
+2. Enter the server's **IP address** in the **Host Name (or IP address)** textbox. (If you already have a profile for a server, select it, click the **Load** button, and follow Steps 4-6 to set up the profile.)
+3. Enter a session name into the **Saved Sessions** textbox.
+4. From the left **Category**: panel, select **Connection &gt; SSH &gt; CAPI**. Then, click the checkbox for **Attempt "CAPI Certificate" (Key-only) auth (SSH-2)**.
+5. In the **PuTTY Configuration** window, select **Connection &gt; SSH &gt; Auth**. Next, click the checkboxes for **Allow agent forwarding** and **Allow attempted changes of username in SSH-2** and save your session.
+6. To create new profiles for multiple UNIX-like servers, repeat Steps 3-6 for each one.
 
 #### Obtain PIV SSH key
 
-1. To get your PIV's **SSH key**, go to the **PuTTY Configuration** window. At the left panel, click on **Connection &gt; SSH&nbsp;&gt; CAPI**. Under **Authentication Parameters**, click the **Browse** button.  
+1. Go to the **PuTTY Configuration** window. Click on **Connection &gt; SSH&nbsp;&gt; CAPI**. 
+2. Under **Authentication Parameters**, click the **Browse** button.  
 
 > _This automatically fills in the **Cert** and **SSH keystring** textboxes._
 
 2. Copy and paste the **SSH keystring**&nbsp;**_value_** (i.e., SSH key) into **Microsoft Notepad** and save it.  
-3. Provide your SSH key to the SSH server administrator and ask that it be added to your SSH server account.
+3. Provide your SSH key to the SSH server administrator and ask that it be added to your SSH server account. <!--Is the "SSH server" the same thing as the remote UNIX-like server? Unclear.-->
 
 > _Once the SSH server account has been set up with your SSH key, you can log in with your PIV. 
-> For other SSH servers, submit a service ticket to the administrator with the server's IP address, your account name, and your PIV's SSH key._
+> For additional SSH servers, submit a service ticket to the administrator with the server's IP address, your account name, and your PIV's SSH key._ <!--Doesn't read like the same process as Step 3, but is this the same process?-->
 
 ### Verify PuTTY login and proceed with SSH
 
-1. Run **PuTTY** and select your **Saved Session**.
-2. Click **Load** and then **Open**.
-3. Enter your **remote UNIX/Linux account name**.  
-4. At the prompt, enter your **PIV card PIN** and click **OK** to log into the remote server.
-5. Once logged in, run the command: **ssh-add –l** to display the SSH key.  
+1. Run **PuTTY** and select your **Saved Session**. Click **Load** and then **Open**.
+2. Enter your **remote UNIX/Linux account name**.  
+3. At the prompt, enter your **PIV card PIN** and click **OK** to log into the remote server.
+4. Once logged in, run the command: **ssh-add –l** to display the SSH key.  
 
-> _For each server you "jump" to, **ssh-add –l** will display the SSH key. You may then **ssh** to any other host in the environment._
+> _Use **ssh-add –l** for each server to display the SSH key. You may then **ssh** to any other host in the environment._
 
-## Authenticate PIV for SSH from a Linux
+## Authenticate PIV for SSH from Linux
 
 * [Hardware and software requirements](#hardware-and-software-requirements)
 * [Obtain and save public key from PIV](#obtain-and-save-public-key-from-PIV)
-* [SSH to log into remote server](#SSH-to-log-into-remote-server)
+* [SSH to log into UNIX-like server](#SSH-to-log-into-unix-like-server)
 
 ### Hardware and software requirements
 
   * A PIV
   * A card reader
-  * A Linux computer configured for PIV login. 
+  * A Linux computer configured for PIV login 
   
-**CELESTE - To download and install OpenSC,** go to: [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.
+**CELESTE - Include? OpenSC open-source middleware supports many types of smart cards with cryptographic functions. It includes command line utilities.**
+To download and install OpenSC,** go to: [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.
 
 ### Obtain and save public key from PIV
 
@@ -135,7 +131,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
         ```  
   3. Submit the file with your public SSH key to the SSH server administrator.
 
-### SSH to log into remote server
+### SSH to log into UNIX-like server
 
   1. Insert your **PIV** into your card reader.
   2. To log into the remote server, enter:
@@ -150,11 +146,11 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 {% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %} 
 
-## Authenticate PIV for SSH from macOS (10.12 Sierra) Computer
+## Authenticate PIV for SSH from macOS (10.12 Sierra)
 
 * [Hardware and software requirements](#hardware-and-software-requirements)
 * [Obtain and save public key from PIV](#obtain-and-save-public-key-from-PIV)
-* [SSH to log into remote server](#SSH-to-log-into-remote-server)
+* [SSH to log into UNIX-like server](#SSH-to-log-into-unix-like-server)
 
 ### Hardware and software requirements
 
@@ -171,7 +167,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 			ssh-keygen -D /Library/OpenSC/lib/pkcs11/opensc-pkcs11.so > mykey.pub
         ```
 
-### SSH to log into remote server
+### SSH to log into UNIX-like server
 
   1. Insert your **PIV** into your computer's smartcard reader.
   2. Use the following command to log into the remote server:
