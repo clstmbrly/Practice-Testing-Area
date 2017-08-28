@@ -11,10 +11,12 @@ You often need to remotely access UNIX-like servers on your network by using SSH
 
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-For Windows, Linux, and macOS, this guide will help you to:
+**CELESTE:  The setup for card reader, etc., here is only for Windows--Linux and macOs procedures don't include card reader set up** 
+
+**CELESTE:  Validate these**  For Windows, Linux, and macOS, this guide will help you to:
 
 1. Ensure that your OS recognizes and authenticates your PIV.
-2. Enable the correct drivers on your computer for SSH.
+2. Enable the correct drivers on your computer to use a card reader.
 3. Configure a UNIX-like server.
 3. SSH to a UNIX-like server.
 
@@ -29,7 +31,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 **Change to Here for PIV Authentication** CELESTE
 
-## Use PIV Authentication to SSH from Windows
+## Authenticate PIV for SSH from Windows
 
 * [Hardware and software requirements](#hardware-and-software-requirements)
 * [Install PuTTY-CAC](#install-putty-cac)
@@ -109,7 +111,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 > _For each server you "jump" to, **ssh-add –l** will display the SSH key. You may then **ssh** to any other host in the environment._
 
-## Use PIV to SSH from a Linux
+## Authenticate PIV for SSH from a Linux
 
 * [Hardware and software requirements](#hardware-and-software-requirements)
 * [Obtain and save public key from PIV](#obtain-and-save-public-key-from-PIV)
@@ -119,7 +121,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
   * A PIV
   * A card reader
-  * A Linux computer that is configured for PIV login. 
+  * A Linux computer configured for PIV login. 
   
 **CELESTE - To download and install OpenSC,** go to: [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.
 
@@ -135,7 +137,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 ### SSH to log into remote server
 
-  1. Insert your **PIV** into your computer's card reader.
+  1. Insert your **PIV** into your card reader.
   2. To log into the remote server, enter:
 
         ```
@@ -148,7 +150,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 {% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %} 
 
-## Use PIV to SSH from macOS (10.12 Sierra) Computer
+## Authenticate PIV for SSH from macOS (10.12 Sierra) Computer
 
 * [Hardware and software requirements](#hardware-and-software-requirements)
 * [Obtain and save public key from PIV](#obtain-and-save-public-key-from-PIV)
