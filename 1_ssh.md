@@ -5,11 +5,13 @@ permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-Using a PIV card is the most secure way to authenticate for Secure Shell (SSH) to a UNIX-like server on your network. Your PIV offers strong security features (e.g., tamper-resistance, protected private keys, encryption, biometrics, etc.) that very difficult to exploit than vulnerable software authentication methods (e.g., username and password).  
+Using a PIV card is a highly secure way to authenticate for Secure Shell (SSH) to a UNIX-like server on your network. Your PIV offers strong security features (e.g., tamper-resistance, protected private keys, encryption, biometrics, etc.) that /make exploitation difficult for an attacker/very difficult to exploit. Software authentication methods (e.g., username and password) are more vulnerable to attack.  that software authentication methods don't offer and so are more easily exploited.
 
-Other methods of authentication are available, such as tying Pluggable Authentication Modules (PAM) to directories (Linux).
+A PIV card is the most secure way to authenticate for ...SSH
   
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
+
+**Note:**  Other authentication methods are available, such as tying Pluggable Authentication Modules (PAM) to directories (Linux).
 
 This guide will help you to use your PIV to authenticate and SSH from Windows, Linux, or macOS:
 
