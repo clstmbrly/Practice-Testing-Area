@@ -47,17 +47,15 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 ### Install PuTTY-CAC
 
-1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_. 
+1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_. Open PuTTY and click **About** to ensure that the correct version was installed.
   
 > _PuTTY will normally be installed at **C:\Program Files\PuTTY**._
-     
-2. Ensure that the correct version was installed:  open PuTTY and click **About**.
 
 ### Use PIV to insert Microsoft CAPI key into Pageant 
 
 1. Insert your **PIV** into the card reader, and open **Windows Explorer**.
 2. Open **Pageant** and go to **C: &gt; Program Files &gt; PuTTY &gt; Pageant**.
-3. Right-click on the **Pageant** icon at the bottom of the screen, and select **View Keys &amp; Certs**.
+3. Right-click on the **Pageant** icon, and select **View Keys &amp; Certs**.
 4. From the Pageant **Key/CAPI Cert List** window, click on **Add Cert**.
 5. From the **Windows Security** window, select your **Smart Card Logon** certificate.
 6. Ensure that this is the right certificate:  go to: **Click here to view certificate properties &gt; Details**.
