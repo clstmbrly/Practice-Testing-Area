@@ -15,19 +15,18 @@ You often need to remotely access UNIX-like servers on your network by using SSH
 
 **CELESTE:  Validate these**  For Windows, Linux, and macOS, this guide will help you to:
 
-1. Ensure that your OS recognizes and authenticates your PIV.
-2. Enable the correct drivers on your computer to use a card reader.
-3. Configure a UNIX-like server.
+1. Ensure that your OS recognizes and authenticates your PIV. <!--Is the order correct here? Does this encapsulate all of the procedures/total purpose within each OS section?-->
+2. Configure a UNIX-like server.
 3. SSH to a UNIX-like server.
 
-Click the link for your OS-specific steps. Please also review the section, _Configure a UNIX-like Server_.
+Click the link for your OS-specific steps. Please also review _Configure a UNIX-like Server for Remote Access_.
 
 **CELESTE -- Change "Use" to "PIV Authentication for SSH from OS," etc.???  Really first about Getting OS to Recognize your card reader and PIV--- then using PIV for authentication to SSH to server**
 
 * [Authenticate PIV for SSH from Windows](#authenticate-piv-for-ssh-from-windows) 
 * [Authenticate PIV for SSH from Linux](#authenticate-piv-for-ssh-from-linux)
 * [Authenticate PIV for SSH from macOS](#authenticate-piv-for-ssh-from-macOS)
-* [Configure a UNIX-like Server](#configure-a-unix-like-server)
+* [Configure a UNIX-like Server for Remote Access](#configure-a-unix-like-server-for-remote-access)
 
 ## Authenticate PIV for SSH from Windows
 
@@ -47,7 +46,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
 ### Install PuTTY-CAC
 
-1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_. Open PuTTY and click **About** to ensure that the correct version was installed.
+1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_.
   
 > _PuTTY will normally be installed at **C:\Program Files\PuTTY**._
 
@@ -112,10 +111,7 @@ Click the link for your OS-specific steps. Please also review the section, _Conf
 
   * A PIV
   * A card reader
-  * A Linux computer configured for PIV login 
-  
-**CELESTE - Include? OpenSC open-source middleware supports many types of smart cards with cryptographic functions. It includes command line utilities.**
-To download and install OpenSC,** go to: [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.
+  * A Linux computer configured for PIV login (For one method to do this, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
 
 ### Obtain and save public key from PIV
 
@@ -152,7 +148,7 @@ To download and install OpenSC,** go to: [**OpenSC**](https://www.github.com/Ope
 
   * A PIV
   * A card reader
-  * A Mac (macOS 10.12 Sierra) computer configured for PIV login. (For additional information, go to [**configure opensc**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}.)
+  * A Mac (macOS 10.12 Sierra) computer configured for PIV login. (For one method to do this, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
 
 ### Obtain and save public key from PIV
 
@@ -165,7 +161,7 @@ To download and install OpenSC,** go to: [**OpenSC**](https://www.github.com/Ope
 
 ### SSH to log into UNIX-like server
 
-  1. Insert your **PIV** into your computer's smartcard reader.
+  1. Insert your **PIV** into your computer's card reader.
   2. Use the following command to log into the remote server:
 
         ```
@@ -178,9 +174,9 @@ To download and install OpenSC,** go to: [**OpenSC**](https://www.github.com/Ope
 
 {% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %}
 
-## Configure a UNIX-like Server
+## Configure a UNIX-like Server for Remote Access
 
-These steps will help you to configure a UNIX-like server for remote access. <!--Do you configure the UNIX-like, remote server once you have accessed it? Do you configure it to allow for future remote access? What are you configuring and when? Unclear.-->
+These steps will help you to configure a UNIX-like server for remote access. 
 
   1. Change the configuration in the **/etc/ssh/sshd_config** file and restart the **sshd**:
 
@@ -195,8 +191,8 @@ These steps will help you to configure a UNIX-like server for remote access. <!-
 			mkdir /etc/sshd/authorized_keys
         ```
 
-  3. To allow one user to have access, place the user's PIV's SSH public key in this directory, according to the user's name: **/etc/sshd/authorized_keys/[login ID]**. 
+  3. To allow one user to have access, place the user's PIV's SSH public key in this directory, according to the username: **/etc/sshd/authorized_keys/[login ID]**. 
   
        >_Only a **root user** may modify this directory and its files. This ensures that access requirements are enforced._  
   
-  4. Disable any alternative means of access (i.e., via passwords), as needed.
+  4. Disable any alternative means of access (i.e., passwords), as needed.
