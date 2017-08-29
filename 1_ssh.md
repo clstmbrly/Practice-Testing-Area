@@ -59,27 +59,20 @@ Click the link for your OS-specific steps. Please also review _Configure a UNIX-
 5. From the **Windows Security** window, select your **Smart Card Logon** certificate.
 6. Ensure that this is the right certificate:  go to: **Click here to view certificate properties &gt; Details**.
 7. Locate and click **Enhanced Key Usage**. 
+8. When you see the **Smart Card Logon**, it means that the certificate is of the right type. Click on the **Smart Card certificate** (i.e., **CAPI key**) to highlight it; then click **OK** and **Close**. 
 
-> _When you see the **Smart Card Logon**, it means that the certificate is the right type. Click **OK**._
-
-> _**Note:**  If multiple certificates exist, you may want to clear the expired or revoked certificates._
-
-8. Click on the **Smart Card certificate** (i.e., **CAPI key**) to highlight it. Click **OK** and **Close**.
-
-> _The Pageant window will populate with the certificate information. Whenever you start Pageant, you will need to re-add the certificate._
+> _The Pageant window will populate with the certificate information. (Clear any expired or revoked certificates.) Whenever you start Pageant, you will need to re-add the certificate._
 
 ### Configure PuTTY
 
 #### Set up a PIV login profile
 
 1. From the Windows taskbar, click the **Pageant** icon and select **New Session** to launch **PuTTY**.
-2. Enter the server's **IP address** in the **Host Name (or IP address)** textbox. (If you already have a profile for a server, select it, click the **Load** button, and follow Steps 4-6 to set up the profile.)
-3. Enter a session name into the **Saved Sessions** textbox.
-4. From the left **Category**: panel, select **Connection &gt; SSH &gt; CAPI**. Then, click the checkbox for **Attempt "CAPI Certificate" (Key-only) auth (SSH-2)**.
-5. In the **PuTTY Configuration** window, select **Connection &gt; SSH &gt; Auth**. Next, click the checkboxes for **Allow agent forwarding** and **Allow attempted changes of username in SSH-2** and save your session.
-6. To create new profiles for multiple UNIX-like servers, repeat Steps 3-6 for each one.
+2. From the left **Category**: panel, select **Connection &gt; SSH &gt; CAPI**. Then, click the checkbox for **Attempt "CAPI Certificate" (Key-only) auth (SSH-2)**.
+3. In the **PuTTY Configuration** window, select **Connection &gt; SSH &gt; Auth**. Next, click the checkboxes for **Allow agent forwarding** and **Allow attempted changes of username in SSH-2** and save your session.
+4. To create new profiles for multiple UNIX-like servers, repeat Steps 3-6 for each one.
 
-#### Obtain PIV SSH key
+#### Obtain PIV SSH key  ******CELESTE STOPPED 8/29/2017***
 
 1. Go to the **PuTTY Configuration** window. Click on **Connection &gt; SSH&nbsp;&gt; CAPI**. 
 2. Under **Authentication Parameters**, click the **Browse** button.  
@@ -111,7 +104,7 @@ Click the link for your OS-specific steps. Please also review _Configure a UNIX-
 
   * A PIV
   * A card reader
-  * A Linux computer configured for PIV login (For one method to do this, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
+  * A Linux computer configured for PIV login (For one method of doing this with a Linux OS, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
 
 ### Obtain and save public key from PIV
 
@@ -148,7 +141,7 @@ Click the link for your OS-specific steps. Please also review _Configure a UNIX-
 
   * A PIV
   * A card reader
-  * A Mac (macOS 10.12 Sierra) computer configured for PIV login. (For one method to do this, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
+  * A Mac (macOS 10.12 Sierra) computer configured for PIV login. (For one method of doing this with a macOS, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
 
 ### Obtain and save public key from PIV
 
