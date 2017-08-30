@@ -74,7 +74,7 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from a 
 
 > _This fills in the **Cert** and **SSH keystring**._
 
-3. Save your **SSH keystring**&nbsp;**_value_** (i.e., "SSH key") in a **Notepad** file and send it to the SSH server administrator to be added to your SSH server account. 
+3. Save your **SSH keystring**&nbsp;**_value_** (i.e., "SSH key") in a **Notepad** file. Send it to the SSH server administrator to be added to your SSH server account. 
 
 #### SSH to a UNIX-like server
 
