@@ -111,6 +111,7 @@ For an open-source method, go to: [**OpenSC**](https://www.github.com/OpenSC/Ope
         ```
 			ssh-keygen -D /usr/lib64/opensc-pkcs11.so > mykey.pub
         ```  
+
 3. Send the file to the SSH server administrator.
 
 ### SSH to a UNIX-like server
@@ -173,7 +174,7 @@ For an open-source method, go to: [**OpenSC**](https://www.github.com/OpenSC/Ope
 
 ## Configure a UNIX-like Server
 
-1. Change the configuration in the **/etc/ssh/sshd_config** file and restart the **sshd**, as follows:
+1. Change the configuration in the **/etc/ssh/sshd_config** file and restart the **sshd**:
 
       ```
 		AuthorizedKeysFile /etc/sshd/authorized_keys/%u
