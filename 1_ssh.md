@@ -13,10 +13,10 @@ This guide will help you to use your PIV for SSH to UNIX-like servers from your 
 
 Click on your OS: 
 
-  [**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
-  [**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
-  [**Authenticate PIV for SSH from macOS**](#authenticate-piv-for-ssh-from-macOS)
-  [**Configure a UNIX-like Server for Remote Access**](#configure-a-unix-like-server-for-remote-access)
+- [**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
+- [**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
+- [**Authenticate PIV for SSH from macOS**](#authenticate-piv-for-ssh-from-macOS)
+- [**Configure a UNIX-like Server for Remote Access**](#configure-a-unix-like-server-for-remote-access)
 
 ## Authenticate PIV for SSH from Windows
 
