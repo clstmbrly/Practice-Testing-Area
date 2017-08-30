@@ -5,11 +5,13 @@ permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-Enabling your PIV for Secure Shell (SSH) is the most secure way to remotely access UNIX-like servers on your network. The strong security features of your PIV hardware (e.g., digitally signed FASC-N, certificates and key pairs, encryption, biometrics) make it difficult to exploit. Software authentication methods (e.g., usernames and passwords) are much more likely to be targeted by attackers. Other options are available, such as Linux' authentication through Pluggable Authentication Modules (PAM).
+Enabling your PIV for Secure Shell (SSH) is the most secure way to remotely access UNIX-like servers on your network. The strong security features of your PIV hardware (e.g., certificates and key pairs, encryption, biometrics) make it highly difficult to exploit. Software authentication methods (e.g., usernames and passwords) are much more likely to be targeted by attackers. 
 
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-This guide will help you to enable your PIV for SSH to UNIX-like servers from your _Windows_, _Linux_, or _macOS_ computer and configure a UNIX-like server for remote access:
+{% include alert-info.html heading = "Other authentication options are available, such as Linux' Pluggable Authentication Modules (PAM)." %}
+
+This guide will help you to enable your PIV for SSH to UNIX-like servers from a _Windows_, _Linux_, or _macOS_ computer and to configure a UNIX-like server for remote access. Select your OS:
 
 - [**Enable PIV for SSH from Windows**](#enable-piv-for-ssh-from-windows) 
 - [**Enable PIV for SSH from Linux**](#enable-piv-for-ssh-from-linux)
@@ -36,15 +38,15 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from yo
 
 1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_.
   
-> _PuTTY will normally be installed at **C:\Program Files\PuTTY**._
+> _PuTTY-CAC will normally be installed at **C:\Program Files\PuTTY**._
 
 ### Use PIV to insert Microsoft CAPI key into Pageant 
 
-1. Insert your **PIV** into the card reader.
+1. Insert your **PIV** into your card reader.
 2. Go to:  **C: &gt; Program Files &gt; PuTTY &gt; Pageant**.
 3. Click the **Pageant** icon from the Windows taskbar, and select **View Keys &amp; Certs**.
 
-     > _The Pageant **Key/CAPI Cert List** window opens._
+> _The Pageant **Key/CAPI Cert List** window opens._
 
 4. Click **Add Cert**.
 5. At the **Windows Security** window, select your **Smart Card Logon** certificate.
@@ -54,7 +56,7 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from yo
 
 > _This fills in the certificate information. (Clear any expired or revoked certificates.) Whenever you start Pageant, you will need to re-add the certificate._
 
-### Configure PuTTY   ***CELESTE:  CHECK HEADING LEVELS***
+### Configure PuTTY
 
 #### Set up a PIV login profile
 
@@ -72,8 +74,7 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from yo
 
 > _This fills in the **Cert** and **SSH keystring**._
 
-2. Save your **SSH keystring**&nbsp;**_value_** (i.e., "SSH key") in a **Notepad** file.  
-3. Send this to the SSH server administrator to be added to your SSH server account. (To add additional SSH servers, contact the administrator.)
+3. Save your **SSH keystring**&nbsp;**_value_** (i.e., "SSH key") in a **Notepad** file and send it to the SSH server administrator to be added to your SSH server account. 
 
 #### SSH to a UNIX-like server
 
@@ -81,67 +82,73 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from yo
 2. Select a **Saved Session**; then click **Load** and **Open**.
 3. Enter your **remote UNIX/Linux account name**.  
 4. At the prompt, enter your **PIV card PIN** and click **OK**. 
-5. Once logged into the remote server, run the command: **ssh-add –l** to display the SSH key.  
+5. Once logged into the remote server, enter the command: **ssh-add –l** to display the SSH key.  
 
-> _For each server you "jump to," use **ssh-add –l** to display the SSH key. Once you see it, you may **ssh** to any host in the environment._
+> _For each server you "jump to," **ssh-add –l** will display the SSH key. Once you see it, you may **SSH** to any host in the environment._
 
 ## Enable PIV for SSH from Linux
 
 - [**Hardware and software requirements**](#hardware-and-software-requirements)
-- [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-PIV)
-- [**SSH to a UNIX-like server**](#SSH-to-a-unix-like-server)
+- [**Configure for PIV login**](#configure-for-piv-login)
+- [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-piv)
+- [**SSH to a UNIX-like server**](#ssh-to-a-unix-like-server)
 
 ### Hardware and software requirements
 
-  * A PIV
-  * A card reader
-  * A Linux computer configured for PIV login 
+* A PIV
+* A card reader
+* A Linux computer 
   
-(For one method, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
+### Configure for PIV login
+
+For an open-source method, go to: [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
 
 ### Obtain and save public key from PIV
 
-  1. Insert your **PIV** into your computer's card reader.
-  2. To save your **public SSH key** to a file, enter:
+1. Insert your **PIV** into your card reader.
+2. To save your **public SSH key** to a file, enter:
 
         ```
 			ssh-keygen -D /usr/lib64/opensc-pkcs11.so > mykey.pub
         ```  
-  3. Submit the file with your public SSH key to the SSH server administrator.
+3. Sent the file to the SSH server administrator.
 
 ### SSH to a UNIX-like server
 
-  1. Insert your **PIV** into your card reader.
-  2. To log into the remote server, enter:
+1. Insert your **PIV** into your card reader.
+2. To log into the remote server, enter:
 
         ```
 			ssh -I /usr/lib64/opensc-pkcs11.so <remote-host>
         ```    
 
-  3. At the PIV card password prompt, enter your **PIN**.
+3. At the PIV card password prompt, enter your **PIN**.
 
-     > _The **remote-host shell prompt** appears._
+> _The **remote-host shell prompt** appears._
 
 {% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %} 
 
 ## Enable PIV for SSH from macOS (10.12 Sierra)
 
 - [**Hardware and software requirements**](#hardware-and-software-requirements)
-- [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-PIV)
-- [**SSH to a UNIX-like server**](#SSH-to-log-into-unix-like-server)
+- [**Configure for PIV login**](#configure-for-piv-login)
+- [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-piv)
+- [**SSH to a UNIX-like server**](#ssh-to-log-into-unix-like-server)
 
 ### Hardware and software requirements
 
-  * A PIV
-  * A card reader
-  * A Mac (macOS 10.12 Sierra) computer configured for PIV login. 
+* A PIV
+* A card reader
+* A Mac (macOS 10.12 Sierra) computer 
   
-(For one method of doing this with a macOS, go to [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
+### Configure for PIV login
+
+For an open-source method, go to: [**OpenSC**](https://www.github.com/OpenSC/OpenSC/wiki/Download-latest-OpenSC-stable-release){:target="_blank"}_.)
 
 ### Obtain and save public key from PIV
 
 1. Insert your **PIV** into your card reader.
-2. To save the **user's public SSH key** to a file, use this command:
+2. To save your **public SSH key** to a file, enter:
 
         ```
 			ssh-keygen -D /Library/OpenSC/lib/pkcs11/opensc-pkcs11.so > mykey.pub
@@ -152,7 +159,7 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from yo
 ### SSH to a UNIX-like server
 
 1. Insert your **PIV** into your card reader.
-2. Use the following command to log into the remote server:
+2. To log into the remote server, enter:
 
         ```
 		 	ssh -I /Library/OpenSC/lib/pkcs11/opensc-pkcs11.so <remote-host>
@@ -160,7 +167,7 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from yo
 
 3. At the PIV password prompt, enter your **PIN**.
 
-     > _The **remote-host shell prompt** appears._
+> _The **remote-host shell prompt** appears._
 
 {% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %}
 
@@ -173,14 +180,14 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from yo
 		PasswordAuthentication No
       ```
 
-  2. Create the directory:  **/etc/sshd/authorized_keys**:
+2. Create the **/etc/sshd/authorized_keys** directory:
 
         ```
 			mkdir /etc/sshd/authorized_keys
         ```
 
-  3. To allow one person to have access, place his/her PIV's SSH public key in this directory, according to username: **/etc/sshd/authorized_keys/[login ID]**. 
+3. To allow one person to have access, place his/her PIV's SSH public key in this directory, according to username: **/etc/sshd/authorized_keys/[login ID]**. 
   
-       >_Only a **root user** may modify this directory and its files to ensure that access requirements are enforced._  
+>_Only a **root user** may modify this directory and its files to ensure that access requirements are enforced._  
   
-  4. Disable any alternative means of access (i.e., passwords), as needed.
+4. Disable any alternative means of access (i.e., passwords), as needed.
