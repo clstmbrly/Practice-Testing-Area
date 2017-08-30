@@ -111,7 +111,7 @@ For an open-source method, go to: [**OpenSC**](https://www.github.com/OpenSC/Ope
         ```
 			ssh-keygen -D /usr/lib64/opensc-pkcs11.so > mykey.pub
         ```  
-3. Sent the file to the SSH server administrator.
+3. Send the file to the SSH server administrator.
 
 ### SSH to a UNIX-like server
 
