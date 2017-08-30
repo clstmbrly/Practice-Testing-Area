@@ -5,20 +5,18 @@ permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-Authenticating with your PIV is the most secure way to use Secure Shell (SSH) for remote access to UNIX-like servers on your network. Your PIV chip offers strong security features (e.g., protected private keys, encryption, biometrics, etc.) that are difficult to exploit. Software authentication methods (e.g., usernames and passwords) are much more likely to be targeted by attackers. Other authentication methods are available, such as Linux' solution that ties Pluggable Authentication Modules (PAM) to directories.
+Enabling your PIV for Secure Shell (SSH) is the most secure way to remotely access UNIX-like servers on your network. The strong security features of your PIV hardware (e.g., digitally signed FASC-N, certificates and key pairs, encryption, biometrics) make it difficult to exploit. Software authentication methods (e.g., usernames and passwords) are much more likely to be targeted by attackers. Other options are available, such as Linux' authentication through Pluggable Authentication Modules (PAM).
 
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-This guide will help you to use your PIV for SSH to UNIX-like servers from your _Windows_, _Linux_, or _macOS_ computer. 
+This guide will help you to enable your PIV for SSH to UNIX-like servers from your _Windows_, _Linux_, or _macOS_ computer and configure a UNIX-like server for remote access:
 
-Click on your OS:&nbsp;&nbsp;&nbsp;(**Note:**  Please also review _Configure a UNIX-like Server_.)
-
-- [**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
-- [**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
-- [**Authenticate PIV for SSH from macOS**](#authenticate-piv-for-ssh-from-macOS)
+- [**Enable PIV for SSH from Windows**](#enable-piv-for-ssh-from-windows) 
+- [**Enable PIV for SSH from Linux**](#enable-piv-for-ssh-from-linux)
+- [**Enable PIV for SSH from macOS**](#enable-piv-for-ssh-from-macOS)
 - [**Configure a UNIX-like Server**](#configure-a-unix-like-server)
 
-## Authenticate PIV for SSH from Windows
+## Enable PIV for SSH from Windows
 
 - [**Hardware and software requirements**](#hardware-and-software-requirements)
 - [**Install PuTTY-CAC**](#install-putty-cac)
@@ -87,7 +85,7 @@ Click on your OS:&nbsp;&nbsp;&nbsp;(**Note:**  Please also review _Configure a U
 
 > _For each server you "jump to," use **ssh-add –l** to display the SSH key. Once you see it, you may **ssh** to any host in the environment._
 
-## Authenticate PIV for SSH from Linux
+## Enable PIV for SSH from Linux
 
 - [**Hardware and software requirements**](#hardware-and-software-requirements)
 - [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-PIV)
@@ -126,7 +124,7 @@ Click on your OS:&nbsp;&nbsp;&nbsp;(**Note:**  Please also review _Configure a U
 
 {% include alert-warning.html heading = "The card reader may flash. **Do not** remove the PIV until the login process has been completed." %} 
 
-## Authenticate PIV for SSH from macOS (10.12 Sierra)
+## Enable PIV for SSH from macOS (10.12 Sierra)
 
 - [**Hardware and software requirements**](#hardware-and-software-requirements)
 - [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-PIV)
