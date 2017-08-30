@@ -36,9 +36,7 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from a 
 
 ### Install PuTTY-CAC
 
-1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_.
-  
-> _PuTTY-CAC will normally be installed at **C:\Program Files\PuTTY**._
+1. Download and install [**PuTTY-CAC**](https://www.github.com/NoMoreFood/putty-cac/releases){:target="_blank"}_. (_PuTTY-CAC will normally be installed at **C:\Program Files\PuTTY**._)
 
 ### Use PIV to insert Microsoft CAPI key into Pageant 
 
