@@ -5,7 +5,7 @@ permalink: /userconfig/ssh
 collection: userconfig
 ---
 
-Enabling your PIV for Secure Shell (SSH) is the most secure way to remotely access UNIX-like servers on your network. The strong security features of your PIV hardware (e.g., certificates and key pairs, encryption, biometrics) make it highly difficult to exploit. Software authentication methods (e.g., usernames and passwords) are much more likely to be targeted by attackers. 
+Enabling your PIV for Secure Shell (SSH) is the most secure way to remotely access UNIX-like servers on your network. The strong security features of your PIV hardware (e.g., certificates and key pairs, encryption, biometrics) make it extremely difficult to exploit. Software authentication methods (e.g., usernames and passwords) are much more likely to be targeted by attackers. 
 
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
