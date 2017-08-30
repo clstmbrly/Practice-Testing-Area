@@ -48,8 +48,11 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from a 
 3. Click **Add Cert**.
 4. At the **Windows Security** window, select your **Smart Card Logon** certificate.
 5. To ensure that the certificate is the right one, click **Click here to view certificate properties &gt; Details**.
-6. Click **Enhanced Key Usage**. 
-7. You should now see the **Smart Card Logon** window. (This means the certificate is of the right type.) Click on the **Smart Card certificate** (i.e., **CAPI key**). Then click **OK** and **Close**. 
+6. Click **Enhanced Key Usage**.
+
+> You should now see the **Smart Card Logon** window. (This means the certificate is of the right type.)
+
+7. Click on the **Smart Card certificate** (i.e., **CAPI key**). Then click **OK** and **Close**. 
 
 > _This fills in the certificate information. (Clear any expired or revoked certificates.) Whenever you start Pageant, you will need to re-add the certificate._
 
