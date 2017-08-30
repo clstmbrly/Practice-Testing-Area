@@ -9,20 +9,22 @@ Authenticating with your PIV is the most secure way to use Secure Shell (SSH) fo
 
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-This guide will help you to use your PIV for SSH to UNIX-like servers from your _Windows_, _Linux_, or _macOS_ computer. Click on your OS: _(Please also review **Configure a UNIX-like Server for Remote Access**.)_
+This guide will help you to use your PIV for SSH to UNIX-like servers from your _Windows_, _Linux_, or _macOS_ computer. 
+
+Click on your OS: 
 
 * [**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
 * [**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
 * [**Authenticate PIV for SSH from macOS**](#authenticate-piv-for-ssh-from-macOS)
-* [**Configure a UNIX-like Server for Remote Access**](#configure-a-unix-like-server-for-remote-access) (**_Please review._**)
+* [**Configure a UNIX-like Server for Remote Access**](#configure-a-unix-like-server-for-remote-access)
 
 ## Authenticate PIV for SSH from Windows
 
-* [Hardware and software requirements](#hardware-and-software-requirements)
-* [Install PuTTY-CAC](#install-putty-cac)
-* [Use PIV to insert Microsoft CAPI key into Pageant](#use-piv-to-insert-microsoft-capi-key-into-pageant)
-* [Configure PuTTY](#configure-putty)
-* [SSH to a UNIX-like server](#ssh-to-a-unix-like-server)
+* [**Hardware and software requirements**](#hardware-and-software-requirements)
+* [**Install PuTTY-CAC**](#install-putty-cac)
+* [**Use PIV to insert Microsoft CAPI key into Pageant**](#use-piv-to-insert-microsoft-capi-key-into-pageant)
+* [**Configure PuTTY**](#configure-putty)
+* [**SSH to a UNIX-like server**](#ssh-to-a-unix-like-server)
 
 ### Hardware and software requirements
 
@@ -83,13 +85,13 @@ This guide will help you to use your PIV for SSH to UNIX-like servers from your 
 4. At the prompt, enter your **PIV card PIN** and click **OK**. 
 5. Once logged into the remote server, run the command: **ssh-add –l** to display the SSH key.  
 
-> _For each server you "jump to," use **ssh-add –l** to display the SSH key. Once you see it, you may **ssh** to any host in the environment.
+> _For each server you "jump to," use **ssh-add –l** to display the SSH key. Once you see it, you may **ssh** to any host in the environment._
 
 ## Authenticate PIV for SSH from Linux
 
-* [Hardware and software requirements](#hardware-and-software-requirements)
-* [Obtain and save public key from PIV](#obtain-and-save-public-key-from-PIV)
-* [SSH to a UNIX-like server](#SSH-to-a-unix-like-server)
+* [**Hardware and software requirements**](#hardware-and-software-requirements)
+* [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-PIV)
+* [**SSH to a UNIX-like server**](#SSH-to-a-unix-like-server)
 
 ### Hardware and software requirements
 
@@ -126,9 +128,9 @@ This guide will help you to use your PIV for SSH to UNIX-like servers from your 
 
 ## Authenticate PIV for SSH from macOS (10.12 Sierra)
 
-* [Hardware and software requirements](#hardware-and-software-requirements)
-* [Obtain and save public key from PIV](#obtain-and-save-public-key-from-PIV)
-* [SSH to a UNIX-like server](#SSH-to-log-into-unix-like-server)
+* [**Hardware and software requirements**](#hardware-and-software-requirements)
+* [**Obtain and save public key from PIV**](#obtain-and-save-public-key-from-PIV)
+* [**SSH to a UNIX-like server**](#SSH-to-log-into-unix-like-server)
 
 ### Hardware and software requirements
 
