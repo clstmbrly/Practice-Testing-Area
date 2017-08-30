@@ -13,18 +13,18 @@ This guide will help you to use your PIV for SSH to UNIX-like servers from your 
 
 Click on your OS: 
 
-* [**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
-* [**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
-* [**Authenticate PIV for SSH from macOS**](#authenticate-piv-for-ssh-from-macOS)
-* [**Configure a UNIX-like Server for Remote Access**](#configure-a-unix-like-server-for-remote-access)
+[**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
+[**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
+[**Authenticate PIV for SSH from macOS**](#authenticate-piv-for-ssh-from-macOS)
+[**Configure a UNIX-like Server for Remote Access**](#configure-a-unix-like-server-for-remote-access)
 
 ## Authenticate PIV for SSH from Windows
 
-* [**Hardware and software requirements**](#hardware-and-software-requirements)
-* [**Install PuTTY-CAC**](#install-putty-cac)
-* [**Use PIV to insert Microsoft CAPI key into Pageant**](#use-piv-to-insert-microsoft-capi-key-into-pageant)
-* [**Configure PuTTY**](#configure-putty)
-* [**SSH to a UNIX-like server**](#ssh-to-a-unix-like-server)
+[**Hardware and software requirements**](#hardware-and-software-requirements)
+[**Install PuTTY-CAC**](#install-putty-cac)
+[**Use PIV to insert Microsoft CAPI key into Pageant**](#use-piv-to-insert-microsoft-capi-key-into-pageant)
+[**Configure PuTTY**](#configure-putty)
+[**SSH to a UNIX-like server**](#ssh-to-a-unix-like-server)
 
 ### Hardware and software requirements
 
