@@ -9,9 +9,7 @@ Authenticating with your PIV is the most secure way to use Secure Shell (SSH) fo
 
 {% include alert-info.html heading = "Your PIV contains an authentication key pair and public certificate. Using a PIV key pair and public certificate is exactly like using a key pair and self-signed certificate for SSH remote access." %}
 
-This guide will help you enable your PIV for SSH to UNIX-like servers on your network from a Windows, Linux, and macOS computer. 
-
-Click on Windows, Linux, or macOS for OS-specific steps. _(Please also review **Configure a UNIX-like Server for Remote Access**.)_
+This guide will help you enable your PIV for SSH to UNIX-like servers on your network from a Windows, Linux, and macOS computer. Click on your Operating System (OS). _(Please also review **Configure a UNIX-like Server for Remote Access**.)_
 
 * [**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
 * [**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
