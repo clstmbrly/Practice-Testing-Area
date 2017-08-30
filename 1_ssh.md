@@ -70,9 +70,10 @@ Click the link for your OS-specific steps. Please also review _Configure a UNIX-
 #### Set up a PIV login profile
 
 1. From the Windows taskbar, click the **Pageant** icon and select **New Session** to launch **PuTTY**.
-2. From the left **Category**: panel, select **Connection &gt; SSH &gt; CAPI**. Then, click the checkbox for **Attempt "CAPI Certificate" (Key-only) auth (SSH-2)**.
-3. In the **PuTTY Configuration** window, select **Connection &gt; SSH &gt; Auth**. Next, click the checkboxes for **Allow agent forwarding** and **Allow attempted changes of username in SSH-2** and save your session.
-4. To create new profiles for multiple UNIX-like servers, repeat Steps 3-6 for each one.
+2. From **Category**, select **Connection &gt; SSH &gt; CAPI**. 
+3. Click the checkbox for **Attempt "CAPI Certificate" (Key-only) auth (SSH-2)**.
+4. From the **PuTTY Configuration** window, select **Connection &gt; SSH &gt; Auth**. Next, click the checkboxes for **Allow agent forwarding** and **Allow attempted changes of username in SSH-2** and save your session.
+5. To create new profiles for additional UNIX-like servers, repeat these steps.
 
 #### Obtain PIV SSH key  ******CELESTE STOPPED 8/29/2017***
 
