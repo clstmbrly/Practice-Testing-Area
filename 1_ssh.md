@@ -11,7 +11,7 @@ Authenticating with your PIV is the most secure way to use Secure Shell (SSH) fo
 
 This guide will help you to use your PIV for SSH to UNIX-like servers from your _Windows_, _Linux_, or _macOS_ computer. 
 
-Click on your OS: 
+Click on your OS:   (**Note:**  Please also review _Configure a UNIX-like Server_.)
 
 - [**Authenticate PIV for SSH from Windows**](#authenticate-piv-for-ssh-from-windows) 
 - [**Authenticate PIV for SSH from Linux**](#authenticate-piv-for-ssh-from-linux)
