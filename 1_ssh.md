@@ -11,7 +11,7 @@ Enabling your PIV for Secure Shell (SSH) is the most secure way to remotely acce
 
 {% include alert-info.html heading = "Other authentication options are available, such as Linux' Pluggable Authentication Modules (PAM)." %}
 
-This guide will help you to enable your PIV for SSH to UNIX-like servers from a _Windows_, _Linux_, or _macOS_ computer:
+This guide will help you to enable your PIV for SSH to UNIX-like servers from a _Windows_, _Linux_, or _macOS_ computer.
 
 - [**Enable PIV for SSH from Windows**](#enable-piv-for-ssh-from-windows) 
 - [**Enable PIV for SSH from Linux**](#enable-piv-for-ssh-from-linux)
