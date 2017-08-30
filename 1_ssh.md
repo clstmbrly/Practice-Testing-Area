@@ -81,7 +81,7 @@ This guide will help you to enable your PIV for SSH to UNIX-like servers from a 
 1. Launch **PuTTY**. 
 2. Select a **Saved Session**; then click **Load** and **Open**.
 3. Enter your **remote UNIX/Linux account name**.  
-4. At the prompt, enter your **PIV card PIN** and click **OK**. 
+4. At the prompt, enter your PIV **PIN** and click **OK**. 
 5. Once logged into the remote server, enter the command: **ssh-add –l** to display the SSH key.  
 
 > _For each server you "jump to," **ssh-add –l** will display the SSH key. Once you see it, you may **SSH** to any host in the environment._
