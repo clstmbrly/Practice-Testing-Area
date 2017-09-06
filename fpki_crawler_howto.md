@@ -4,8 +4,12 @@ title: How To Use the FPKI Crawler
 permalink: /fpkicrawler/
 ---
 
-<!--The title in the nav block above will be the webpage title (level 1 heading) when rendered and published on website. Playbooks don't have an Introduction title, just a lead paragraph.-->
-<!--Intro line from the FPKI-Guides' Useful Tools webpage about FPKI Crawler--good intro line.-->The [Federal Public Key Infrastructure (FPKI) Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ is an interactive website that allows you to see all the relationships between the hundreds of FPKI Certification Authorities (CAs). It also validates each CA’s certificate path to the Federal Common Policy CA (COMMON), provides CA certificate data views, and output files for reporting and analysis.<!--It also displays CA certificates that do not validate in the All Certificates Webpage. We need to say that also.-->  
+<!--Intro line from the FPKI-Guides' Useful Tools webpage about FPKI Crawler--good intro line.-->The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ is an interactive website that allows you to:
+
+* See all the relationships between the hundreds of Certification Authorities (CAs) in the FPKI. 
+* See each CA’s certificate validation path to the Federal Common Policy CA (COMMON).
+* Produce output files (data views) for reporting and analysis.
+<!--It also displays CA certificates that do not validate in the All Certificates Webpage. We need to say that also.-->  
 <!--TOC for reader navigation--LaChelle prefers.-->
 
 * [FPKI Graph](#fpki-graph)
