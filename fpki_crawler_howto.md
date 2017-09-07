@@ -27,7 +27,7 @@ The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful 
 
 ## FPKI Crawler Output Files
 
-The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (i.e., _AIA Crawler Results_ webpage) produces output files that can help you to understand and administer your certificate Key Store and build a Trust Store. These output files provide detailed CA certificate information, including path and certificate policy validation. This information is organized into CA certificate lists and spreadsheets that you can view in Microsoft Excel or OpenOffice. The P7B files provide public CA certicates that you can download.
+The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (i.e., _AIA Crawler Results_ webpage) produces output files that can help you to understand and administer your certificate Key Store and build a Trust Store. These output files give detailed CA certificate information, including path and certificate policy validation. This information is organized into certificate lists and spreadsheets that you can view in Microsoft Excel or OpenOffice. The P7B files provide public CA certicates that you can download.
 
 {% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and a Subject Information Access (SIA) extensions. The CA certificate’s AIA chain will lead to the COMMON-certified certificate for download. The SIA extension will give a URL for all CA certificates that the CA has issued." %} 
 
@@ -43,12 +43,14 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### 1. Federal Common Policy Tree File (CSV) (_FederalCommonPolicyTree.csv_)
 
-The _FederalCommonPolicyTree.csv_ provides a relational, data view of <!--All?-->the CAs that validate to COMMON, as well as the CAs that cross-certify with them. <!--If All, then this is also an All Certificates output file and summary 3 bullets below belong above this section.-->
+The _FederalCommonPolicyTree.csv_ provides a data view of all CAs that validate to COMMON and those that cross-certify with them.
 
 ### 2. All Certificates (HTML) (_AIACrawler.html_)
 
-<!--Real Description: "Crawler Output as HTML
-Lists Certificate Paths to Common Policy and **Validating Policies**"-->
+<!--Real Description: Reader will not correlate the real Crawler title: "Crawler Output as HTML
+Lists Certificate Paths to Common Policy and **Validating Policies**" with "All Certificates," so I've added the file name to give them a clue.-->
+
+**celeste stopped re-edit/re-review here 9/7**
 
 The AIA Crawler Results webpage separates all CA certificates that validate to COMMON into three categories.The data found at https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html provides lists of all certificates that have a valid certificate chain with COMMON.  <!--Third one below is those that do NOT validate to COMMON.--> (**Note:** The file descriptions are summaried here for brevity.)
 
