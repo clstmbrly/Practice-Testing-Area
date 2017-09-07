@@ -4,8 +4,14 @@ title: How To Use the FPKI Crawler
 permalink: /fpkicrawler/
 ---
 
-The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ is an interactive website that helps you to visualize the relationships between the hundreds of Certification Authorities (CAs) in the Federal Public Key Infrastructure (FPKI) and how each CA’s certificate path validates to the root Federal Common Policy CA (COMMON). The Crawler also provides useful data output files, as well as public certificates for reporting, analysis, and download.
-<!--Does the graph really show how a CA certificate path validates to COMMON? This intro didn't fully encapsulate all that the FPKI Crawler does, so I added the rest--hopefully correct. -->  
+The FPKI Crawler is an interactive website that will help you to:
+
+* Visualize the relationships between the hundreds of Certification Authorities (CAs) in the Federal Public Key Infrastructure (FPKI)
+* Understand how each CA’s certificate path validates to the root, Federal Common Policy CA (COMMON).<!--I don't see that the Graph shows you how each CA validates to COMMON.--> 
+* Obtain output files that provide certificate information for reporting and analysis.
+* Download public certificates.
+
+<!--This intro didn't fully encapsulate all that the FPKI Crawler does, so I added the rest--hopefully correct. -->  
 <!--This is a TOC for reader navigation--LaChelle prefers.-->
 * [FPKI Graph](#fpki-graph)
 * [FPKI Crawler Outputs](#fpki-crawler-outputs)
@@ -14,14 +20,17 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ## FPKI Graph
 
-The Crawler's interactive FPKI Graph helps you to visualize each CA's relationship to the other CAs and Bridges in the FPKI ecosystem. Click on any dot (i.e., CA) in the graph to see its inbound and outbound relationships. The graph also shows how each CA certificate validates to COMMON. <!--Do Bridges show up as dot relationships also? Does it show the CAs that cross-certify with each each other, as mentioned in Federal Common Tree File below?-->
+The FPKI Crawler's visualization tool, the [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_, shows you all of the relationships between each CA and the other CAs and Bridges in the FPKI ecosystem. The graph also shows you how each CA certificate validates to COMMON. <!--How does the graph show a CA's validation path to COMMON? I don't see that on the Graph when I click on a CA. Do Bridges show up as dot relationships also? Does it show the CAs that cross-certify with each each other, as mentioned in Federal Common Tree File below?-->
+
+* Click on any dot (i.e., CA) in the graph to see its inbound and outbound relationships. 
+
 **Provide link to the Graph**
 
 <!--This paragraph doesn't seem to relate to the Graph but to finding public certificate links via URLs. Doesn't flow from previous paragraph. Move to a certificate section?-->The Crawler uses AIAs and SIAs to find all CA certificates. Most CAs that validate to COMMON include an Authority Information Access (AIA) extension in their public certificates that gives a URL to the signing CA's certificate. Following a CA certificate’s AIA chain should lead you to a COMMON-certified certificate for download.<!--Download is the objective?--> Each CA should also have a Subject Information Access (SIA) extension in its public certificate that gives a URL for all CA certificates that the CA has issued<!--CA certificates issues by the CA? The Crawler won't be able to find all CAs if they don't have AIA and SIA extensions.  What happens then?-->
 
-## FPKI Crawler Outputs **Make this section title: "Public Certificates for Reporting and Analysis (AIA Crawler Results Webpage)"**
+## FPKI Crawler Outputs:  Public Certificates for Reporting and Analysis
 
-The FPKI Crawler generates output files that will help you to understand and administer your certificate Key Store and build a Trust Store. These files are available at [AIA Crawler Results](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_. They give detailed information about certificates, including:
+AIA Crawler Results Webpage The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (aka "AIA Crawler") generates output files that will help you to understand and administer your certificate Key Store and build a Trust Store. These files are available at . They give detailed information about certificates, including:
 
 * Path validation
 * Certificate Policy validation
@@ -35,7 +44,7 @@ The FPKI Crawler generates output files that will help you to understand and adm
 
 ## Public Certificates for Reporting and Analysis (AIA Crawler Results Webpage) **DELETE THIS TITLE**
 
-Move to here?  This webpage separates all CA certificates that validate to COMMON into three categories. (**Note:** The file names have been shortened here for brevity.)
+Move to here?  This webpage separates all CA certificates that validate to COMMON into three categories. (**Note:** )
 
 
 ### Federal Common Policy Tree File (CSV) (FederalCommonPolicyTree.csv)  **Make a 4th level heading, etc.**
@@ -86,7 +95,7 @@ The file _allcertsfoundaturi.xml_ lists each AIA URL in XML format. For each AIA
 
 ## Public Certificates for Download
 
-The Crawler provides the public certificate information as binary data for download and analysis by any FPKI validating agency or organization. The data involves all certificates retrieved by the FPKI Crawler.
+The FPKI Crawler provides the public certificate information as binary data for download and analysis by any FPKI validating agency or organization. The data involves all certificates retrieved by the FPKI Crawler.
 
 <!--This will be an alert warning box on the IDM.gov webpage.-->
 {% include alert-warning.html heading = "Do Not Import These Certificates into a Trust Store before Analysis!" content="This certificate data is made available for analysis purposes. The certificates from these files should not be imported into a Trust Store prior to analysis to determine applicable trust relationships." %}
