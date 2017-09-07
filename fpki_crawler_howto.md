@@ -8,8 +8,8 @@ The FPKI Crawler is an interactive website that will help you to:
 
 * Visualize the relationships between the hundreds of Certification Authorities (CAs) in the Federal Public Key Infrastructure (FPKI)
 * Understand how each CA’s certificate path validates to the Root, Federal Common Policy CA (COMMON)<!--I don't see that the Graph shows you how each CA validates to COMMON.--> 
-* Obtain public certificate information for reporting and analysis
-* Download public certificates
+* Obtain public CA certificate information for reporting and analysis
+* Download public CA certificates
 
 ### Table of Contents
 <!--This intro didn't fully encapsulate all that the FPKI Crawler does, so I added the rest--hopefully correct. -->  
