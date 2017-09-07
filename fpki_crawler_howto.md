@@ -97,18 +97,18 @@ The file _allcertsfoundaturi.xml_ lists each AIA URL in XML format. For each AIA
 The FPKI Crawler provides the public certificate information as binary data for download and analysis by any FPKI validating agency or organization. The data involves all certificates retrieved by the FPKI Crawler.
 
 <!--This will be an alert warning box on the IDM.gov webpage.-->
-{% include alert-warning.html heading = "Do Not Import These Certificates into a Trust Store before Analysis!" content="This certificate data is made available for analysis purposes. The certificates from these files should not be imported into a Trust Store prior to analysis to determine applicable trust relationships." %}
+{% include alert-warning.html heading = "Do Not Import These Certificates into a Trust Store before Analysis!" content="The certificates from these files are made available for analysis purposes only. These certificates should not be imported into a Trust Store prior to analysis to determine applicable trust relationships." %}
 
-**1. All CA Certificates in One File (_CACertificatesValidatingToCommonPolicy.p7b_)**
+### 1. All CA Certificates in One File (_CACertificatesValidatingToCommonPolicy.p7b_)
 
 The _CACertificatesValidatingToCommonPolicy.p7b_ contains all certificates retrieved by the FPKI Crawler. This file allows you to easily sort the certificates by expiration date, issuer or subject. 
 
-**2. All CA Certificates Broken Down into Eight Files**
+### 2. All CA Certificates Broken Down into Eight Files
 
 The certificates found in the files ‘CACertificatesValidatingToCommonPolicy_1.p7b’ through ‘CACertificatesValidatingToCommonPolicy_8.p7b’ contain all of the CA certificates found by the Crawler, broken evenly into eight files to simplify analysis.
 
-3. Certificate Files by Groups
+### 3. Certificate Files by Groups
 
 The CA certificates are partitioned into types and categories as defined in the Certificate Grouping section. For each of these groups, all CA certificates are organized into a single PKCS#7 file. In addition, another PKCS#7 file is generated containing all of the CA certificates plus all additional certificates required for path validation to COMMON.
 
-As an example, the Federal Government’s Veterans Affairs Agency from the Verizon Shared Service Provider Certification Authority has two CAs that can be found in ‘US_Government__VA.p7b’. In order to path validate these CAs to COMMON, a Betrusted cross certificate is required. Therefore, the file ‘US_Government__VA_FullPath.p7b’ contains both the CAs plus the cross certificate.
+> For example: the U.S. Department of Veterans Affairs from the Verizon Shared Service Provider Certification Authority has two CAs that can be found in ‘US_Government__VA.p7b’. In order to validate the CAs' paths to COMMON, a Betrusted cross-certificate is required. Therefore, the file ‘US_Government__VA_FullPath.p7b’ contains both the CAs and the cross-certificate.
