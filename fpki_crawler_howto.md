@@ -21,9 +21,9 @@ The FPKI Crawler is an interactive website that will help you to:
 
 ## FPKI Graph
 
-The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful for visualizing the relationships between all of the CAs and Bridges in the FPKI ecosystem. The Graph also shows you how each CA certificate is linked to the Root, COMMON.<!--I don't see the COMMON linkage in the Graph.--> 
+The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful tool for visualizing the relationships between all of the CAs and Bridges in the FPKI ecosystem. The Graph also shows you how each CA certificate is linked to the Root, COMMON.<!--Sometimes you have to click on more than one dot to get to the COMMON linkage.--> 
 
-* Click on any dot in the FPKI Graph to see a CA's inbound and outbound relationships. 
+Click on any dot in the FPKI Graph to see a CA's inbound and outbound relationships. 
 
 ## FPKI Crawler Outputs 
 
@@ -34,9 +34,9 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 * These files give detailed information about certificates for reporting and analysis, including:
 
   * Certificate Policy validation
-  * Organized certificate lists in comma-separated-value (CSV) spreadsheets (viewable in Microsoft Excel or OpenOffice)<!--The files are in different formats--csv, html, xml, etc.-->.
+  * Organized CA certificate lists in comma-separated-value (CSV) spreadsheets (viewable in Microsoft Excel or OpenOffice)<!--The files are in different formats--csv, html, xml, etc.-->.
 
-* The P7B files give you certicates for download.
+* The P7B files give you CA public certicates for download.
 
 The Crawler uses AIAs and SIAs to find all CA certificates. Most CAs that validate to COMMON include an Authority Information Access (AIA) extension in their public certificates that gives a URL to the signing CA's certificate. Following a CA certificate’s AIA chain will lead you to a COMMON-certified certificate for download.<!--Isn't that what the P7B files are for?--> Each CA should also have a Subject Information Access (SIA) extension in its public certificate that gives a URL for all CA certificates that the CA has issued.
 
