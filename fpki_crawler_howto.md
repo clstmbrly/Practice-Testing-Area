@@ -43,7 +43,7 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### 1. Federal Common Policy Tree File (CSV) (_FederalCommonPolicyTree.csv_)
 
-The _FederalCommonPolicyTree.csv_ provides a data view of all CAs that validate to COMMON and those that cross-certify with them.
+The _FederalCommonPolicyTree.csv_ provides a data view of all CAs that validate to COMMON and those that cross-certify with them. **the cross-certified CAs that don't validate to COMMON??**
 
 ### 2. All Certificates (HTML) (_AIACrawler.html_)
 
