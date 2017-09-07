@@ -23,7 +23,7 @@ The FPKI Crawler is an interactive website that will help you to:
 
 The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful for visualizing the relationships between all of the CAs and Bridges in the FPKI ecosystem. The Graph also shows you how each CA certificate is linked to the Root, COMMON.<!--I don't see the COMMON linkage in the Graph.--> 
 
-* Click on any dot in the Graph to see a CA's inbound and outbound relationships. 
+* Click on any dot in the FPKI Graph to see a CA's inbound and outbound relationships. 
 
 ## FPKI Crawler Outputs:&nbsp;&nbsp;Public Certificates for Reporting and Analysis
 
