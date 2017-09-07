@@ -84,11 +84,11 @@ For each CA certificate the Crawler finds, the _allcerts.csv_ output file contai
 
 * OIDs include id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
 
-### Certificates with AIA Information (CSV) (_allcertsfoundaturi.csv_)
+### 4. Certificates with AIA Information (CSV) (_allcertsfoundaturi.csv_)
 
 The file _allcertsfoundaturi.csv_ lists each AIA URL and either the error retrieving certificates or the list of CA certificates found at that AIA. It includes the following certificate information: Subject DN, Issuer DN, Serial Number, Signing Algorithm, Not Before, Subject Key and Authority Key as hexadecimal numbers.
 
-### Certificates with AIA Information (XML) (_allcertsfoundaturi.xml_)   **This comes before the CSV format file on webpage**
+### 5. Certificates with AIA Information (XML) (_allcertsfoundaturi.xml_)   **This comes before the CSV format file on webpage**
 
 The file _allcertsfoundaturi.xml_ lists each AIA URL in XML format. For each AIA URL, any error extracting the certificates will be listed; otherwise, all certificates found at that AIA are listed.
 
