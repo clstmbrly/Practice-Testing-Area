@@ -25,7 +25,7 @@ The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful 
 
 * Click on any dot in the Graph to see a CA's inbound and outbound relationships. 
 
-## FPKI Crawler Outputs:  Public Certificates for Reporting and Analysis
+## FPKI Crawler Outputs:&nbsp;&nbsp;Public Certificates for Reporting and Analysis
 
 The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (i.e., _AIA Crawler Results_ webpage) generates output files that will help you to understand and administer your certificate Key Store and build a Trust Store.
 
