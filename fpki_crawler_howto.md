@@ -45,11 +45,11 @@ The Crawler uses AIAs and SIAs to find all CA certificates. Most CAs that valida
 * For State Governments, the State Name is extracted. 
 * For commercial CAs, the Company Name is extracted." %}
 
-### Federal Common Policy Tree File (CSV) (_FederalCommonPolicyTree.csv_)
+### 1. Federal Common Policy Tree File (CSV) (_FederalCommonPolicyTree.csv_)
 
 The _FederalCommonPolicyTree.csv_ provides a relational, data view of <!--All?-->the CAs that validate to COMMON, as well as the CAs that cross-certify with them. <!--If All, then this is also an All Certificates output file and summary 3 bullets below belong above this section.-->
 
-### All Certificates (HTML) (AIACrawler.html)
+### 2. All Certificates (HTML) (AIACrawler.html)
 
 <!--Real Description: "Crawler Output as HTML
 Lists Certificate Paths to Common Policy and **Validating Policies**"-->
@@ -70,7 +70,7 @@ Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42 
 
 <!--XML format output file should come here - order on webpage shows this precedes CSV file.-->
 
-### All Certificates File (CSV) (_allcerts.csv_)
+### 3. All Certificates File (CSV) (_allcerts.csv_)
 
 For each CA certificate the Crawler finds, the _allcerts.csv_ output file contains a line item. You can use this file for analyzing the list of certificates. The certificate details are presented as raw data in a spreadsheet format. 
 
