@@ -25,7 +25,9 @@ The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful 
 
 * Click on any dot in the FPKI Graph to see a CA's inbound and outbound relationships. 
 
-## FPKI Crawler Outputs:&nbsp;&nbsp;Public Certificates for Reporting and Analysis
+## FPKI Crawler Outputs 
+
+### Public Certificates for Reporting and Analysis
 
 The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (i.e., _AIA Crawler Results_ webpage) generates output files that will help you to understand and administer your certificate Key Store and build a Trust Store.
 
@@ -92,7 +94,7 @@ The file _allcertsfoundaturi.csv_ lists each AIA URL and either the error retrie
 
 The file _allcertsfoundaturi.xml_ lists each AIA URL in XML format. For each AIA URL, any error extracting the certificates will be listed; otherwise, all certificates found at that AIA are listed.
 
-## Public Certificates for Download
+### Public Certificates for Download
 
 The FPKI Crawler provides the public certificate information as binary data for download and analysis by any FPKI validating agency or organization. The data involves all certificates retrieved by the FPKI Crawler.
 
