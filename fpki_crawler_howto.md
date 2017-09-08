@@ -44,7 +44,7 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all CAs that validate to COMMON and those that cross-certify with them. <!--Below in allcerts.csv we say "raw data in a spreadsheet." For consistency which is better?-->
 
-### 2. All Certificates (_AIACrawler.html_)
+### 2. All Certificates (_AIACrawler.html_)<!--Unclear why is this section called "All Certificates"...?-->
 
 The all-inclusive file in 4 sections, _AIACrawler.html_, lists all CA certificates found, according to the search methods described below:
 
@@ -56,28 +56,40 @@ The all-inclusive file in 4 sections, _AIACrawler.html_, lists all CA certificat
 
 * **All Certificates &mdash;** All certificates, whether or not they have a validated path to COMMON. <!--How are these found--AIA and SIA extensions or other method?-->
 
-* Click on any certificate hyperlink in the file to see its detailed information and validation status. For example:
+> Click on any certificate hyperlink in the file to see its detailed information and validation status. For example:
 
    ```
   Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
    ```
 
-<!--XML format output file should come here, based on order on FPKI Crawler (AIA Crawler Results) webpage shows this precedes CSV file.-->
+**XML file should be here acc. to AIA Crawler Results webpage order**<!--XML format output file should be here, based on order on FPKI Crawler (AIA Crawler Results) webpage shows this precedes CSV file.-->
 
 ### 3. All Certificates File (_allcerts.csv_)
 
-The _allcerts.csv_ (Microsoft Excel) file lists each CA certificate found. You can use this file to analyze certificate details. The columns for each certificate line item are:
+The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler with a line item for each. You can use this file to analyze certificates. The columns for each certificate line item are:
 
-* Subject DN
+**Note:&nbsp;&nbspOIDs** are id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
+<!--These column headers are out of order and some were missing that I added-->
+
+* Name 
+* Group
+* Groups
+* Subject Key <!--I see "Subject Key" but no "Subject DN"-->
 * Issuer DN
-* Certificate Group
-* Serial Number
+* Certificate Group <!--Same as header that says "Group"?-->
+* Subject DN
+* Serial <!--Column header just says "Serial"-->
+* Issuer DN
+* Status
+* Status Issue
 * Signing Algorithm (e.g., SHA1 or SHA-256)
-* Online Certificate Status Protocol (OCSP) URLs (if found) 
+* Not After
+* Online Certificate Status Protocol (OCSP) HTTP and LDAP (URLs, if found) 
 * Subject Key (hexadecimal number)
-* Authority Key.<!--I don't see this in the file. Where does it appear? Are Subject Key and Authority Key the same thing here? Should Authority Key be on a separate line?-->
-* Certificate Revocation List Distribution Point (CRLDP) URLs will be listed in one column for HTTP, one for LDAP CRLDP, and one Unknown/Error column. <!--Don't understand what this is telling the reader.-->
-* AIA and SIA URLs are listed in separate columns for each OID and HTTP, LDAP or Unknown/Error. <!--Don't understand what this is telling the reader.-->(**Note:**&nbsp;&nbspOIDs include id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.)
+* Authority Key
+* Certificate Revocation List Distribution Point (CRLDP) URLs will be listed in one column for HTTP, one for LDAP CRLDP, and one Unknown/Error column.
+* AIA and SIA URLs are listed in separate columns for each OID and HTTP, LDAP or Unknown/Error. <!--Don't understand. For SIA Column headings = SIA has 3 HTTP column (headers), 2 LDAP column (headers), and 1 CRLDP/AIA and SIA Errors (header) column. 
+For AIA, there are 2 AIA Len column headers, 1 AIA http, 1 AIA ldap, 1 AIA repository. ... For CRLDP there are 2 columns headers (one HTTP and one LDAP).  Will there be 4 columns for OID, HTTP, LDAP, and Unknown/Error? Are 2 columns for AIA and SIA URLs? Unclear.-->
 
 ### 4. Certificates with AIA Information (_allcertsfoundaturi.csv_)
 
@@ -102,8 +114,8 @@ The _CACertificatesValidatingToCommonPolicy.p7b_ contains all certificates retri
 
 The certificates found in the files ‘CACertificatesValidatingToCommonPolicy_1.p7b’ through ‘CACertificatesValidatingToCommonPolicy_8.p7b’ contain all of the CA certificates found by the Crawler, broken evenly into eight files to simplify analysis.
 
-### 3. Certificate Files by Groups
+### 3. Certificate Files by Groups <!--Define "Groups"-->
 
-The CA certificates are partitioned into types and categories as defined in the Certificate Grouping section. For each of these groups, all CA certificates are organized into a single PKCS#7 file. In addition, another PKCS#7 file is generated containing all of the CA certificates plus all additional certificates required for path validation to COMMON.
+The CA certificates are partitioned into types <!--As in "Type" described FPKI Crawler Output Files section? What is this referencing?-->and categories<!--Do you mean the "All Certificates (_AIACrawler.html_)" section?-->, as defined in the Certificate Grouping sections<!--What section is this referencing?-->. For each of these groups<!--Types and Categories?-->, all CA certificates are organized into a single **PKCS#7** file. In addition, another **PKCS#7** file is generated containing all of the CA certificates plus all additional certificates required for path validation to COMMON. For example:
 
-> For example: the U.S. Department of Veterans Affairs from the Verizon Shared Service Provider Certification Authority has two CAs that can be found in ‘US_Government__VA.p7b’. In order to validate the CAs' paths to COMMON, a Betrusted cross-certificate is required. Therefore, the file ‘US_Government__VA_FullPath.p7b’ contains both the CAs and the cross-certificate.
+> The U.S. Department of Veterans Affairs from the <!--"issued by"? "from the" doesn't sound right-->Verizon Shared Service Provider (SSP) CA has two CA certificates that can be found in **_US_Government__VA.p7b_**. In order to validate the CAs' paths to COMMON, a Betrusted cross-certificate is required. Therefore, the file **_US_Government__VA_FullPath.p7b_** contains both CA certificates and the cross-certificate.
