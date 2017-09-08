@@ -46,13 +46,15 @@ The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all 
 
 ### 2. All Certificates (_AIACrawler.html_)
 
-The all-inclusive file, _AIACrawler.html_, in 4 parts lists all CA certificates that both validate to COMMON and those that do not. These have been found via AIA and SIA extensions. The certificate hyperlinks will take you to detailed information and current validation status. For example:
+The all-inclusive file, _AIACrawler.html_, lists the CA certificates (divided into 4 sections) found according to the methods described below. 
+
+* Click on any certificate hyperlink in the file to see its detailed information and current validation status. For example:
 
    ```
-Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
+  Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
    ```
    
-The 4 parts to this file are:
+The file's 4 sections are:
 
 * **Certificates Found with Validated AIA Chains to COMMON Policy &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. 
 
