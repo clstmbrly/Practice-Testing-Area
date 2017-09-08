@@ -48,9 +48,9 @@ The _FederalCommonPolicyTree.csv_ provides a data view of all CAs that validate 
 
 **celeste stopped re-edit/re-review here 9/7**
 
-The [_AIACrawler.html_](https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html){:target=_"blank"]_ file lists all CA certificates that validate to COMMON. The data is separated into three categories: <!--Originally said it listed only those with a validating chain to COMMON, but 3rd item below says "Certificates found with NO validated chains to COMMON, so I deleted that part. Paragraphs below explain what file lists.-->
+The [_AIACrawler.html_](https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html){:target=_"blank"]_ file lists all CA certificates that validate to COMMON. The data is separated into three categories:
 
-* **Certificates Found with Validated AIA Chains to COMMON** &mdash; 
+* **Certificates Found with Validated AIA Chains to COMMON** &mdash; All valid paths are included. For each path, the FPKI certificate policies for which they validate are listed.  **CELESTE STOPPED AT THIS BULLET**
 
 * **Certificates Found with Validated Chains to COMMON** &mdash; This list gives all CA certificates with validated paths by using Java Development Kit (JDK) PKIX, and the certificate policies for which they validate are listed.  <!--Give URL to this File. The File title implies that COMMON is the policy.> 
 
