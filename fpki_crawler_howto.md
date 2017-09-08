@@ -46,7 +46,7 @@ The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all 
 
 ### 2. All Certificates (_AIACrawler.html_)
 
-The [_AIACrawler.html_](https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html){:target=_"blank"]_ This all-inclusive file in 4 parts lists all CA certificates that both validate to COMMON and those that do not. These have been found through searching for AIA and SIA extensions. The hyperlink for each certificate will take you to its detailed information and current validation status. For example:
+The all-inclusive file, _AIACrawler.html_, in 4 parts lists all CA certificates that both validate to COMMON and those that do not. These have been found via AIA and SIA extensions. The certificate hyperlinks will take you to detailed information and current validation status. For example:
 
    ```
 Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
@@ -58,7 +58,7 @@ The 4 parts to this file are:
 
 * **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** All certificates with validated paths to COMMON found by using Java Development Kit (JDK) Public Key Infrastructure for X.509 Certificates (PKIX) and the certificate policies to which they validate.  <!--Is the JDX PKIX method superior (since it is mentioned)? Does it find certificate information that the other method(s) don't? What is the methods for finding parts 1 and 3 certificates?--> 
 
-* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates that have **NO** validated path to COMMON (via AIA and SIA extensions). Only the certificate information is listed. These tend to be cross-certificates issued to the FPKI that allow a partner PKI to use of its own root CA as the trust anchor instead of COMMON.<!--Explain how cross-certificates can be issued to the whole FPKI itself. Meaning is cross-certificates between FPKI CAs and partner PKI CAs?--> These tend to be cross-certified FPKI and partner PKI certificates. In these cased, the partner PKI is allowed to use its own root CA as its trust anchor instead of COMMON. <!--Why is "via AIA and SIA extensions" mentioned for this list but not for the other 2? Aren't AIAs and SIAs searched for all 3 lists?
+* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates found through AIA and SIA extensions that have **NO** validated path to COMMON. Only the certificate information is listed. These tend to be cross-certificates issued to FPKI <!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.
 
 * **All Certificates &mdash;** All certificates, regardless of whether or not they have validated paths to COMMON.
 
@@ -66,7 +66,7 @@ The 4 parts to this file are:
 
 ### 3. All Certificates File (_allcerts.csv_)
 
-The _allcerts.csv_ (Microsoft Excel) file gives a line item for each CA certificate found. You can use this file to analyze certificate details. The columns for each certificate line item are:
+The _allcerts.csv_ (Microsoft Excel) file lists each CA certificate found. You can use this file to analyze certificate details. The columns for each certificate line item are:
 
 * Subject DN
 * Issuer DN
