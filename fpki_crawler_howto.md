@@ -58,9 +58,9 @@ The 4 parts to this file are:
 
 * **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** All certificates with validated paths to COMMON found by using Java Development Kit (JDK) Public Key Infrastructure for X.509 Certificates (PKIX) and the certificate policies to which they validate.  <!--Is the JDX PKIX method superior (since it is mentioned)? Does it find certificate information that the other method(s) don't? What is the methods for finding parts 1 and 3 certificates?--> 
 
-* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates found through AIA and SIA extensions that have **NO** validated path to COMMON. Only the certificate information is listed. These tend to be cross-certificates issued to FPKI <!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.
+* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates found through AIA and SIA extensions that have **NO** validated path to COMMON. Only the certificate information is listed. (These tend to be cross-certificates issued to FPKI <!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
 
-* **All Certificates &mdash;** All certificates, regardless of whether or not they have validated paths to COMMON.
+* **All Certificates &mdash;** All certificates, regardless of having a validated path to COMMON.
 
 <!--XML format output file should come here - order on webpage shows this precedes CSV file.-->
 
