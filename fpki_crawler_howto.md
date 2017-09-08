@@ -48,7 +48,7 @@ The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all 
 
 The all-inclusive file, _AIACrawler.html_, lists the CA certificates (divided into 4 sections) found according to the methods described below. 
 
-* Click on any certificate hyperlink in the file to see its detailed information and current validation status. For example:
+* Click on any certificate hyperlink in the file to see its detailed information and validation status. For example:
 
    ```
   Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
