@@ -42,7 +42,7 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
 
-The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all CAs that validate to COMMON and those that cross-certify with them.
+The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all CAs that validate to COMMON and those that cross-certify with them. <!--Below in allcerts.csv we say "raw data in a spreadsheet." For consistency which is better?-->
 
 ### 2. All Certificates (_AIACrawler.html_)
 
@@ -54,35 +54,36 @@ Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42 
    
 The 4 parts to this file are:
 
-* **Certificates Found with Validated AIA Chains to COMMON Policy &mdash;** Gives all certificates with validated paths to COMMON and the certificate policies to which they validate. 
+* **Certificates Found with Validated AIA Chains to COMMON Policy &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. 
 
-* **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** Gives all certificates with validated paths to COMMON found by using Java Development Kit (JDK) Public Key Infrastructure for X.509 Certificates (PKIX) and the certificate policies to which they validate.  <!--Is the JDX PKIX method superior (since it is mentioned)? Does it find certificate information that the other method(s) don't? What is the methods for finding parts 1 and 3 certificates?--> 
+* **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** All certificates with validated paths to COMMON found by using Java Development Kit (JDK) Public Key Infrastructure for X.509 Certificates (PKIX) and the certificate policies to which they validate.  <!--Is the JDX PKIX method superior (since it is mentioned)? Does it find certificate information that the other method(s) don't? What is the methods for finding parts 1 and 3 certificates?--> 
 
-* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** Gives all certificates that have **NO** validated path to COMMON (via AIA and SIA extensions). Only the certificate information is listed. These tend to be cross-certificates issued to the FPKI that allow a partner PKI to use of its own root CA as the trust anchor instead of COMMON.<!--Explain how cross-certificates can be issued to the whole FPKI itself. Meaning is cross-certificates between FPKI CAs and partner PKI CAs?--> These tend to be cross-certified FPKI and partner PKI certificates. In these cased, the partner PKI is allowed to use its own root CA as its trust anchor instead of COMMON. <!--Why is "via AIA and SIA extensions" mentioned for this list but not for the other 2? Aren't AIAs and SIAs searched for all 3 lists?
+* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates that have **NO** validated path to COMMON (via AIA and SIA extensions). Only the certificate information is listed. These tend to be cross-certificates issued to the FPKI that allow a partner PKI to use of its own root CA as the trust anchor instead of COMMON.<!--Explain how cross-certificates can be issued to the whole FPKI itself. Meaning is cross-certificates between FPKI CAs and partner PKI CAs?--> These tend to be cross-certified FPKI and partner PKI certificates. In these cased, the partner PKI is allowed to use its own root CA as its trust anchor instead of COMMON. <!--Why is "via AIA and SIA extensions" mentioned for this list but not for the other 2? Aren't AIAs and SIAs searched for all 3 lists?
 
-* **All Certificates &mdash;** Gives all certificates regardless of whether or not they have validated paths to COMMON.
+* **All Certificates &mdash;** All certificates, regardless of whether or not they have validated paths to COMMON.
 
 <!--XML format output file should come here - order on webpage shows this precedes CSV file.-->
 
-### 3. All Certificates File (CSV) (_allcerts.csv_)
+### 3. All Certificates File (_allcerts.csv_)
 
-For each CA certificate the Crawler finds, the _allcerts.csv_ output file contains a line item. You can use this file to analyze the certificate details (i.e., raw data in a spreadsheet). 
+The _allcerts.csv_ (Microsoft Excel) file gives a line item for each CA certificate found. You can use this file to analyze certificate details. The columns for each certificate line item are:
 
-* Columns include Subject DN, Issuer DN, Certificate Group, Serial Number, Signing Algorithm (e.g., SHA1 or SHA-256), and Online Certificate Status Protocol (OCSP) URLs found in the certificate (if any found). 
+* Subject DN
+* Issuer DN
+* Certificate Group
+* Serial Number
+* Signing Algorithm (e.g., SHA1 or SHA-256)
+* Online Certificate Status Protocol (OCSP) URLs (if found) 
+* Subject Key (hexadecimal number)
+* Authority Key.<!--I don't see this in the file. Where does it appear? Are Subject Key and Authority Key the same thing here? Should Authority Key be on a separate line?-->
+* Certificate Revocation List Distribution Point (CRLDP) URLs will be listed in one column for HTTP, one for LDAP CRLDP, and one Unknown/Error column. <!--Don't understand what this is telling the reader.-->
+* AIA and SIA URLs are listed in separate columns for each OID and HTTP, LDAP or Unknown/Error. <!--Don't understand what this is telling the reader.-->(**Note:**&nbsp;&nbspOIDs include id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.)
 
-* The Subject Key as a hexadecimal number, Authority Key.<!--I don't see this in the file. Where does it appear?-->
+### 4. Certificates with AIA Information (_allcertsfoundaturi.csv_)
 
-* Certificate Revocation List Distribution Point (CRLDP) URLs will be listed in one column for HTTP, one for LDAP CRLDP, and one Unknown/Error column.
+The _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and either the error retrieving certificates or the list of CA certificates found at that AIA. It includes the following certificate information: Subject DN, Issuer DN, Serial Number, Signing Algorithm, Not Before, Subject Key and Authority Key as hexadecimal numbers.
 
-* AIA and SIA URLs are listed in separate columns for each OID and HTTP, LDAP or Unknown/Error. 
-
-* OIDs include id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
-
-### 4. Certificates with AIA Information (CSV) (_allcertsfoundaturi.csv_)
-
-The file _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and either the error retrieving certificates or the list of CA certificates found at that AIA. It includes the following certificate information: Subject DN, Issuer DN, Serial Number, Signing Algorithm, Not Before, Subject Key and Authority Key as hexadecimal numbers.
-
-### 5. Certificates with AIA Information (XML) (_allcertsfoundaturi.xml_)   **This comes before the CSV format file on webpage**
+### 5. Certificates with AIA Information (_allcertsfoundaturi.xml_)   **This comes before the CSV format file on webpage**
 
 The file _allcertsfoundaturi.xml_ lists each AIA URL in XML format. For each AIA URL, any error extracting the certificates will be listed; otherwise, all certificates found at that AIA are listed.
 
