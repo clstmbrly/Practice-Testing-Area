@@ -27,11 +27,10 @@ The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful 
 
 ## FPKI Crawler Output Files
 
-The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (i.e., _AIA Crawler Results_ webpage) produces output files that can help you to understand and administer your certificate Key Store and build a Trust Store. These output files give detailed CA certificate information, including path and certificate policy validation. This information is organized into certificate lists and spreadsheets that you can view in Microsoft Excel or OpenOffice. The P7B files provide public CA certicates that you can download.
+The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (i.e., _AIA Crawler Results_ webpage) produces output files that can help you understand and administer your certificate Key Store and build a Trust Store. These files give detailed CA certificate information, including path and certificate policy validation. This information is organized into certificate lists and spreadsheets that you can view in Microsoft Excel or OpenOffice. The P7B files provide public CA certicates that you can download.
 
 {% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and a Subject Information Access (SIA) extensions. The CA certificate’s AIA chain will lead to the COMMON-certified certificate for download. The SIA extension will give a URL for all CA certificates that the CA has issued." %} 
 
-<!--This information interrupts the flow of information like a digression. Can the user figure this out by looking at the output files?  Can we leave this out?  Possibly it can be included in another info-alert box.-->
 {% include alert-info.html heading="CAs are categorized by Type and Agency or Company" content="
 
 * The **Type** is either U.S. Government, State, or Commercial.
@@ -43,18 +42,15 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### 1. Federal Common Policy Tree File (CSV) (_FederalCommonPolicyTree.csv_)
 
-The _FederalCommonPolicyTree.csv_ provides a data view of all CAs that validate to COMMON and those that cross-certify with them. **the cross-certified CAs that don't validate to COMMON??**
+The _FederalCommonPolicyTree.csv_ provides a data view of all CAs that validate to COMMON and those that cross-certify with them.
 
 ### 2. All Certificates (HTML) (_AIACrawler.html_)
 
-<!--Real Description: Reader will not correlate the real Crawler title: "Crawler Output as HTML
-Lists Certificate Paths to Common Policy and **Validating Policies**" with "All Certificates," so I've added the file name to give them a clue.-->
-
 **celeste stopped re-edit/re-review here 9/7**
 
-The AIA Crawler Results webpage separates all CA certificates that validate to COMMON into three categories.The data found at https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html provides lists of all certificates that have a valid certificate chain with COMMON.  <!--Third one below is those that do NOT validate to COMMON.--> (**Note:** The file descriptions are summaried here for brevity.)
+The [_AIACrawler.html_](https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html){:target=_"blank"]_ file lists all CA certificates that validate to COMMON. The data is separated into three categories: <!--Originally said it listed only those with a validating chain to COMMON, but 3rd item below says "Certificates found with NO validated chains to COMMON, so I deleted that part. Paragraphs below explain what file lists.-->
 
-* **Certificates Found with Validated AIA Chains to COMMON** &mdash; <!--What is the file format? Other Files give the format.>This list gives all CA certificates with validated paths to COMMON. <!--Give URL to this File. The File title implies that COMMON is the policy.-->
+* **Certificates Found with Validated AIA Chains to COMMON** &mdash; 
 
 * **Certificates Found with Validated Chains to COMMON** &mdash; This list gives all CA certificates with validated paths by using Java Development Kit (JDK) PKIX, and the certificate policies for which they validate are listed.  <!--Give URL to this File. The File title implies that COMMON is the policy.> 
 
@@ -70,11 +66,11 @@ Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42 
 
 ### 3. All Certificates File (CSV) (_allcerts.csv_)
 
-For each CA certificate the Crawler finds, the _allcerts.csv_ output file contains a line item. You can use this file for analyzing the list of certificates. The certificate details are presented as raw data in a spreadsheet format. 
+For each CA certificate the Crawler finds, the _allcerts.csv_ output file contains a line item. You can use this file to analyze the certificate details (i.e., raw data in a spreadsheet). 
 
-* Columns include Subject DN, Issuer DN, Certificate Group, Serial Number, Signing Algorithm (e.g., SHA1 or SHA-256). The Subject Key as a hexadecimal number, Authority Key.
+* Columns include Subject DN, Issuer DN, Certificate Group, Serial Number, Signing Algorithm (e.g., SHA1 or SHA-256), and Online Certificate Status Protocol (OCSP) URLs found in the certificate (if any found). 
 
-* Online Certificate Status Protocol (OCSP) URLs found in the certificate<!--Will also be in an AIA or SIA extension?-->, if any, is listed in a separate column. 
+* The Subject Key as a hexadecimal number, Authority Key.<!--I don't see this in the file. Where does it appear?-->
 
 * Certificate Revocation List Distribution Point (CRLDP) URLs will be listed in one column for HTTP, one for LDAP CRLDP, and one Unknown/Error column.
 
