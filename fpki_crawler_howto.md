@@ -46,14 +46,8 @@ The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all 
 
 ### 2. All Certificates (_AIACrawler.html_)
 
-The all-inclusive file, _AIACrawler.html_, lists the CA certificates (divided into 4 sections) found according to the methods described below. 
+The all-inclusive file, _AIACrawler.html_, lists the CA certificates (divided into 4 sections) found according to the search methods described below. 
 
-* Click on any certificate hyperlink in the file to see its detailed information and validation status. For example:
-
-   ```
-  Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
-   ```
-   
 The file's 4 sections are:
 
 * **Certificates Found with Validated AIA Chains to COMMON Policy &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. 
@@ -63,6 +57,12 @@ The file's 4 sections are:
 * **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates with **NO** validated path to COMMON. Only the certificate information is listed. (These certificates are found through AIA and SIA extensions. They tend to be cross-certificates issued to FPKI CAs<!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
 
 * **All Certificates &mdash;** All certificates, whether or not they have a validated path to COMMON.
+
+* Click on any certificate hyperlink in the file to see its detailed information and validation status. For example:
+
+   ```
+  Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
+   ```
 
 <!--XML format output file should come here, based on order on FPKI Crawler (AIA Crawler Results) webpage shows this precedes CSV file.-->
 
