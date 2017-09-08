@@ -27,7 +27,7 @@ The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful 
 
 ## FPKI Crawler Output Files
 
-The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (i.e., _AIA Crawler Results_ webpage) produces output files that can help you understand and administer your certificate Key Store and build a Trust Store. These files give detailed CA certificate information, including path and certificate policy validation. This information is organized into certificate lists and spreadsheets that you can view in Microsoft Excel or OpenOffice. The P7B files provide public CA certicates that you can download.
+The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (_AIA Crawler Results_ webpage) produces output files that can help you understand and administer your certificate Key Store and build a Trust Store. These files give detailed CA certificate information, including path and certificate policy validation in list and spreadsheet formats. that you can view in Microsoft Excel or OpenOffice. The P7B files provide public CA certicates that you can download.
 
 {% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and a Subject Information Access (SIA) extensions. The CA certificate’s AIA chain will lead to the COMMON-certified certificate for download. The SIA extension will give a URL for all CA certificates that the CA has issued." %} 
 
@@ -40,27 +40,27 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### Public Certificates for Reporting and Analysis
 
-### 1. Federal Common Policy Tree File (CSV) (_FederalCommonPolicyTree.csv_)
+### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
 
-The _FederalCommonPolicyTree.csv_ provides a data view of all CAs that validate to COMMON and those that cross-certify with them.
+The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all CAs that validate to COMMON and those that cross-certify with them.
 
-### 2. All Certificates (HTML) (_AIACrawler.html_)
+### 2. All Certificates (_AIACrawler.html_)
 
-**celeste stopped re-edit/re-review here 9/7**
-
-The [_AIACrawler.html_](https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html){:target=_"blank"]_ file lists all CA certificates that validate to COMMON. The data is separated into three categories:
-
-* **Certificates Found with Validated AIA Chains to COMMON** &mdash; All valid paths are included. For each path, the FPKI certificate policies for which they validate are listed.  **CELESTE STOPPED AT THIS BULLET**
-
-* **Certificates Found with Validated Chains to COMMON** &mdash; This list gives all CA certificates with validated paths by using Java Development Kit (JDK) PKIX, and the certificate policies for which they validate are listed.  <!--Give URL to this File. The File title implies that COMMON is the policy.> 
-
-* **Certificates Found with No Validated Chains to COMMON** &mdash; This list gives all certificates that are found without a valid path to COMMON (via AIA and SIA extensions). Only the certificate information is listed. These tend to be cross-certificates issued to the FPKI that allow a partner PKI to use of its own root CA as the trust anchor instead of COMMON.<!--Explain how cross-certificates can be issued to the whole FPKI itself. Meaning is cross-certificates between FPKI CAs and partner PKI CAs?--> These tend to be cross-certified FPKI and partner PKI certificates. In these cased, the partner PKI is allowed to use its own root CA as its trust anchor instead of COMMON.
-
-Each CA certificate is listed as a hyperlink to its detailed information. <!--Aren't those above in other lists also hyperlinked? Not stated in those cases.-->This list also provides each certificate's current validation status. For example:
+The [_AIACrawler.html_](https://fpki-graph.fpki-lab.gov/crawler/AIACrawler.html){:target=_"blank"]_ This all-inclusive file in 4 parts lists all CA certificates that both validate to COMMON and those that do not. These have been found through searching for AIA and SIA extensions. The hyperlink for each certificate will take you to its detailed information and current validation status. For example:
 
    ```
 Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
    ```
+   
+The 4 parts to this file are:
+
+* **Certificates Found with Validated AIA Chains to COMMON Policy** &mdash; Gives all certificates with validated paths to COMMON and the certificate policies to which they validate. 
+
+* **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA** &mdash; Gives all certificates with validated paths to COMMON found by using Java Development Kit (JDK) Public Key Infrastructure for X.509 Certificates (PKIX) and the certificate policies to which they validate.  <!--Is the JDX PKIX method superior (since it is mentioned)? Does it find certificate information that the other method(s) don't? What is the methods for finding parts 1 and 3 certificates?--> 
+
+* **Certificates Found with NO Validated Chains to COMMON Policy** &mdash; Gives all certificates that have **NO** validated path to COMMON (via AIA and SIA extensions). Only the certificate information is listed. These tend to be cross-certificates issued to the FPKI that allow a partner PKI to use of its own root CA as the trust anchor instead of COMMON.<!--Explain how cross-certificates can be issued to the whole FPKI itself. Meaning is cross-certificates between FPKI CAs and partner PKI CAs?--> These tend to be cross-certified FPKI and partner PKI certificates. In these cased, the partner PKI is allowed to use its own root CA as its trust anchor instead of COMMON. <!--Why is "via AIA and SIA extensions" mentioned for this list but not for the other 2? Aren't AIAs and SIAs searched for all 3 lists?
+
+* **All Certificates** &mdash; Gives all certificates regardless of whether or not they have validated paths to COMMON.
 
 <!--XML format output file should come here - order on webpage shows this precedes CSV file.-->
 
@@ -80,7 +80,7 @@ For each CA certificate the Crawler finds, the _allcerts.csv_ output file contai
 
 ### 4. Certificates with AIA Information (CSV) (_allcertsfoundaturi.csv_)
 
-The file _allcertsfoundaturi.csv_ lists each AIA URL and either the error retrieving certificates or the list of CA certificates found at that AIA. It includes the following certificate information: Subject DN, Issuer DN, Serial Number, Signing Algorithm, Not Before, Subject Key and Authority Key as hexadecimal numbers.
+The file _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and either the error retrieving certificates or the list of CA certificates found at that AIA. It includes the following certificate information: Subject DN, Issuer DN, Serial Number, Signing Algorithm, Not Before, Subject Key and Authority Key as hexadecimal numbers.
 
 ### 5. Certificates with AIA Information (XML) (_allcertsfoundaturi.xml_)   **This comes before the CSV format file on webpage**
 
