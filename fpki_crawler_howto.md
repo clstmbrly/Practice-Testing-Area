@@ -46,17 +46,15 @@ The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all 
 
 ### 2. All Certificates (_AIACrawler.html_)
 
-The all-inclusive file, _AIACrawler.html_, lists the CA certificates (divided into 4 sections) found according to the search methods described below. 
-
-The file's 4 sections are:
+The all-inclusive file in 4 sections, _AIACrawler.html_, lists all CA certificates found, according to the search methods described below:
 
 * **Certificates Found with Validated AIA Chains to COMMON Policy &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. 
 
-* **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. (These certificates are found by using Java Development Kit [JDK] Public Key Infrastructure for X.509 Certificates [PKIX].)  <!--Why is the JDX PKIX method used in addition to AIA and SIA extensions? Does it find certificates that wouldn't otherwise be found for some reason?--> 
+* **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. (These certificates are found through using Java Development Kit [JDK] Public Key Infrastructure for X.509 Certificates [PKIX].)  <!--Why is the JDX PKIX method used in addition to AIA and SIA extensions? Does it find certificates that wouldn't otherwise be found for some reason?--> 
 
-* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates with **NO** validated path to COMMON. Only the certificate information is listed. (These certificates are found through AIA and SIA extensions. They tend to be cross-certificates issued to FPKI CAs<!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
+* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates with **NO** validated path to COMMON. (These certificates are found through using AIA and SIA extensions.) This file lists only the certificate information. (These tend to be cross-certificates issued to FPKI CAs<!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
 
-* **All Certificates &mdash;** All certificates, whether or not they have a validated path to COMMON.
+* **All Certificates &mdash;** All certificates, whether or not they have a validated path to COMMON. <!--How are these found--AIA and SIA extensions or other method?-->
 
 * Click on any certificate hyperlink in the file to see its detailed information and validation status. For example:
 
