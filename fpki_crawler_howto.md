@@ -68,7 +68,7 @@ The all-inclusive file in 4 sections, _AIACrawler.html_, lists all CA certificat
 
 The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler with a line item for each. You can use this file to analyze certificates. The columns for each certificate line item are:
 
-**Note:&nbsp;&nbspOIDs** are id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
+(**Note: OIDs** are id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.)
 <!--These column headers are out of order and some were missing that I added-->
 
 * Name 
@@ -95,9 +95,10 @@ For AIA, there are 2 AIA Len column headers, 1 AIA http, 1 AIA ldap, 1 AIA repos
 
 The _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and either the error retrieving certificates or the list of CA certificates found at that AIA. It includes the following certificate information: Subject DN, Issuer DN, Serial Number, Signing Algorithm, Not Before, Subject Key and Authority Key as hexadecimal numbers.
 
-### 5. Certificates with AIA Information (_allcertsfoundaturi.xml_)   **This comes before the CSV format file on webpage**
+### 5. Certificates with AIA Information (_allcertsfoundaturi.xml_)   **This comes before the _allcerts.csv_ file on webpage**
+<!--This file shows that it "doesn't have any style associated with it" so it's hard to figure out what's what. How will the user read it?-->
 
-The file _allcertsfoundaturi.xml_ lists each AIA URL in XML format. For each AIA URL, any error extracting the certificates will be listed; otherwise, all certificates found at that AIA are listed.
+The file _allcertsfoundaturi.xml_ lists each AIA URL in XML format. For each URL, any error extracting the certificates will be listed; otherwise, all certificates found at that AIA are listed.
 
 ### Public Certificates for Download
 
