@@ -27,22 +27,20 @@ The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful 
 
 ## FPKI Crawler Output Files
 
-The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (_AIA Crawler Results_ webpage) produces output files that can help you understand and administer your certificate Key Store and build a Trust Store. These files give detailed CA certificate information, including path and certificate policy validation in list and spreadsheet formats. that you can view in Microsoft Excel or OpenOffice. The P7B files provide public CA certicates that you can download.
+The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (_AIA Crawler Results_ webpage) offers output files to help you understand and administer your certificate Key Store and build a Trust Store: 
 
-{% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and a Subject Information Access (SIA) extensions. The CA certificate’s AIA chain will lead to the COMMON-certified certificate for download. The SIA extension will give a URL for all CA certificates that the CA has issued." %} 
+* CSV, HTML, and XML-formatted files give path and certificate validation data 
+* P7B files give public CA certicates for download
 
-{% include alert-info.html heading="CAs are categorized by Type and Agency or Company" content="
-
-* The **Type** is either U.S. Government, State, or Commercial.
-* For U.S. Government, the Agency is extracted from the Distinguished Name (DN). 
-* For State Governments, the State Name is extracted. 
-* For commercial CAs, the Company Name is extracted." %}
+{% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and a Subject Information Access (SIA) extensions. An AIA chain will lead to the COMMON-certified certificate for download. The SIA will give the URL to a list <!--A list?-->of all CA certificates that the CA has issued." %} 
 
 ### Public Certificates for Reporting and Analysis
 
+All Crawler output files categorize CA certificates by _Type_ (_U.S. Government_, _State_, or _Company_). _Agency_, _State Name_, and _Company Name_ are extracted from the Distinguished Name (DN).
+
 ### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
 
-The _FederalCommonPolicyTree.csv_ (Microsoft Excel) provides a data view of all CAs that validate to COMMON and those that cross-certify with them. <!--Below in allcerts.csv we say "raw data in a spreadsheet." For consistency which is better?-->
+The _FederalCommonPolicyTree.csv_ (Microsoft Excel) gives a data view of all CAs that validate to COMMON and those that cross-certify with them. <!--Below in allcerts.csv we say "raw data in a spreadsheet." For consistency which is better?-->
 
 ### 2. All Certificates (_AIACrawler.html_)<!--Unclear why is this section called "All Certificates"...?-->
 
@@ -66,7 +64,7 @@ The all-inclusive file in 4 sections, _AIACrawler.html_, lists all CA certificat
 
 ### 3. All Certificates File (_allcerts.csv_)
 
-The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler with a line item for each. You can use this file to analyze certificates. The columns for each certificate line item are:
+The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. The columns for each certificate line item are:<!--Is is necessary to list the column headers?-->
 
 (**Note: OIDs** are id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.)
 <!--These column headers are out of order and some were missing that I added-->
