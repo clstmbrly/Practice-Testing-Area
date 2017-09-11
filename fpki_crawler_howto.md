@@ -4,7 +4,7 @@ title: How To Use the FPKI Crawler
 permalink: /fpkicrawler/
 ---
 
-The FPKI Crawler is an interactive website that will help you to:
+As a federal agency or an entity supporting a federal agency need to understand the relationships between the Certification Authorities (CAs) within the Federal Public Key Infrastructure (FPKI). The FPKI Crawler provides a relationship view of all CAs with a relationship to the FPKI. The FPKI Crawler is an interactive website that will help you to:
 
 * See the relationships between the hundreds of Certification Authorities (CAs) in the Federal Public Key Infrastructure (FPKI)
 * Understand how each CA’s certificate path validates to the Root, Federal Common Policy CA (COMMON)
