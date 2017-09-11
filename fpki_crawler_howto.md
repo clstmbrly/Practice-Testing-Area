@@ -4,7 +4,7 @@ title: How To Use the FPKI Crawler
 permalink: /fpkicrawler/
 ---
 
-Your agency or organization needs to understand the Certification Authorities' (CAs) relationships within the Federal Public Key Infrastructure (FPKI).[and to access data about them] To help you [clarify..clearly understand..] do this, the FPKI Crawler offers you these useful tools:
+Agencies and organizations often need help in/to understanding/understand the Certification Authorities' (CAs) relationships within the Federal Public Key Infrastructure (FPKI). The FPKI Crawler offers you useful tools to visualize these relationships and validation paths to the Federal Common Policy CA (COMMON), as well as find CA certificate data and download files.
 
 By using the FPKI Crawler's useful tools....
 
@@ -37,33 +37,34 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
 
-The _FederalCommonPolicyTree.csv_ (Microsoft Excel) gives a data view of all CAs that validate to COMMON and those that cross-certify with them. <!--Below in allcerts.csv we say "raw data in a spreadsheet." For consistency which is better?-->
+The _FederalCommonPolicyTree.csv_ (Microsoft Excel) gives a data view of all CAs that validate to COMMON and those that cross-certify with them. 
 
-### 2. All Certificates (_AIACrawler.html_)<!--Unclear why is this section called "All Certificates"...?-->
+### 2. All Certificates (_AIACrawler.html_)
 
-The _AIACrawler.html_ (4 sections) gives data on all CA certificates found by the Crawler:
+The _AIACrawler.html_ file (in 4 Sections) gives all CA certificates operating in the FPKI that are found by the Crawler:
 
-* **Certificates Found with Validated AIA Chains to COMMON Policy &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. 
+* **Certificates Found with Validated AIA Chains to COMMON &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate.<!--Does this mean: "the certificates policies to which they validate" if NOT COMMON?--> 
 
-* **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. (These certificates are found through using Java Development Kit [JDK] Public Key Infrastructure for X.509 Certificates [PKIX].)   
+* **Certificates Found with Validated Chains to COMMON, NOT Found through AIA &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. (These certificates are found via searching with Java Development Kit [JDK] Public Key Infrastructure for X.509 Certificates [PKIX] when no validating chain is found via AIA.)   
 
-* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates with NO validated path to COMMON. (These certificates are found through using AIA and SIA extensions.) This file lists only the certificate information. (These tend to be cross-certificates issued to FPKI CAs<!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
+* **Certificates Found with NO Validated Chains to COMMON &mdash;** All certificates with NO validated path to COMMON. (These certificates are found through using AIA and SIA extensions.) This file lists only the certificate information. (These tend to be cross-certificates issued to FPKI CAs<!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
 
-* **All Certificates &mdash;** <!--This is another part of the this output file that I found by searching through the file. It lists all certificates, whether or not they have a validated path to COMMON. <!--Assume this list is also via AIA and SIA...?-->
+* **All Certificates &mdash;** All certificates in the FPKI, whether or not they have validated paths to COMMON. 
 
-> Click on any certificate hyperlink in the file to see its detailed data and status. For example:
+> For each CA certificate listed in the _AIACrawler.html_ file, you will see the **_Cert_** and **_Issuer_** information and status.  For example:
 
    ```
   Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
    ```
+> For detailed data about certificates or issuers, click on any link in the file.
 
-### 3. Certificates with AIA Information (_allcertsfoundaturi.xml_) <!--Moved this paragraph to here to follow the same file order as given on the Crawler webpage.--> 
+### 3. Certificates with AIA Information (_allcertsfoundaturi.xml_)
 
-The _allcertsfoundaturi.xml_ file lists all AIA URLs in XML format. Extraction errors are also included.
+The _allcertsfoundaturi.xml_ file lists all AIA URLs and extraction errors in XML format.
 
 ### 4. All Certificates File (_allcerts.csv_)
 
-The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. The columns for each certificate line item are:<!--Is is necessary to list the column headers?-->
+The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. The key columns for each certificate line item are: 
 
 >**Note: OIDs** are id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
 <!--These column headers are out of order and some were missing that I added-->
