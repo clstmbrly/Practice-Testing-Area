@@ -36,7 +36,9 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### Public Certificates for Reporting and Analysis
 
-All Crawler output files categorize CA certificates by _Type_ (_U.S. Government_, _State_, or _Company_). _Agency_, _State Name_, and _Company Name_ are extracted from the Distinguished Name (DN).
+All Crawler output files categorize CA certificates by _Type_ (_U.S. Government_, _State_, or _Company_). 
+
+_Agency_, _State Name_, and _Company Name_ are extracted from the Distinguished Name (DN).
 
 ### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
 
