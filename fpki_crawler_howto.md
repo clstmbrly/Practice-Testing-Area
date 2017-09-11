@@ -62,58 +62,19 @@ The _AIACrawler.html_ file (in 4 Sections) gives all CA certificates operating i
 
 The _allcertsfoundaturi.xml_ file lists all AIA URLs and extraction errors in XML format.
 
-### 4. All Certificates File (_allcerts.csv_)
+### 4. Certificates with AIA Information (_allcertsfoundaturi.csv_) **CELESTE STOPPED HERE**
 
-The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. The key columns for each certificate include Subject DN, Issuer DN, (Certificate) Group, Serial (Number), Sig Alg (Signing Algorithm) (typically SHA1 or SHA-256), Subject Key (hexadecimal number), and Authority Key.
+The _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and either the error retrieving certificates or the list of CA certificates found via that AIA. It includes the following certificate information: Error (if any), Certificate DN, Issuer (DN), Not Before, and as hexadecimal numbers: Serial Number, Sig Alg (Signing Algorithm), Subject Key, and Authority Key.
 
-The Online Certificate Status Protocol (OCSP) URL, if found in the certificate is listed in the OCSP http column. The Certificate Revocation List Distribution Point (CRLDP) URLs will be listed as one each in the CDRLDP http column, the CDRLDP ldap column, and the CRLDP, and one Unknown/Error column.
+### 5. All Certificates File (_allcerts.csv_)
 
-The AIA and SIA URLs are listed in separate columns for each OID and HTTP, LDAP or Unknown/Error. The OIDs include id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
+The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. 
 
->**Note: OIDs** are id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
-<!--These column headers are out of order and some were missing that I added-->
+* The key columns for each certificate include:  Subject DN, Issuer DN, (Certificate) Group, Serial (Number), Sig Alg (Signing Algorithm) (typically SHA1 or SHA-256), Subject Key (hexadecimal number), and Authority Key.
 
-* Name 
-* Issuer
-* Group
-* Groups
-* AIA Path Len
-* Non-AIA Path Len
-* Status
-* Status Issues
-* Sig Alg
-* Not After
-* OCSP http
-* CRLDP http
-* CRLDP ldap
-* AIA id-ad-caIssuers http
-* AIA id-ad-caIssuers ldap
-* AIA id-ad-caRepository ldap
-* SIA id-ad-caIssuers http
-STOPPED HERE
+* The Online Certificate Status Protocol (OCSP) URL, if found in the certificate, is listed in the OCSP HTTP column. The Certificate Revocation List Distribution Point (CRLDP) URLs will be listed, one each, in the CDRLDP HTTP column; the CDRLDP LDAP column; and the CRLDP, AIA and SIA ERRORS column.
 
-* Subject Key <!--I see "Subject Key" but no "Subject DN"-->
-* Issuer DN
-* Certificate Group <!--Same as header that says "Group"?-->
-* Subject DN
-* Serial <!--Column header just says "Serial"-->
-* Issuer DN
-* Status
-* Status Issue
-* Signing Algorithm (e.g., SHA1 or SHA-256)
-* Not After
-* Online Certificate Status Protocol (OCSP) HTTP and LDAP (URLs, if found) 
-* Subject Key (hexadecimal number)
-* Authority Key
-* Certificate Revocation List Distribution Point (CRLDP) URLs will be listed in one column for HTTP, one for LDAP CRLDP, and one Unknown/Error column.
-* AIA and SIA URLs are listed in separate columns for each OID and HTTP, LDAP or Unknown/Error. <!--Don't understand. For SIA Column headings = SIA has 3 HTTP column (headers), 2 LDAP column (headers), and 1 CRLDP/AIA and SIA Errors (header) column. 
-For AIA, there are 2 AIA Len (Length) column headers, 1 AIA http, 1 AIA ldap, 1 AIA repository. ... For CRLDP there are 2 columns headers (one HTTP and one LDAP).  Will there be 4 columns for OID, HTTP, LDAP, and Unknown/Error? Are 2 columns for AIA and SIA URLs? Unclear.-->
-
-### 5. Certificates with AIA Information (_allcertsfoundaturi.csv_)
-
-The _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and either the error retrieving certificates or the list of CA certificates found at that AIA. It includes the following certificate information: Subject DN, Issuer DN, Serial Number, Signing Algorithm, Not Before, Subject Key and Authority Key as hexadecimal numbers.
-
-
+* The AIA and SIA URLs are listed for Object Identifiers (OIDs) (i.e., id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping) in these columns:  AIA id-ad-caIssuers HTTP; AIA id-ad-caIssuers LDAP; AIA id-ad-caRepository LDAP; SIA id-ad-caIssuers HTTP; SIA id-ad-caRepository HTTP; SIA id-ad-caRepository LDAP; SIA id-ad-caRepository LDAP; SIA id-ad-timeStamping HTTP; SIA id-ad-timeStamping LDAP; and CRLDP, AIA and SIA ERRORS. 
 
 ### Public Certificates for Download
 
