@@ -64,7 +64,11 @@ The _allcertsfoundaturi.xml_ file lists all AIA URLs and extraction errors in XM
 
 ### 4. All Certificates File (_allcerts.csv_)
 
-The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. The key columns for each certificate line item are: 
+The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. The key columns for each certificate include Subject DN, Issuer DN, (Certificate) Group, Serial (Number), Sig Alg (Signing Algorithm) (typically SHA1 or SHA-256), Subject Key (hexadecimal number), and Authority Key.
+
+The Online Certificate Status Protocol (OCSP) URL, if found in the certificate is listed in the OCSP http column. The Certificate Revocation List Distribution Point (CRLDP) URLs will be listed as one each in the CDRLDP http column, the CDRLDP ldap column, and the CRLDP, and one Unknown/Error column.
+
+The AIA and SIA URLs are listed in separate columns for each OID and HTTP, LDAP or Unknown/Error. The OIDs include id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
 
 >**Note: OIDs** are id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping.
 <!--These column headers are out of order and some were missing that I added-->
