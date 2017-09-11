@@ -4,16 +4,14 @@ title: How To Use the FPKI Crawler
 permalink: /fpkicrawler/
 ---
 
-As a federal agency, or an organization supporting an agency, you need to understand the relationships between the Certification Authorities (CAs) within the Federal Public Key Infrastructure (FPKI). The FPKI Crawler is an interactive website that gives you tools to view these relationships; understand validation paths to the Root, Federal Common Policy CA (COMMON); obtain public certificate data for reporting and analysis; and download public CA certificates.
+Your agency or organization needs to understand the Certification Authorities' (CAs) relatiionships within the Federal Public Key Infrastructure (FPKI). To help you with this, the FPKI Crawler website provides a useful set of tools:
 
-The FPKI Crawler is an interactive website that will help you to:
+* An interactive FPKI Graph to visualize CA relationships and validation paths to the Root, Federal Common Policy CA (COMMON) 
+* Public CA certificate data files for reporting and analysis
+* Downloadable public CA certificate files
 
-* Understand how each CA’s certificate path validates to the Root, 
-* Obtain public CA certificate data for reporting and analysis
-* Download public CA certificates
-<!--The intro didn't fully encapsulate all that the FPKI Crawler does, so I added the rest--hopefully correct. -->  
 ### Table of Contents
-<!--This is a TOC for reader navigation--LaChelle prefers.-->
+
 * [FPKI Graph](#fpki-graph)
 * [FPKI Crawler Outputs](#fpki-crawler-outputs)
   * [Public Certificates for Reporting and Analysis](#public-certificates-for-reporting-and-analysis)
