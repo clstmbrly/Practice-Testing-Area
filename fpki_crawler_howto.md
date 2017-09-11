@@ -8,11 +8,10 @@ The FPKI Crawler is an interactive website that will help you to:
 
 * See the relationships between the hundreds of Certification Authorities (CAs) in the Federal Public Key Infrastructure (FPKI)
 * Understand how each CA’s certificate path validates to the Root, Federal Common Policy CA (COMMON)
-* Obtain public CA certificate information for reporting and analysis
+* Obtain public CA certificate data for reporting and analysis
 * Download public CA certificates
-
+<!--The intro didn't fully encapsulate all that the FPKI Crawler does, so I added the rest--hopefully correct. -->  
 ### Table of Contents
-<!--This intro didn't fully encapsulate all that the FPKI Crawler does, so I added the rest--hopefully correct. -->  
 <!--This is a TOC for reader navigation--LaChelle prefers.-->
 * [FPKI Graph](#fpki-graph)
 * [FPKI Crawler Outputs](#fpki-crawler-outputs)
@@ -21,17 +20,17 @@ The FPKI Crawler is an interactive website that will help you to:
 
 ## FPKI Graph
 
-The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is useful visualization tool that shows you the relationships between all of the CAs and Bridges in the FPKI ecosystem. The Graph also shows you how each CA certificate is linked to the Root, COMMON.
+The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is a useful visualization tool that shows you the relationships between all of the CAs and Bridges in the FPKI ecosystem. The Graph also shows you how each CA certificate is linked to the Root, COMMON.
 
-* Click on any dot in the FPKI Graph to see a CA's inbound and outbound relationships. 
+* Click on any dot in the FPKI Graph to see that CA's inbound and outbound relationships. 
 
 ## FPKI Crawler Output Files
 
-The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (_AIA Crawler Results_ webpage) offers output files in different file formats (CSV, HTML, XML, P7B, etc.) to help you understand and administer your certificate Key Store and build a Trust Store: 
+The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (_AIA Crawler Results_ webpage) offers output files in CSV, HTML, XML, P7B, etc., to help you understand and administer your certificate Key Store and build a Trust Store: 
 
-{% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and a Subject Information Access (SIA) extensions. An AIA chain will lead to the COMMON-certified certificate for download. The SIA will give the URL to a list <!--A list?-->of all CA certificates that the CA has issued." %} 
+{% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and Subject Information Access (SIA) extensions. An AIA chain will lead to the COMMON-certified certificate for download. The SIA gives a URL where you can see all CA-issued certificates." %} 
 
-All Crawler output files categorize CA certificates by _Type_ (_U.S. Government_, _State_, or _Company_). _Agency_, _State Name_, and _Company Name_ are extracted from the Distinguished Name (DN).
+> All Crawler output files categorize CA certificates by _Type_ (_U.S. Government_, _State_, or _Company_). _Agency_, _State Name_, and _Company Name_ are extracted from the Distinguished Name (DN).
 
 ### Public Certificates for Reporting and Analysis
 
@@ -41,13 +40,13 @@ The _FederalCommonPolicyTree.csv_ (Microsoft Excel) gives a data view of all CAs
 
 ### 2. All Certificates (_AIACrawler.html_)<!--Unclear why is this section called "All Certificates"...?-->
 
-The all-inclusive file in 4 sections, _AIACrawler.html_, compiles all CA certificates found into four groups:
+The _AIACrawler.html_ (4 sections) gives data on all CA certificates found by the Crawler:
 
 * **Certificates Found with Validated AIA Chains to COMMON Policy &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. 
 
 * **Certificates Found with Validated Chains to COMMON Policy, Not Found through AIA &mdash;** All certificates with validated paths to COMMON and the certificate policies to which they validate. (These certificates are found through using Java Development Kit [JDK] Public Key Infrastructure for X.509 Certificates [PKIX].)   
 
-* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates with **NO** validated path to COMMON. (These certificates are found through using AIA and SIA extensions.) This file lists only the certificate information. (These tend to be cross-certificates issued to FPKI CAs<!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
+* **Certificates Found with NO Validated Chains to COMMON Policy &mdash;** All certificates with NO validated path to COMMON. (These certificates are found through using AIA and SIA extensions.) This file lists only the certificate information. (These tend to be cross-certificates issued to FPKI CAs<!--CAs?--> that allow a partner PKI to use its own Root CA as the trust anchor instead of COMMON.)
 
 * **All Certificates &mdash;** <!--This is another part of the this output file that I found by searching through the file. It lists all certificates, whether or not they have a validated path to COMMON. <!--Assume this list is also via AIA and SIA...?-->
 
@@ -57,9 +56,7 @@ The all-inclusive file in 4 sections, _AIACrawler.html_, compiles all CA certifi
   Issuer CN=Federal Bridge CA 2016,OU=FPKI,O=U.S. Government,C=US serial# 0x03F42   status GOOD
    ```
 
-**XML file should be here acc. to AIA Crawler Results webpage order**<!--XML format output file should be here, based on order on FPKI Crawler (AIA Crawler Results) webpage shows this precedes CSV file.-->
-
-### 3. Certificates with AIA Information (_allcertsfoundaturi.xml_) <!--This XML file is listed on the AIA Crawler webpage before the allcerts.csv file below.--> 
+### 3. Certificates with AIA Information (_allcertsfoundaturi.xml_) <!--Moved this paragraph to here to follow the same file order as given on the Crawler webpage.--> 
 
 The _allcertsfoundaturi.xml_ file lists all AIA URLs in XML format. Extraction errors are also included.
 
@@ -121,11 +118,11 @@ The FPKI Crawler provides the public certificate information as binary data for 
 
 ### 1. All CA Certificates in One File (_CACertificatesValidatingToCommonPolicy.p7b_)
 
-The _CACertificatesValidatingToCommonPolicy.p7b_ contains all certificates retrieved by the FPKI Crawler. This file allows you to easily sort the certificates by expiration date, issuer or subject. 
+The _CACertificatesValidatingToCommonPolicy.p7b_ contains all certificates retrieved by the FPKI Crawler. This file allows you to easily sort certificates by expiration date, issuer, or subject. 
 
-### 2. All CA Certificates Broken Down into Eight Files (_CACertificatesValidatingToCommonPolicy_1.p7b_ &mdash; _8.p7b_)
+### 2. All CA Certificates Broken Down into Eight Files (_CACertificatesValidatingToCommonPolicy_1.p7b_&mdash;_8.p7b_)
 
-The certificates found in the files ‘CACertificatesValidatingToCommonPolicy_1.p7b’ through ‘CACertificatesValidatingToCommonPolicy_8.p7b’ contain all of the CA certificates found by the Crawler, broken evenly into eight files to simplify analysis.
+The certificates found in the files ‘CACertificatesValidatingToCommonPolicy_1.p7b’ through ‘CACertificatesValidatingToCommonPolicy_8.p7b’ contain all of the CA certificates found by the Crawler, broken into eight files to simplify analysis.<!--Will user be analyzing certificate download files?-->
 
 ### 3. Certificate Files by Groups <!--Define "Groups"-->
 
