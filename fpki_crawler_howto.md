@@ -11,8 +11,6 @@ Your agency or organizations may need to understand the complex relationships be
 * Access CA certificate data for reporting and analysis
 * Download certificate files
 
-### Table of Contents
-
 * [FPKI Graph](#fpki-graph)
 * [FPKI Crawler Outputs](#fpki-crawler-outputs)
   * [Public Certificates for Reporting and Analysis](#public-certificates-for-reporting-and-analysis)
