@@ -65,7 +65,7 @@ The _allcertsfoundaturi.xml_ file lists all AIA URLs and extraction errors in XM
 
 The _allcertsfoundaturi.csv_ (Microsoft Excel) lists all AIA URLs and the CA certificates found, or certificate-retreival errors. 
 
-* The key columns include&nbsp;&nbsp;Error (if any), Certificate DN, Issuer (DN), Serial Number, Not Before, Sig Alg (Signing Algorithm), Subject Key, and Authority Key.
+* The key columns include:&nbsp;&nbsp;Error (if any), Certificate DN, Issuer (DN), Serial Number, Not Before, Sig Alg (Signing Algorithm), Subject Key, and Authority Key.
 
 ### 5. All Certificates File (_allcerts.csv_)
 
