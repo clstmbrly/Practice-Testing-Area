@@ -56,17 +56,17 @@ The _AIACrawler.html_ (HTML) file lists all FPKI CA certificates found by the Cr
    ```
 > For detailed data about certificates or issuers, click on any link in the _AIACrawler.html_ file.
 
-### 3. Certificates with AIA Information (_allcertsfoundaturi.xml_)
+#### 3. Certificates with AIA Information (_allcertsfoundaturi.xml_)
 
 The _allcertsfoundaturi.xml_ (XML) file lists all AIA URLs and extraction errors found.
 
-### 4. Certificates with AIA Information (_allcertsfoundaturi.csv_)
+#### 4. Certificates with AIA Information (_allcertsfoundaturi.csv_)
 
 The _allcertsfoundaturi.csv_ (Microsoft Excel) lists all AIA URLs and CA certificates found, or certificate-retreival errors. 
 
 * The key columns include:&nbsp;&nbsp;Error (if any), Certificate DN, Issuer (DN), Serial Number, Not Before, Sig Alg (Signing Algorithm), Subject Key, and Authority Key.
 
-### 5. All Certificates File (_allcerts.csv_)
+#### 5. All Certificates File (_allcerts.csv_)
 
 The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found. You can use this file to analyze certificates. 
 
@@ -82,19 +82,19 @@ The FPKI Crawler provides all CA public certificates found for download and anal
 
 {% include alert-warning.html heading = "Do Not Import Certificates into a Trust Store before Analysis!" content="These certificates are available for analysis only. Determine applicable trust relationships before importing any certificate." %}
 
-### 1. All CA Certificates in a Single File (_CACertificatesValidatingToCommonPolicy.p7b_)
+#### 1. All CA Certificates in a Single File (_CACertificatesValidatingToCommonPolicy.p7b_)
 
 The _CACertificatesValidatingToCommonPolicy.p7b_ file contains all CA certificates found. You can easily sort them by expiration date, issuer, or subject. 
 
-### 2. All CA Certificates Broken Down into Eight Files (_CACertificatesValidatingToCommonPolicy_1.p7b_ through _8.p7b_)
+#### 2. All CA Certificates Broken Down into Eight Files (_CACertificatesValidatingToCommonPolicy_1.p7b_ through _8.p7b_)
 
 The files, _CACertificatesValidatingToCommonPolicy_1.p7b_ through _CACertificatesValidatingToCommonPolicy_8.p7b_, contain all CA certificates found, broken down into eight files to simplify analysis.
 
-### 3. Certificate Files Grouped by Type and Organization (_.p7b Files_)
+#### 3. Certificate Files Grouped by Type and Organization (Additional _.p7b_ Certificates)
 
-The CA certificates are grouped into _Types_ and _Organizations_ (as described in the "FPKI Crawler Output Files" section above). For each _Type_ and _Organization_, there are two files (shown in two different columns on the AIA Crawler Results webpage): 
+For these .p7b certificates files, the CA certificates are grouped by _Type_ (_U.S. Government_, _State_, or _Company_) and _Organization_ (_Agency_, _State Name_, and _Company Name_). For every _Type_ and _Organization_, there are two files: 
 
-* All CA certificates found. 
-* All CA certificates found, plus all other certificates required for path validation to COMMON. 
+* All CA certificates found
+* All CA certificates found, plus all other certificates required for path validation to COMMON.
 
-> For example:&nbsp;&nbsp;The U.S. Department of Veterans Affairs' CA (issued by the Verizon Shared Service Provider [SSP] CA) has two CA certificates listed in the _US_Government_VA.p7b_ file. In order to validate this CA's path to COMMON, a Betrusted cross-certificate is required. Therefore, the _US_Government_VA_FullPath.p7b_ file contains both the CA certificates and the Betrusted cross-certificate.
+> For example:&nbsp;&nbsp;The U.S. Department of Veterans Affairs' CA (issued by the Verizon Federal Shared Service Provider [SSP] CA) has two CA certificates in the _US_Government_VA.p7b_ file. In order to validate the two certificates' paths to COMMON, a Betrusted cross-certificate is required. Therefore, the _US_Government_VA_FullPath.p7b_ file contains both the CA certificates and the Betrusted cross-certificate.
