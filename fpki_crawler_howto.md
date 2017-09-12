@@ -33,11 +33,11 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 ### Public Certificates for Reporting and Analysis
 
-### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
+#### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
 
 The _FederalCommonPolicyTree.csv_ (Microsoft Excel) gives a data view of all CAs that validate to COMMON and the cross-certified CAs. 
 
-### 2. All Certificates (_AIACrawler.html_)
+#### 2. All Certificates (_AIACrawler.html_)
 
 The _AIACrawler.html_ (HTML) file lists all FPKI CA certificates found by the Crawler (in four Sections):
 
