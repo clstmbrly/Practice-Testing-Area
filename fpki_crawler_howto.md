@@ -4,13 +4,12 @@ title: How To Use the FPKI Crawler
 permalink: /fpkicrawler/
 ---
 
-Agencies and organizations often need help in/to understanding/understand the Certification Authorities' (CAs) relationships within the Federal Public Key Infrastructure (FPKI). The FPKI Crawler offers you useful tools to visualize these relationships and validation paths to the Federal Common Policy CA (COMMON), as well as find CA certificate data and download files.
+Your agency or organizations may need to understand the complex relationships between the Certification Authorities (CAs) within the Federal Public Key Infrastructure (FPKI). To help you navigate through this information, the FPKI Crawler offers some useful tools to:
 
-By using the FPKI Crawler's useful tools....
-
-* An interactive FPKI Graph to visualize CA relationships and validation paths to the Root, Federal Common Policy CA (COMMON) 
-* Public CA certificate data files for reporting and analysis
-* Downloadable public CA certificate files
+* Visualize these relationships
+* Understand how CAs validate to the Federal Common Policy CA (COMMON)
+* Access CA certificate data for reporting and analysis
+* Download certificate files
 
 ### Table of Contents
 
@@ -21,13 +20,13 @@ By using the FPKI Crawler's useful tools....
 
 ## FPKI Graph
 
-The [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ is a useful visualization tool that shows you the relationships between all of the CAs and Bridges in the FPKI ecosystem. The Graph also shows you how each CA certificate is linked to the Root, COMMON.
+The FPKI Crawler visualization tool, the [FPKI Graph](https://fpki-graph.fpki-lab.gov/){:target="_blank"}_ shows you how all the CAs and Bridges interconnect within the FPKI ecosystem. The Graph also shows you each CA's validation path to the Root, COMMON.
 
 * Click on any dot in the FPKI Graph to see that CA's inbound and outbound relationships. 
 
 ## FPKI Crawler Output Files
 
-The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (_AIA Crawler Results_ webpage) offers output files in CSV, HTML, XML, P7B, etc., to help you understand and administer your certificate Key Store and build a Trust Store: 
+The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ (_AIA Crawler Results_ webpage) offers output files in CSV, HTML, XML, P7B, etc., to help you understand and administer your certificate Key Store and build a Trust Store. 
 
 {% include alert-info.html heading="The FPKI Crawler uses AIAs and SIAs to find all CA certificates." content="Each CA public certificate should contain Authority Information Access (AIA) and Subject Information Access (SIA) extensions. An AIA chain will lead to the COMMON-certified certificate for download. The SIA gives a URL where you can see all CA-issued certificates." %} 
 
@@ -62,23 +61,25 @@ The _AIACrawler.html_ file (in 4 Sections) gives all CA certificates operating i
 
 The _allcertsfoundaturi.xml_ file lists all AIA URLs and extraction errors in XML format.
 
-### 4. Certificates with AIA Information (_allcertsfoundaturi.csv_) **CELESTE STOPPED HERE**
+### 4. Certificates with AIA Information (_allcertsfoundaturi.csv_)
 
-The _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and either the error retrieving certificates or the list of CA certificates found via that AIA. It includes the following certificate information: Error (if any), Certificate DN, Issuer (DN), Not Before, and as hexadecimal numbers: Serial Number, Sig Alg (Signing Algorithm), Subject Key, and Authority Key.
+The _allcertsfoundaturi.csv_ (Microsoft Excel) lists each AIA URL and the CA certificates found or certificate-retreival errors. 
+
+* The key columns include:  Error (if any), Certificate DN, Issuer (DN), Serial Number, Not Before, Sig Alg (Signing Algorithm), Subject Key, and Authority Key.
 
 ### 5. All Certificates File (_allcerts.csv_)
 
 The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found by the Crawler. You can use this file to analyze certificates. 
 
-* The key columns for each certificate include:  Subject DN, Issuer DN, (Certificate) Group, Serial (Number), Sig Alg (Signing Algorithm) (typically SHA1 or SHA-256), Subject Key (hexadecimal number), and Authority Key.
+* The key columns include:  Subject DN, Issuer DN, (Certificate) Group, Serial (Number), Sig Alg (Signing Algorithm) (typically SHA1 or SHA-256), Subject Key (hexadecimal number), and Authority Key.
 
-* The Online Certificate Status Protocol (OCSP) URL, if found in the certificate, is listed in the OCSP HTTP column. The Certificate Revocation List Distribution Point (CRLDP) URLs will be listed, one each, in the CDRLDP HTTP column; the CDRLDP LDAP column; and the CRLDP, AIA and SIA ERRORS column.
+* The Online Certificate Status Protocol (OCSP) URL, if found in the certificate, is listed in the OCSP HTTP column. The Certificate Revocation List Distribution Point (CRLDP) URLs will be listed in the CDRLDP HTTP column; the CDRLDP LDAP column; and the CRLDP, AIA and SIA ERRORS column.
 
 * The AIA and SIA URLs are listed for Object Identifiers (OIDs) (i.e., id-ad-caIssuers, id-ad-caRepository, and id-ad-timeStamping) in these columns:  AIA id-ad-caIssuers HTTP; AIA id-ad-caIssuers LDAP; AIA id-ad-caRepository LDAP; SIA id-ad-caIssuers HTTP; SIA id-ad-caRepository HTTP; SIA id-ad-caRepository LDAP; SIA id-ad-caRepository LDAP; SIA id-ad-timeStamping HTTP; SIA id-ad-timeStamping LDAP; and CRLDP, AIA and SIA ERRORS. 
 
 ### Public Certificates for Download
 
-The FPKI Crawler provides the public certificate information as binary data for download and analysis by any FPKI validating agency or organization. The data involves all certificates retrieved by the FPKI Crawler.
+The FPKI Crawler provides all retrieved CA public certificates for download and analysis.
 
 <!--This will be an alert warning box on the IDM.gov webpage.-->
 {% include alert-warning.html heading = "Do Not Import These Certificates into a Trust Store before Analysis!" content="The certificates from these files are made available for analysis purposes only. These certificates should not be imported into a Trust Store prior to analysis to determine applicable trust relationships." %}
