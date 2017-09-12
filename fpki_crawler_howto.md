@@ -79,20 +79,23 @@ The _allcerts.csv_ (Microsoft Excel) file lists all CA certificates found. You c
 
 ### Public Certificates for Download
 
-The FPKI Crawler provides all found CA public certificates for download and analysis.
+The FPKI Crawler provides all CA public certificates found for download and analysis.
 
-{% include alert-warning.html heading = "Do Not Import These Certificates into a Trust Store before Analysis!" content="The certificates from these files are made available for analysis purposes only. These certificates should not be imported into a Trust Store prior to analysis to determine applicable trust relationships." %}
+{% include alert-warning.html heading = "Do Not Import Certificates into a Trust Store before Analysis!" content="These certificates are available for analysis only. Determine applicable trust relationships before importing any certificate." %}
 
-### 1. All CA Certificates in One File (_CACertificatesValidatingToCommonPolicy.p7b_)
+### 1. All CA Certificates in a Single File (_CACertificatesValidatingToCommonPolicy.p7b_)
 
-The _CACertificatesValidatingToCommonPolicy.p7b_ contains all certificates found. This file allows you to easily sort the certificates by expiration date, issuer, or subject. 
+The _CACertificatesValidatingToCommonPolicy.p7b_ file contains all CA certificates found. You can easily sort them by expiration date, issuer, or subject. 
 
-### 2. All CA Certificates Broken Down into Eight Files (_CACertificatesValidatingToCommonPolicy_1.p7b_&mdash;_8.p7b_)
+### 2. All CA Certificates Broken Down into Eight Files (_CACertificatesValidatingToCommonPolicy_1.p7b_ through _8.p7b_)
 
-The certificates found in the files ‘CACertificatesValidatingToCommonPolicy_1.p7b’ through ‘CACertificatesValidatingToCommonPolicy_8.p7b’ contain all of the CA certificates found, broken into eight files to simplify analysis.<!--Will user be analyzing certificate download files?-->
+The files, _CACertificatesValidatingToCommonPolicy_1.p7b_ through _CACertificatesValidatingToCommonPolicy_8.p7b_, contain all CA certificates found, broken down into eight files to simplify analysis.
 
-### 3. Certificate Files by Groups <!--Define "Groups"-->
+### 3. Certificate Files Grouped by Type and Organization (_.p7b Files_)
 
-The CA certificates are partitioned into Types <!--As in "Type" described FPKI Crawler Output Files section? What is this referencing?-->and categories<!--Do you mean the "All Certificates (_AIACrawler.html_)" section?-->, as defined in the Certificate Grouping sections<!--What section is this referencing?-->. For each of these groups<!--Types and Categories?-->, all CA certificates are organized into a single **PKCS#7** file. In addition, another **PKCS#7** file is generated containing all of the CA certificates plus all additional certificates required for path validation to COMMON. For example:
+The CA certificates are grouped into _Types_ and _Organizations_ (as described in the "FPKI Crawler Output Files" section above). For each _Type_ and _Organization_, there are two files (shown in two different columns on the AIA Crawler Results webpage): 
 
-> The U.S. Department of Veterans Affairs from the <!--"issued by"? "from the" doesn't sound right-->Verizon Shared Service Provider (SSP) CA has two CA certificates that can be found in **_US_Government__VA.p7b_**. In order to validate the CAs' paths to COMMON, a Betrusted cross-certificate is required. Therefore, the file **_US_Government__VA_FullPath.p7b_** contains both CA certificates and the cross-certificate.
+* All CA certificates found. 
+* All CA certificates found, plus all other certificates required for path validation to COMMON. 
+
+> For example:&nbsp;&nbsp;The U.S. Department of Veterans Affairs' CA (issued by the Verizon Shared Service Provider [SSP] CA) has two CA certificates listed in the _US_Government_VA.p7b_ file. In order to validate this CA's path to COMMON, a Betrusted cross-certificate is required. Therefore, the _US_Government_VA_FullPath.p7b_ file contains both the CA certificates and the Betrusted cross-certificate.
