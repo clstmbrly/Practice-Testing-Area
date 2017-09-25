@@ -6,7 +6,11 @@ permalink: networkconfig/AMA/
 ---
 **Add draft paragraphs in from 9/22/2017**
 
-**IG paragraph** You may want to provide higher privileges to users when they use their PIV/CAC card for login. In such a scenario, you can use Authentication Mechanism Assurance (AMA) feature of Windows Active Directory (AD). When the AMA is enabled, it will allow you to insert an administrator-designated, global group membership based on the certificate policy of the PIV/CAC card into the authentication Kerberos token.
+**IG paragraph** As a system administrator, you may need to grant higher privilege levels to certain users. **This provides for greater protections when a user has higher level privileges?** For increased security, you can use the Authentication Mechanism Assurance (AMA) feature of Microsoft Windows Active Directory (AD) Domain Services (DS) for Windows Server 2008 R2 and 2012. When you enable AMA, it will allow you to increase a user's privileges by adding a global group membership, based on the PIV's certificate policy, and to their Kerberos token when they log into the agency's enterprise(?) their PIV cards.
+
+From Centrify:  So how do we force the use of smart cards for everything and eliminate passwords?  One method is to modify a user’s account in Active Directory by selecting the “smart card is required for interactive logon” checkbox, or by doing this for all users via an AD Group Policy.  
+Authentication Mechanism Assurance (AMA) places a user into a dynamic user group whenever they authenticate using a smart card, so therefore it knows the difference between Kerberos tickets obtained via a password and those obtained via a smart card.  Again the ultimate goal is usually to enforce smart card authentication directly from within the Active Directory account itself.
+
 
 {% include info-alert.html content=" AMA does not offer an option to require a specific login method (e.g., PIV login)." %}
 
