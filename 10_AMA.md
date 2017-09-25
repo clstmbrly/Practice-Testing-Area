@@ -12,11 +12,11 @@ permalink: networkconfig/AMA/
 
 **CB Draft Text -- need to fix cert policy and OID words and examples**
 
-Access to your SharePoint site so he can read specific documents...
+Access to an agency SharePoint site so he can read specific documents...
 
 So here's how that would work. Let's say that Joe needs Read-Only access to a SharePoint site to view specific documents and Julie needs Write acccess to this SharePoint site. For both Joe and Julie, you'd add these policies and OIDs to Windows AD: 
 
-* Joe's PIV-I <!--Does his having a PIV-I mean that he is from one agency working in a different agency?-->must contain the Object Identifier (OID) plus certificate policy of _2.16.840.1.101.3.2.1.12.6 id-eca-medium-hardware-pivi_. 
+* Joe's PIV-I must contain the Object Identifier (OID) plus certificate policy of _2.16.840.1.101.3.2.1.12.6 id-eca-medium-hardware-pivi_. 
 * Julie's PIV must contain the OID plus certificate policy of _2.16.840.1.101.3.2.1.3.16 id-fpki-common-high_. 
 
 So, for both Joe and Julie, you'll need to add<!--add?--> these two policies to Windows AD by using one of the methods below. Then, you'll assign group memberships based on the policy OIDs so Joe can read and Julie can write to these SharePoint documents.<!--Where is SharePoint located? Does it matter? Cloud, https website, shared drive?-->
