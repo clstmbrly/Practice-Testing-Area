@@ -3,8 +3,16 @@ layout: default
 title: Server-based Certificate Validation Protocol Test Program User's Guide
 permalink: /1_scvp-user-guide/
 ---
+Revision History
 
-Change notice
+Date|Revision No.|Pages Revised
+---|---|---|---|---
+2017-06-08|0|First draft|
+2017-07-13|0|Edited draft|
+2017-08-08|0|Added notes about setting SCVP_OUTPUT_PATH environment variable and alternative vss.properties file location|
+2017-08-11|0|Merged in sections on virtual machines and artifact hosting|
+
+
 
 Intro para
 
