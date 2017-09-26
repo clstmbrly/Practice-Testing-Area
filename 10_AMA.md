@@ -6,9 +6,10 @@ permalink: networkconfig/AMA/
 ---
 **Add draft paragraphs in from 9/22/2017**
 
+Depending on the users' roles within your agency, they need different privilege levels upon PIV login. To help you set these privileges, this guide ... ensure....AMA.  To give them these privileges, you can assign users to a global group membership that has those privileges. **Is the purpose of AMA to add higher security LEVELS FOR HIGHER PRIVILEGES OR TO FORCE USE TO USE A PIV CARD TO LOG IN?  AMA DOES NOT PROVIDE A WAY TO ENFORCE PIV CARD LOGIN.  BEING PART OF THE GROUP MUST FORCE THIS?
 **IG paragraph** As a system administrator, you may need to grant higher privilege levels to certain users. **This provides for greater protections when a user has higher level privileges?** For increased security, you can use the Authentication Mechanism Assurance (AMA) feature of Microsoft Windows Active Directory (AD) Domain Services (DS) for Windows Server 2008 R2 and 2012. When you enable AMA, it will allow you to increase a user's privileges by adding a global group membership, based on the PIV's certificate policy, and to their Kerberos token when they log into the agency's enterprise(?) their PIV cards.
 
-From Centrify:  So how do we force the use of smart cards for everything and eliminate passwords?  One method is to modify a user’s account in Active Directory by selecting the “smart card is required for interactive logon” checkbox, or by doing this for all users via an AD Group Policy.  
+From Centrify:  **So how do we force the use of smart cards for everything and eliminate passwords?  One method is to modify a user’s account in Active Directory by selecting the “smart card is required for interactive logon” checkbox,** or by doing this for all users via an AD Group Policy.  
 Authentication Mechanism Assurance (AMA) places a user into a dynamic user group whenever they authenticate using a smart card, so therefore it knows the difference between Kerberos tickets obtained via a password and those obtained via a smart card.  Again the ultimate goal is usually to enforce smart card authentication directly from within the Active Directory account itself.
 
 
@@ -25,7 +26,7 @@ So here's how that would work. Let's say that Joe needs Read-Only access to a Sh
 * Joe's PIV-I must contain the Object Identifier (OID) _2.16.840.1.101.3.2.1.3.13_ plus the certificate policy name, "_id-fpki-common-authentication_."
 * Julie's PIV must contain the OID _2.16.840.1.101.3.2.1.3.16_ plus the certificate policy name, "_id-fpki-common-high_." 
 
-So, for both Joe and Julie, you'll need to add<!--add?--> these two policies to Windows AD by using one of the methods below. Then, you'll assign group memberships based on the policy OIDs so Joe can read and Julie can write to these SharePoint documents.<!--Where is SharePoint located? Does it matter? Cloud, https website, shared drive?-->
+So, for both Joe and Julie, you'll need to add<!--add?--> their separate two policies to Windows AD by using one of the methods below. Then, you'll assign them to group memberships based on the certificate policy OIDs and policy name associated with their PIV cards...? policy OIDs so Joe can read and Julie can write to these SharePoint documents.
 
 **IG paragraph** As an example, you want to allow Joe read access to sharepoint documents if Joe has a certificate with a policy OID 2.16.840.1.101.3.2.1.12.6 and policy name 'id-eca-medium-hardware-pivi'. You also want Julie to have write privileges since she has a certificate with a policy OID 2.16.840.1.101.3.2.1.3.16 and name id-fpki-common-high. You will setup these 2 policies in AD using any of the available methods listed below and then assign group memberships based on these policy OIDs to read and write access to sharepoint.
 
