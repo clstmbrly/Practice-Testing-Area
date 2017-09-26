@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Server-based Certificate Validation Protocol Test Program User's Guide
-permalink: /1_scvp-user-guide/
+permalink: /1_scvp_user_guide/
 ---
-Revision History
+### Revision History
 
 Date|Revision No.|Pages Revised
 ---|---|---|---|---
@@ -12,9 +12,53 @@ Date|Revision No.|Pages Revised
 2017-08-08|0|Added notes about setting SCVP_OUTPUT_PATH environment variable and alternative vss.properties file location|
 2017-08-11|0|Merged in sections on virtual machines and artifact hosting|
 
+## Table of Contents (Add in)
 
+Space for Table of Contents
 
-Intro para
+## Overview
 
-## First heading
+This document provides an overview of the artifacts and utilities employed by the GSA SCVP Test Program (GSTP). The GSTP aims to confirm an Server-based Certificate Validation Protocol (SCVP) responder is capable of providing accurate certification path validation results in environments with comparable complexity to the U.S. Federal PKI. The test materials do not facilitate confirmation that a product is conformant with all aspects of the SCVP as defined in RFC 5005. Instead, conformance to the SCVP profiles identified for use by GSA [TREAS] is demonstrated.
+
+The GSTP is composed of seven primary components that are used to exercise an SCVP responder under test (RUT):
+
+*	Test SCVP client
+*	Test SCVP client scripts 
+*	Test SCVP client script generator
+*	Test SCVP client script runner (optional)
+*	Test artifacts, i.e., certificates and revocation information
+*	Sample environment for hosting certificates and revocation information
+*	Hosts file to resolve names hosted by sample environment
+
+The test SCVP client is provided along with a set of scripts to cause the client to use test artifacts to interact with a RUT. The test client will emit several streams of information including a summary of test results, basic logging information regarding test client operation, scripts to facilitate re-testing scenarios that failed to yield the expected results, debugging information and, optionally, request and response files for analysis.
+
+A script generator is supplied to generate scripts to drive the test SCVP client. The script generator emits scripts for each set of test artifacts with several variations for interacting with the RUT.
+
+Three distinct sets of test artifacts will be used to test certification path development and certification path validation capabilities:
+
+1. NIST’s Public Key Infrastructure (PKI) Interoperability Test Suite v2 (PKITSv2)
+2. NIST’s Path Development Test Suite v2 (PDTSv2)
+3. Mock Federal PKI (MFPKI)
+
+All AIA and CRL DP URIs included in the test artifacts feature names that are not routable on the public Internet. A Linux virtual machine that hosts artifacts via HTTP server and OCSP responder instances is available, along with a host file that can be tailored for use in resolving names during certification path processing.
+
+## GSTP Components
+
+### Test SCVP Client
+
+The GSTP test client is based on an SCVP client available from GSA on GitHub at: [GSA/VSS](https://github.com/GSA/vss){:target="_blank"}. <!--This link gives 404 error due to Private Repo.--> The GSTP client will also be available via GitHub at a TBD location.  The command line parameters accepted by the client are as follows:
+
+Parameter Name|Parameter Type|Description
+---|---|---|---|---
+-h, --help|None|Show help message and exit|
+Basic Logistics|||
+--scvp_profile|{lightweight, long-term-record, batch}|Name of SCVP profile|
+-x, --expectSuccess|Boolean value {true, false}|Indicates whether success is expected when validating the --target_cert. Defaults to true|
+-l, --logging_conf|Full path and filename of log4j configuration file|Used to customize default logging behavior|
+-n, --test_case_name|String value|Friendly name of test case|
+-z, --signer_certs|Path to directory to receive certificate(s) used to validate SCVP responses|Save signer certificates as read from a validation policy response to a specified directory then exit|
+--log_all_messages|None|Log all requests and responses to the artifacts log, not just those from failed tests. Off by default.|
+
+2017-07-13|0|Edited draft|
+2017-07-13|0|Edited draft|
 
