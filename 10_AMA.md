@@ -18,10 +18,12 @@ Authentication Mechanism Assurance (AMA) places a user into a dynamic user group
 
 Access to an agency SharePoint site so he can read specific documents...
 
-So here's how that would work. Let's say that Joe needs Read-Only access to a SharePoint site to view specific documents and Julie needs Write acccess to this SharePoint site. For both Joe and Julie, you'd add these policies and OIDs to Windows AD: 
+So here's how that would work. Let's say that Joe needs Read-Only access to a SharePoint site to view specific documents and Julie needs Write acccess to this SharePoint site. For both Joe and Julie, you'd add these policies and OIDs to Windows AD:
 
-* Joe's PIV-I must contain the Object Identifier (OID) plus certificate policy of _2.16.840.1.101.3.2.1.12.6 id-eca-medium-hardware-pivi_. 
-* Julie's PIV must contain the OID plus certificate policy of _2.16.840.1.101.3.2.1.3.16 id-fpki-common-high_. 
+**IG paragraph with new cert policy 9/26:** As an example, you want to allow Joe read access to sharepoint documents if Joe has a certificate with a policy OID 2.16.840.1.101.3.2.1.3.13 and policy name "id-fpki-common-authentication." You also want Julie to have write privileges since she has a certificate with a policy OID 2.16.840.1.101.3.2.1.3.16 and name "id-fpki-common-high." You will setup these 2 policies in AD using any of the available methods listed below and then assign group memberships based on these policy OIDs to read and write access to sharepoint.
+
+* Joe's PIV-I must contain the Object Identifier (OID) _2.16.840.1.101.3.2.1.3.13_ plus the certificate policy name, "_id-fpki-common-authentication_."
+* Julie's PIV must contain the OID _2.16.840.1.101.3.2.1.3.16_ plus the certificate policy name, "_id-fpki-common-high_." 
 
 So, for both Joe and Julie, you'll need to add<!--add?--> these two policies to Windows AD by using one of the methods below. Then, you'll assign group memberships based on the policy OIDs so Joe can read and Julie can write to these SharePoint documents.<!--Where is SharePoint located? Does it matter? Cloud, https website, shared drive?-->
 
@@ -48,3 +50,6 @@ So, for both Joe and Julie, you'll need to add<!--add?--> these two policies to 
 
 * A Windows Server® 2008 R2-based Domain Hotfix corrects the known KDC error, "Access tokens are not updated correctly when you enable authentication mechanism assurance in a Windows Server 2008 R2-based domain." [Microsoft Hotfix](https://support.microsoft.com/en-us/help/2771254/access-tokens-are-not-updated-correctly-when-you-enable-authentication){:target="_blank"}. 
 
+## Windows Server® 2016
+
+* For Windows Server® 2016, Microsoft doesn't support AMA:&nbsp;&nbsp;[Windows Server 2016&mdash;What's New in Kerberos Authentication](https://docs.microsoft.com/en-us/windows-server/security/kerberos/whats-new-in-kerberos-authentication){:target="_blank"}. 
