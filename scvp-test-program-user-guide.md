@@ -16,6 +16,7 @@ Date|Revision No.|Pages Revised
 
 Space for Table of Contents
 
+
 ## Overview
 
 This document provides an overview of the artifacts and utilities employed by the GSA SCVP Test Program (GSTP). The GSTP aims to confirm an Server-based Certificate Validation Protocol (SCVP) responder is capable of providing accurate certification path validation results in environments with comparable complexity to the U.S. Federal PKI. The test materials do not facilitate confirmation that a product is conformant with all aspects of the SCVP as defined in RFC 5005. Instead, conformance to the SCVP profiles identified for use by GSA [TREAS] is demonstrated.
@@ -51,24 +52,24 @@ The GSTP test client is based on an SCVP client available from GSA on GitHub at:
 Parameter Name|Parameter Type|Description|
 ---|---|---|
 -h, --help|None|Show help message and exit|
-Basic Logistics|||
+ |**Basic Logistics**||
 --scvp_profile|{lightweight, long-term-record, batch}|Name of SCVP profile|
 -x, --expectSuccess|Boolean value {true, false}|Indicates whether success is expected when validating the --target_cert. Defaults to true|
 -l, --logging_conf|Full path and filename of log4j configuration file|Used to customize default logging behavior|
 -n, --test_case_name|String value|Friendly name of test case|
 -z, --signer_certs|Path to directory to receive certificate(s) used to validate SCVP responses|Save signer certificates as read from a validation policy response to a specified directory then exit|
 --log_all_messages|None|Log all requests and responses to the artifacts log, not just those from failed tests. Off by default.|
-Target Certificate Details|||
+**Target Certificate Details**|||
 -c, --target_cert|Full path and filename of binary DER encoded certificate|Certificate presented to responder for validation; not used when 
 --scvp_profile is set to batch, required otherwise|
 -b, --batch_folder|Full path of folder containing binary DER encoded certificates|Certificates presented to responder for validation; used when --scvp_profile is set to batch, not used otherwise|
 -t, --trust_anchor|Full path and filename of binary DER encoded certificate|Certificate presented to responder as trust anchor to use for validation; omitted from request by default|
 --batch_folder_success|Full path of folder containing binary DER encoded certificates|Certificates presented to responder for validation; used when --scvp_profile is set to batch, not used otherwise; all certificates are expected to validate successfully|
 --batch_folder_failure|Full path of folder containing binary DER encoded certificates|Certificates presented to responder for validation; used when --scvp_profile is set to batch, not used otherwise; all certificates are expected to fail validation|
-SCVP Request Details|||
+**SCVP Request Details**|||
 -v, --validation_policy|Object identifier value expressed in dot notation form (i.e., 1.2.3.4.5)|Validation policy to include in request; default value is 1.3.6.1.5.5.7.19.1|
 --wantBacks|One or more symbolic WantBack names {Cert, BestCertPath, RevocationInfo, PublicKeyInfo, AllCertPaths, EeRevocationInfo, CAsRevocationInfo}|WantBack value(s) to include in request; default is BestCertPath|
-Certification Path Validation Algorithm Inputs|||
+**Certification Path Validation Algorithm Inputs**|||
 -p, --certificate_policy|One or more object identifiers expressed in dot notation form (i.e., 1.2.3.4.5)|Certificate policies to use as the user supplied policy set; omitted from request by default|
 --inhibitAnyPolicy|Boolean value {true, false}|Boolean value to use as inhibitAnyPolicy; omitted from request by default|
 --inhibitPolicyMapping|Boolean value {true, false}|Boolean value to use as inhibitPolicyMapping; omitted from request by default|
