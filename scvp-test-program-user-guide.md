@@ -6,7 +6,7 @@ permalink: /1_scvpuser/
 ### Revision History <!--Normally for a Revision History, aka Change Notice/Record, the first and only entry is the first official (final) publication (i.e., Version 1.0). Revisions prior to the final version should not be listed. In the future, if additional versions are released to correct, update, or substantially change the information, the next official version would be listed on the Revision History (i.e., Version 1.1, if a minor revision, or Version 2.0, if a major revision). In this case, it looks like the 8/11/2017 version is potentially the first, final publication.-->
 
 Date|Revision No.|Pages Revised|
----|---|---|---|---
+---|---|---|
 2017-06-08|0|First draft|
 2017-07-13|0|Edited draft|
 2017-08-08|0|Added notes about setting SCVP_OUTPUT_PATH environment variable and alternative vss.properties file location|
