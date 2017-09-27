@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Server-based Certificate Validation Protocol Test Program User's Guide
+title: Server-based Certificate Validation Protocol (SCVP) Test Program User's Guide
 permalink: /1_scvpuser/
 ---
-### Revision History
+### Revision History <!--Normally for a Revision History, aka Change Notice/Record, the first and only entry is the first official (final) publication (i.e., Version 1.0). Revisions prior to the final version should not be listed. In the future, if additional versions are released to correct, update, or substantially change the information, the next official version would be listed on the Revision History (i.e., Version 1.1, if a minor revision, or Version 2.0, if a major revision). In this case, it looks like the 8/11/2017 version is potentially the first, final publication.-->
 
-Date|Revision No.|Pages Revised
+Date|Revision No.|Pages Revised|
 ---|---|---|---|---
 2017-06-08|0|First draft|
 2017-07-13|0|Edited draft|
 2017-08-08|0|Added notes about setting SCVP_OUTPUT_PATH environment variable and alternative vss.properties file location|
-2017-08-11|0|Merged in sections on virtual machines and artifact hosting|
+2017-08-11|1.0<!--?-->|Merged in sections on virtual machines and artifact hosting|
 
 ## Table of Contents (Add in)
 
@@ -19,7 +19,7 @@ Space for Table of Contents
 
 ## Overview
 
-This document provides an overview of the artifacts and utilities employed by the GSA SCVP Test Program (GSTP). The GSTP aims to confirm an Server-based Certificate Validation Protocol (SCVP) responder is capable of providing accurate certification path validation results in environments with comparable complexity to the U.S. Federal PKI. The test materials do not facilitate confirmation that a product is conformant with all aspects of the SCVP as defined in RFC 5005. Instead, conformance to the SCVP profiles identified for use by GSA [TREAS] is demonstrated.
+This document provides an overview of the artifacts and utilities employed by the U.S. General Services Administration (GSA) Server-based Certificate Validation Protocol (SCVP) Test Program (GSTP). The GSTP's goal is to confirm whether an Server-based Certificate Validation Protocol (SCVP) responder is capable of providing accurate certification path validation results in environments with comparable complexity to the U.S. Federal Public Key Infrastructure (FPKI). The test materials do not facilitate confirmation that a product is conformant with all aspects of the SCVP, as defined in Request for Comment (RFC) 5005. Instead, conformance to the SCVP profiles identified for use by GSA [TREAS] is demonstrated.
 
 The GSTP is composed of seven primary components that are used to exercise an SCVP responder under test (RUT):
 
@@ -43,11 +43,11 @@ Three distinct sets of test artifacts will be used to test certification path de
 
 All AIA and CRL DP URIs included in the test artifacts feature names that are not routable on the public Internet. A Linux virtual machine that hosts artifacts via HTTP server and OCSP responder instances is available, along with a host file that can be tailored for use in resolving names during certification path processing.
 
-## 2. GSTP Components
+## 2 GSTP Components
 
 ### 2.1 Test SCVP Client
 
-The GSTP test client is based on an SCVP client available from GSA on GitHub at: [GSA/VSS](https://github.com/GSA/vss){:target="_blank"}. <!--This link gives 404 error due to Private Repo.--> The GSTP client will also be available via GitHub at a TBD location.  The command line parameters accepted by the client are as follows:
+The GSTP test client is based on an SCVP client available from GitHub.com/GSA at: [GSA/VSS](https://github.com/GSA/vss){:target="_blank"}._ <!--This link gives 404 error due to Private Repo.-->The GSTP client will also be available via GitHub at a TBD location. The command line parameters accepted by the client are as follows:
 
 Parameter Name|Parameter Type|Description|
 ---|---|---|
@@ -66,10 +66,10 @@ Parameter Name|Parameter Type|Description|
 -t, --trust_anchor|Full path and filename of binary DER encoded certificate|Certificate presented to responder as trust anchor to use for validation; omitted from request by default|
 --batch_folder_success|Full path of folder containing binary DER encoded certificates|Certificates presented to responder for validation; used when --scvp_profile is set to batch, not used otherwise; all certificates are expected to validate successfully|
 --batch_folder_failure|Full path of folder containing binary DER encoded certificates|Certificates presented to responder for validation; used when --scvp_profile is set to batch, not used otherwise; all certificates are expected to fail validation|
-&nbsp;&nbsp;---------------------|------------**SCVP Request Details**-----------|----------------------------------&nbsp;&nbsp;|
+&nbsp;&nbsp;---------------------|------------**_SCVP Request Details_**-----------|----------------------------------&nbsp;&nbsp;|
 -v, --validation_policy|Object identifier value expressed in dot notation form (i.e., 1.2.3.4.5)|Validation policy to include in request; default value is 1.3.6.1.5.5.7.19.1|
 --wantBacks|One or more symbolic WantBack names {Cert, BestCertPath, RevocationInfo, PublicKeyInfo, AllCertPaths, EeRevocationInfo, CAsRevocationInfo}|WantBack value(s) to include in request; default is BestCertPath|
-&nbsp;&nbsp;---------------------|**Certification Path Validation </br>Algorithm Inputs**|----------------------------------&nbsp;&nbsp;|
+&nbsp;&nbsp;---------------------|**_Certification Path Validation </br>Algorithm Inputs_**|----------------------------------&nbsp;&nbsp;|
 -p, --certificate_policy|One or more object identifiers expressed in dot notation form (i.e., 1.2.3.4.5)|Certificate policies to use as the user supplied policy set; omitted from request by default|
 --inhibitAnyPolicy|Boolean value {true, false}|Boolean value to use as inhibitAnyPolicy; omitted from request by default|
 --inhibitPolicyMapping|Boolean value {true, false}|Boolean value to use as inhibitPolicyMapping; omitted from request by default|
@@ -79,9 +79,9 @@ Logging output is written to a location identified by the SCVP_OUTPUT_PATH envir
 
 Generally, the client need not be interacted with directly to execute test cases. A set of scripts are provided that drive execution of test scenarios in a variety of contexts. However, prior to using the scripts, the test client itself must be configured to interact with the RUT. A configuration file must be edited to provide the URL of the SCVP interface and a key store must be updated to include keys necessary to verify the SCVP responses. The configuration file is named vss.properties and is located in the /usr/local/tomcat/conf folder. The table below shows the settings that must be modified for test purposes.
 
-Configuration element|Purpose|Example value|
+Configuration Element|Purpose|Example value|
 ---|---|---|
-VSS_TRUSTSTORE_SCVP_SIGNER_ISSUER_LABEL|Provides label of SCVP responder’s certificate in the keystore|someresponder|
+VSS_TRUSTSTORE_SCVP_SIGNER_ISSUER_LABEL|Provides label of SCVP responder’s certificate in the keystore|some responder|
 VSS_SCVP_SERVER_URI|Provides the URI to which SCVP requests are sent|http://example.com/scvp|
 VSS_SCVP_DER_ENCODE_DEFAULTS|Determines whether the client DER encodes default fields (some responders require presence of fields the DER requires to be absent)|False|
 VSS_SCVP_TEST_CLIENT|Governs custom test client behavior that is only appropriate in a test client|True|
@@ -89,7 +89,7 @@ VSS_SCVP_TEST_CLIENT|Governs custom test client behavior that is only appropriat
 Alternatively, the location of the vss.properties file can be provided as a Java system variable when the client is launched as shown below (which also shows temporarily reassigning the SCVP_OUTPUT_PATH environment variable for a single run):
 
 ```
-SCVP_OUTPUT_PATH=/<some path>/SCVP_OUTPUT_PATH2 java -Dvss.configLocation=/<some path>/vss.properties -jar vss2.jar --scvp_profile lightweight -n 4.1.1 -c /<some path>/ValidCertificatePathTest1EE.crt --wantBacks BestCertPath
+SCVP_OUTPUT_PATH=/<some path>/SCVP_OUTPUT_PATH2 java -Dvss.configLocation=/<some path>/vss.properties -jar vss2.jar</br> --scvp_profile lightweight -n 4.1.1 -c /<some path>/ValidCertificatePathTest1EE.crt --wantBacks BestCertPath
 ```
 Once the configuration file edits have been performed, the RUT’s certificate must be added to the keystore.ks file located in the /usr/local/tomcat/conf folder. If the RUT’s certificate is not handy and the RUT supports validation policy requests, the test client can be used to retrieve the certificate via the following command:
 
@@ -99,15 +99,15 @@ java –jar vss2.jar –s /path/to/receive/certificate.der
 The certificate may then be imported into the keystore using:
 
 ```
-keytool -keystore /usr/local/tomcat/conf/vssTrustStore.jks -importcert -file /path/to/receive/certificate.der -alias someresponder 
+keytool -keystore /usr/local/tomcat/conf/vssTrustStore.jks -importcert -file /path/to/receive/certificate.der</br> -alias someresponder 
 ```
 The test client will write logs to the location identified by the SCVP_OUTPUT_PATH environment variable.
 
-### 2.2 Test SCVP client scripts and script generator
+### 2.2 Test SCVP Client Scripts and Script Generator
 
 During the execution of the GSTP, the test SCVP client will be executed hundreds of times. To simplify execution of the test cases, a set of scripts are provided that reference a target certificate or collection of target certificates and provide a set of appropriate command line parameters. These scripts can be modified for the environment in which the test client will be used. Scripts may be manually altered or regenerated to change paths to test artifacts, to change output folder location or to change the list of wantBacks.
 
-ScvpScriptGenerator v1.0.0 usage||
+---------------------|------------------------**_ScvpScriptGenerator v1.0.0 Usage_**-------------------------------------|
 ---|---|
 -h [ --help ]|Print usage instructions|
 -l [ --logging_conf ] arg|Logging configuration to support report generation|
@@ -191,7 +191,7 @@ The resulting output will be a set of scripts, as listed below. For the MFPKI an
 *	PKITS_P384_NON_DEFAULT_lightweight.sh
 *	PKITS_P384_NON_DEFAULT_longterm.sh
 
-### 2.3	Test SCVP client script runner
+### 2.3	Test SCVP Client Script Runner
 
 The following script can be used to execute all GSTP test cases when run from a folder containing the test SCVP client with all logs collecting in one location.
 
@@ -355,25 +355,368 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
 
+This script will run all available scripts in the designated folder. To refrain from running certain scripts, simply delete or move them. For example, if not testing non-default validation policies, remove all of the scripts with non-default in the name.
 
+### 2.4	Test Artifacts
 
+PKITSv2 and PDTSv2 are updates to the existing NIST test suites. PKITS was updated to add AIA and CRL DP extensions to avoid the need to make all artifacts available locally to the product being tested. Additionally, editions were prepared using alternative public key and hash algorithms. PDTS was updated to feature unexpired artifacts, to drop LDAP-centric tests and to use RSA 2048 keys with SHA256 (instead of RSA 1024 with SHA1). While these were generated to support the GSTP, the artifacts are suitable for testing any RFC5280 compliant certification path validation implementation.
 
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
-abc|def|ghi|
+Test Suite|Public Key Details|Hash Algorithm|
+---|---|---|
+PKITSv2|RSA 2048|SHA256|
+PKITSv2|RSA 4096|SHA512|
+PKITSv2|EC p256|SHA256|
+PKITSv2|EC p384|SHA384|
+PDTSv2|RSA 2048|SHA256|
+MFPKI|As observed (mostly RSA 2048)|As observed (mostly SHA256)|
+
+MFPKI artifacts are cloned from the FPKI and do not have uniformly long validity periods like PDTSv2 and PKITSv2. Some artifacts that are classified as “good” will expire over time. PITTv2 can be used to periodically spot check so expired artifacts can be removed from service and/or re-refreshed using PCP.
+
+### 2.5	Sample Environment
+
+A Linux virtual machine is available that features artifacts from the MFPKI, various PKITSv2 editions hosted using Apache httpd and OpenSSL’s OCSP responder capabilities. The environment is intended to facilitate dynamic path discovery and avoid the need to manually provide artifacts to the RUT as a prerequisite for testing certification path validation capabilities.
+
+### 2.6	Hosts File for Sample Environment
+
+A sample hosts file for the URIs included in artifacts that comprise the MFPKI, various PKITSv2 editions and PDTS is below. 
+
+```
+# ********** Hosts added by PCP VM preparation scripts **********
+192.168.1.101	betty.pkits.test
+192.168.1.101	invalidcertificates.gov
+192.168.1.101	testserver.testcertificates.gov
+192.168.1.101	testserver.invalidcertificates.gov
+192.168.1.101	testcertificates.gov
+# ********** End of hosts added by PCP VM preparation scripts **********
+# ********** Hosts added by PCP VM preparation scripts **********
+192.168.1.101	betty-4096.pkits.test
+# ********** End of hosts added by PCP VM preparation scripts **********
+# ********** Hosts added by PCP VM preparation scripts **********
+192.168.1.101	betty-256.pkits.test
+# ********** End of hosts added by PCP VM preparation scripts **********
+# ********** Hosts added by PCP VM preparation scripts **********
+192.168.1.101	betty-384.pkits.test
+# ********** End of hosts added by PCP VM preparation scripts **********
+# ********** Hosts added by PCP VM preparation scripts **********
+192.168.1.101	certipath-crl-ldap.verisign.com.test
+192.168.1.101	certipath-aia.verisign.com.test
+192.168.1.101	www.fis.evincible.com.test
+192.168.1.101	dir1.com-strong-id.net.test
+192.168.1.101	ssp-crl.symauth.com.test
+192.168.1.101	crlserver.orc.com.test
+192.168.1.101	pki.treasury.gov.test
+192.168.1.101	strong-auth.eop.gov.test
+192.168.1.101	ocs1.com-strong-id.net.test
+192.168.1.101	certipath-sia.symauth.com.test
+192.168.1.101	pilot-tscp-aia.symauth.com.test
+192.168.1.101	rootweb.managed.entrust.com.test
+192.168.1.101	nfi3.eva.orc.com.test
+192.168.1.101	aces.ocsp.identrust.com.test
+192.168.1.101	aia1.ssp-strong-id.net.test
+192.168.1.101	sia1.ssp-strong-id.net.test
+192.168.1.101	ocsp.dimc.dhs.gov.test
+192.168.1.101	ocsp.dhhs.gov.test
+192.168.1.101	crl.pki.va.gov.test
+192.168.1.101	ocsp.managed.entrust.com.test
+192.168.1.101	ssp-sia.verisign.com.test
+192.168.1.101	ocspaces.trustdst.com.test
+192.168.1.101	certipath-crl.symauth.com.test
+192.168.1.101	keys.eop.gov.test
+192.168.1.101	sspdir.managed.entrust.com.test
+192.168.1.101	ocsp.pki.va.gov.test
+192.168.1.101	crl.gds.disa.mil.test
+192.168.1.101	crl.gds.nit.disa.mil.test
+192.168.1.101	crl-server.orc.com.test
+192.168.1.101	crl3.digicert.com.test
+192.168.1.101	pilot-tscp-sia.symauth.com.test
+192.168.1.101	tstocs3.com-strong-id.net.test
+192.168.1.101	ssp-aia-ldap.verisign.com.test
+192.168.1.101	sbca2.safe-biopharma.org.test
+192.168.1.101	ocsp.uspto.gov.test
+192.168.1.101	ocsp1.ssp-strong-id.net.test
+192.168.1.101	tstcdp3.com-strong-id.net.test
+192.168.1.101	ocspaces.identrust.com.test
+192.168.1.101	cdp1.com-strong-id.net.test
+192.168.1.101	devpki.treas.gov.test
+192.168.1.101	pki.strac.org.test
+192.168.1.101	devldap.treas.gov.test
+192.168.1.101	rootdir.managed.entrust.com.test
+192.168.1.101	devx500.arc.nasa.gov.test
+192.168.1.101	ldap01.dimc.dhs.gov.test
+192.168.1.101	sia1.com-strong-id.net.test
+192.168.1.101	gpo-crl.ois.gpo.gov.test
+192.168.1.101	doesspocsp.managed.entrust.com.test
+192.168.1.101	devpki.treasury.gov.test
+192.168.1.101	pki.fti.org.test
+192.168.1.101	pub.carillonfedserv.com.test
+192.168.1.101	apps.identrust.com.test
+192.168.1.101	crls.pki.state.gov.test
+192.168.1.101	ldap-pte.identrust.com.test
+192.168.1.101	ldap.treas.gov.test
+192.168.1.101	pilot-tscp-crl.symauth.com.test
+192.168.1.101	lc.nasa.gov.test
+192.168.1.101	hhspkicrl.managed.entrust.com.test
+192.168.1.101	ocsp.defence.gov.au.test
+192.168.1.101	aia3.com-strong-id.net.test
+192.168.1.101	ldap.pki.va.gov.test
+192.168.1.101	sspldap.treas.gov.test
+192.168.1.101	crl.boeing.com.test
+192.168.1.101	certipath-aia.symauth.com.test
+192.168.1.101	pki.tscplab.org.test
+192.168.1.101	sspweb.managed.entrust.com.test
+192.168.1.101	ldap.digicert.com.test
+192.168.1.101	certrep.pki.state.gov.test
+192.168.1.101	crl.identrust.com.test
+192.168.1.101	orc-ds.orc.com.test
+192.168.1.101	ndac.arc.nasa.gov.test
+192.168.1.101	crl.global.lmco.com.test
+192.168.1.101	nfi2.eva.orc.com.test
+192.168.1.101	certstatus.strac.org.test
+192.168.1.101	dir.boeing.com.test
+192.168.1.101	dir1.ssp-strong-id.net.test
+192.168.1.101	sureid-aia.symauth.com.test
+192.168.1.101	servers.cmcf.state.il.us.test
+192.168.1.101	pki-crl.symauth.com.test
+192.168.1.101	crl-pte.identrust.com.test
+192.168.1.101	s.symcb.com.test
+192.168.1.101	ssp-crl-ldap.verisign.com.test
+192.168.1.101	www.fis.evincibletest.com.test
+192.168.1.101	igc.ocsp.identrust.com.test
+192.168.1.101	crl.disa.mil.test
+192.168.1.101	s.symcd.com.test
+192.168.1.101	www.gpo-fbca-crls.ois.gpo.gov.test
+192.168.1.101	certstatus.fti.org.test
+192.168.1.101	cdp1.ssp-strong-id.net.test
+192.168.1.101	ldap.icam.pgs-lab.com.test
+192.168.1.101	demodoesspweb.managed.entrust.com.test
+192.168.1.101	ocsp.external.lmco.com.test
+192.168.1.101	www.illinois.gov.test
+192.168.1.101	ldap.fpki.gov.test
+192.168.1.101	dsspweb.managed.entrust.com.test
+192.168.1.101	ssp-sia.symauth.com.test
+192.168.1.101	crl.external.lmco.com.test
+192.168.1.101	sbca2-test.safe-biopharma.org.test
+192.168.1.101	www.usps.com.test
+192.168.1.101	www.dcs.exostar.com.test
+192.168.1.101	ssp3.eva.orc.com.test
+192.168.1.101	ssp-sia-ldap.verisign.com.test
+192.168.1.101	www.tscp.eads.com.test
+192.168.1.101	ts-mobile-qca.aia.com-strong-id.net.test
+192.168.1.101	ssp-crl.verisign.com.test
+192.168.1.101	ocsp.pki.state.gov.test
+192.168.1.101	ipki.uspto.gov.test
+192.168.1.101	ocsp.nsn0.rcvs.nit.disa.mil.test
+192.168.1.101	www.defence.gov.au.test
+192.168.1.101	tscp-crl.symauth.com.test
+192.168.1.101	ts-mobile-qca.ocsp.com-strong-id.net.test
+192.168.1.101	pki.treas.gov.test
+192.168.1.101	publicsector.ocsp.identrust.com.test
+192.168.1.101	cacerts.digicert.com.test
+192.168.1.101	ssp-ocsp.verisign.com.test
+192.168.1.101	directory.ois.gpo.gov.test
+192.168.1.101	pki.dimc.dhs.gov.test
+192.168.1.101	tstaia3.com-strong-id.net.test
+192.168.1.101	http.fpki.gov.test
+192.168.1.101	pki.raytheon.com.test
+192.168.1.101	tscp-aia.symauth.com.test
+192.168.1.101	apps-stg.identrust.com.test
+192.168.1.101	cdp3.com-strong-id.net.test
+192.168.1.101	crl4.digicert.com.test
+192.168.1.101	cacerts.test.digicert.com.test
+192.168.1.101	ts-mobile-qca.crl.com-strong-id.net.test
+192.168.1.101	hhspkiocsp.managed.entrust.com.test
+192.168.1.101	nfimediumsspdir.managed.entrust.com.test
+192.168.1.101	ssp-aia.symauth.com.test
+192.168.1.101	ssp-aia.verisign.com.test
+192.168.1.101	sureid-crl.symauth.com.test
+192.168.1.101	dir.defence.gov.au.test
+192.168.1.101	nfirootdir.managed.entrust.com.test
+192.168.1.101	ocsp1.com-strong-id.net.test
+192.168.1.101	public.ocsp.identrust.com.test
+192.168.1.101	doesspweb.managed.entrust.com.test
+192.168.1.101	ldap.identrust.com.test
+192.168.1.101	http.cite.fpki-lab.gov.test
+192.168.1.101	certipath-aia-ldap.verisign.com.test
+192.168.1.101	dsspdir.managed.entrust.com.test
+192.168.1.101	crl.nit.disa.mil.test
+192.168.1.101	certdata.northropgrumman.com.test
+192.168.1.101	validation.identrust.com.test
+192.168.1.101	nfimediumsspweb.managed.entrust.com.test
+192.168.1.101	ocsp.disa.mil.test
+192.168.1.101	certipath-crl.verisign.com.test
+192.168.1.101	nfiocsp.managed.entrust.com.test
+192.168.1.101	dsspocsp.managed.entrust.com.test
+192.168.1.101	nfirootweb.managed.entrust.com.test
+192.168.1.101	ocsp.treas.gov.test
+192.168.1.101	apps-pte.identrust.com.test
+192.168.1.101	hc.nasa.gov.test
+192.168.1.101	pilot-certipath-aia.verisign.com.test
+192.168.1.101	ocsp.digicert.com.test
+192.168.1.101	www.ocsp.gpo.gov.test
+192.168.1.101	ssp-ocsp.symauth.com.test
+192.168.1.101	dir.tscp.eads.com.test
+192.168.1.101	aia1.com-strong-id.net.test
+192.168.1.101	tscp-sia.symauth.com.test
+192.168.1.101	http.icam.pgs-lab.com.test
+192.168.1.101	onsitecrl.verisign.com.test
+192.168.1.101	eid-aia.symauth.com.test
+192.168.1.101	pki-ocsp.symauth.com.test
+192.168.1.101	ocsp.northropgrumman.com.test
+192.168.1.101	pub.carillon.ca.test
+192.168.1.101	igcrootpte.ocsp.identrust.com.test
+192.168.1.101	ssp4.eva.orc.com.test
+# ********** End of hosts added by PCP VM preparation scripts **********
+# ********** Hosts added by PCP VM preparation scripts **********
+192.168.1.101	betty.nist.gov.test
+192.168.1.101	smime2.nist.gov.test
+# ********** End of hosts added by PCP VM preparation scripts **********
+```
+## 3 GSTP Usage
+
+### 3.1	Generating Test Scripts
+
+Use the script generator to generate test scripts targeting the desired artifact collection. The example below demonstrates generation of test scripts targeting all six artifact collections located in /home/user/gstp with scripts written to /home/user/test. In this example, two wantBacks will be requested in each SCVP request (except batch, for which the script generator automatically omits all wantBacks).
+
+```
+./ScvpScriptGenerator --mfpki_folder /home/user/gstp/MFPKI/EE_good --mfpki_ta/home/user/gstp/MFPKI/TAs/Common Policy-905F942FD9F28F679B378180FD4F846347F645C1.fake --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
+./ScvpScriptGenerator --pdts_folder /home/user/gstp/PDTS/renamed --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
+./ScvpScriptGenerator --pkits_2048_folder /home/user/gstp/PKITS_2048/renamed/ --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
+./ScvpScriptGenerator --pkits_4096_folder /home/user/gstp/PKITS_4096/renamed --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
+./ScvpScriptGenerator --pkits_p256_folder /home/user/gstp/PKITS_p256/renamed --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
+./ScvpScriptGenerator --pkits_p384_folder /home/user/gstp/PKITS_p384/renamed --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
+```
+Delete any test scripts that are not of interest. For example, if not testing non-default validation policies, delete those scripts.
+
+### 3.2	Executing GSTP Test Cases
+
+The RUT must be configured with all necessary trust anchors, any non-default validation policies and with the hosts file targeting the hosting environment that will be used. The test client must be configured to interact with the responder (in the vss.properties file) and save logs to an appropriate location (via the SCVP_OUTPUT_PATH environment variable). 
+
+After the RUT and client are configured, simply execute the desired test scripts and review the results. Make sure to delete any output files prior to test execution, if desired, because output files will be appended to throughout execution. The test runner script can be used to handle log file management.
+
+### 3.3	Reviewing Logs
+
+The test SCVP client is configured to emit six log streams, as described in the following subsections.
+
+#### 3.3.1 Summary Results
+
+The summary results file is written to results.csv and contains a brief summary of test SCVP client execution. It includes friendly name for a test, the expected result, an indication of expected result achieved and an indication of profile conformance evaluation.
+
+#### 3.3.2 Client Log
+
+The client log is written to client.txt. It contains additional detail not presented in the summary results. For example, an indication of which fields in an SCVP response caused profile conformance evaluation failure.
+
+#### 3.3.3 Validation Failures Re-execution Script
+
+The validation failures re-execution script is written to _validation_failures.txt_. It includes invocations of the test SCVP client to enable re-execution of test cases that failed to yield the expected result with regard to validation of the target certificate(s).
+
+#### 3.3.4 Profile Evaluation Failures Re-execution Script
+
+The profile failures re-execution script is written to _profile_failures.txt_. It includes invocations of the test SCVP client to enable re-execution of test cases that failed to yield the expected result with regard to evaluation of the SCVP response against the target SCVP profile.
+
+#### 3.3.5 Artifacts
+
+Base64-encoded SCVP requests and responses corresponding to failed test cases are written to artifacts.csv to facilitate detailed analysis using a utility like dumpasn1. To capture all request and responses, pass the _--log_all_messages_ flag to the client.
+
+#### 3.3.6 Debug
+
+A debug log that includes all of the above plus lower level library output is emitted to aid in troubleshooting. The log information emitted by lower level libraries may include details that are not propagated back to the test client.
+
+## 4 Deploying Artifacts
+
+The test PKI artifacts are supplied in three forms:
+
+* Compressed archives containing only the artifacts themselves
+* Installed on Virtual Machines (VMs) intended to be deployed locally
+* Installed on an Amazon Web Services (AWS) image, suitable for deployment as an Elastic Compute Cloud (EC2) instance.
+
+### 4.1	Local VMs
+
+Two VMs intended for local use are supplied. One includes the PKI Copy and Paste (PCP) tool used to generate the artifacts along with assorted other tools suitable for inspecting and testing them. It also includes a copy of the test harness and related utilities, ready to run to test an SCVP service.
+
+The second VM includes a copy of all the artifacts and software configured to host them at the locations referenced in the certificates and service OCSP responses.
+
+#### 4.1.1 Tools VM
+
+The SCVP Tools VM is supplied in Open Virtualization Format (OVF). In addition to being used to generate artifacts, it can be used to administer the artifacts VM.
+
+* User: _pcpadmin_
+* Password: _aqswdefr1234!_
+
+The Tools VM should be deployed to the same virtual network as the artifact hosting VM. The _pcpadmin_ user has an SSH keypair installed which can be used to administer the artifact hosting VM.
+
+The Tools included:
+
+* All scripts and clients referenced in this guide, including copies of the sample hosts files that match the artifacts hosted in the Host VM, EC2 and Linode
+* PCP itself
+* FileZilla, for managing files on the hosting VM
+* Firefox web browser
+* Publication scripts referenced in the artifact publication guide
+* Graphical Trust Anchor Constraints Tool<!--Correct?--> (TACT) tools for editing settings databases and Trust Anchor stores
+* openssl
+* dumpasn1
+* Xca
+* Python 2 and Python 3
+* PyCharm Community Edition
+
+#### 4.1.2 Artifact-Hosting VM
+
+The artifact-hosting VM supplied in OVF. It is intended to be run without a graphical interface of any kind. It needs to have one interface on the same network as the Tools VM and one interface on the same network as the RUT. The hosts file installed on the RUT must reference the IP address of this network interface.
+
+Once the artifact-hosting VM is connected, log into the console using the following credentials:
+
+* User: _vmadmin_
+* Password: _aqswdefr1234!_
+
+Use the `ip` command to find the current address of the network adapter connected to the RUT network:
+
+```
+[vmadmin@ficam-artifacts ~]$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:be:31:f5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.210/24 brd 192.168.99.255 scope global dynamic ens33
+       valid_lft 1547sec preferred_lft 1547sec
+    inet6 fe80::f090:3a80:a0f2:b37c/64 scope link
+       valid_lft forever preferred_lft forever
+3: ens34: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:0c:29:be:31:ff brd ff:ff:ff:ff:ff:ff
+    inet 10.142.42.2/24 brd 10.142.42.255 scope global ens34
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c:29ff:febe:31ff/64 scope link
+       valid_lft forever preferred_lft forever
+```
+And update the addresses in the hosts file installed on the RUT accordingly.
+
+Start the httpd service by running the command:  
+
+```
+# systemctl start httpd
+```
+
+If the RUT will be using OCSP as well as CRLs to check status, open a command prompt in /srv/ocsp and run the command: 
+
+```
+# bash startall.sh 
+```
+
+### 4.2	AWS Image
+
+The AWS image is functionally identical to the local VM. Responders installed in the same AWS cloud can use its private IP address to access artifacts. Responders installed elsewhere can be added to the scvp-artifact-hosting security group and use the public IP of the ficam-scvp-artifacts VM.
+
+### 4.3	Artifact Archives
+
+Artifacts are also supplied in zip archives within the Tools VM as well as published to the ficam-scvp-testing GitHub repository. These can be loaded into the SCVP responders per the vendor documentation for doing so.
+
+## Bibliography
+
+Abbreviation|Referenced Document|
+---|---|
+[RFC 5055]|Freeman, T., Housley, R., Malpani, A., Cooper, D. and W. Polk, "Server-Based Certificate Validation Protocol (SCVP)," December 2007.
+[TREAS]|Treasury Validation Services: SCVP Request and Response Profile, October 7, 2016.
