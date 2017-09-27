@@ -89,7 +89,7 @@ VSS_SCVP_TEST_CLIENT|Governs custom test client behavior that is only appropriat
 Alternatively, the location of the vss.properties file can be provided as a Java system variable when the client is launched as shown below (which also shows temporarily reassigning the SCVP_OUTPUT_PATH environment variable for a single run):
 
 ```
-SCVP_OUTPUT_PATH=/<some path>/SCVP_OUTPUT_PATH2 java -Dvss.configLocation=/<some path>/vss.properties -jar vss2.jar</br> --scvp_profile lightweight -n 4.1.1 -c /<some path>/ValidCertificatePathTest1EE.crt --wantBacks BestCertPath
+SCVP_OUTPUT_PATH=/<some path>/SCVP_OUTPUT_PATH2 java -Dvss.configLocation=/<some path>/vss.properties -jar vss2.jar --scvp_profile lightweight -n 4.1.1 -c /<some path>/ValidCertificatePathTest1EE.crt --wantBacks BestCertPath
 ```
 Once the configuration file edits have been performed, the RUT’s certificate must be added to the keystore.ks file located in the /usr/local/tomcat/conf folder. If the RUT’s certificate is not handy and the RUT supports validation policy requests, the test client can be used to retrieve the certificate via the following command:
 
@@ -99,7 +99,7 @@ java –jar vss2.jar –s /path/to/receive/certificate.der
 The certificate may then be imported into the keystore using:
 
 ```
-keytool -keystore /usr/local/tomcat/conf/vssTrustStore.jks -importcert -file /path/to/receive/certificate.der</br> -alias someresponder 
+keytool -keystore /usr/local/tomcat/conf/vssTrustStore.jks -importcert -file /path/to/receive/certificate.der -alias someresponder 
 ```
 The test client will write logs to the location identified by the SCVP_OUTPUT_PATH environment variable.
 
