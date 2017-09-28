@@ -127,19 +127,19 @@ The test client will write logs to the location identified by the SCVP_OUTPUT_PA
 During the execution of the GSTP, the test SCVP client will be executed hundreds of times. To simplify execution of the test cases, a set of scripts are provided that reference a target certificate or collection of target certificates and provide a set of appropriate command line parameters. These scripts can be modified for the environment in which the test client will be used. Scripts may be manually altered or regenerated to change paths to test artifacts, to change output folder location or to change the list of wantBacks.
 
 --------------------------|---------------------**_ScvpScriptGenerator v1.0.0 Usage_**-----------------------------------|
----|---|
--h [ --help ]|Print usage instructions|
--l [ --logging_conf ] arg|Logging configuration to support report generation|
---pkits_2048_folder arg|Folder containing PKITS 2048 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
---pkits_4096_folder arg|Folder containing PKITS 4096 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
---pkits_p256_folder arg|Folder containing PKITS p256 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
---pkits_p384_folder arg|Folder containing PKITS p384 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
---pdts_folder arg|Folder containing PDTS edition|
---mfpki_folder arg|Folder containing MFPKI edition|
---mfpki_ta arg|File containing the MFPKI trust anchor|
---output_folder arg|Folder to receive generated scripts|
--l [ --logging ] arg|Logging configuration for ScvpScriptGenerator logging purposes|
---want_back arg|List of OIDS in dot notation form (i.e., 1.2.3.4.5) to be passes as --wantBacks to the SCVP client|
+:---|---|
+-h&nbsp;[&nbsp;--help&nbsp;]|Print usage instructions|
+-l&nbsp;[&nbsp;--logging_conf&nbsp;]&nbsp;arg|Logging configuration to support report generation|
+--pkits_2048_folder&nbsp;arg|Folder containing PKITS 2048 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
+--pkits_4096_folder&nbsp;arg|Folder containing PKITS 4096 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
+--pkits_p256_folder&nbsp;arg|Folder containing PKITS p256 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
+--pkits_p384_folder&nbsp;arg|Folder containing PKITS p384 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
+--pdts_folder&nbsp;arg|Folder containing PDTS edition|
+--mfpki_folder&nbsp;arg|Folder containing MFPKI edition|
+--mfpki_ta&nbsp;arg|File containing the MFPKI trust anchor|
+--output_folder&nbsp;arg|Folder to receive generated scripts|
+-l&nbsp;[&nbsp;--logging&nbsp;]&nbsp;arg|Logging configuration for ScvpScriptGenerator logging purposes|
+--want_back&nbsp;arg|List of OIDS in dot notation form (i.e., 1.2.3.4.5) to be passes as --wantBacks to the SCVP client|
 
 The following script can be tailored to regenerate a full complement of scripts to support execution of the GSTP against a given SCVP responder:
 
