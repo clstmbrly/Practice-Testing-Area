@@ -126,7 +126,7 @@ The test client will write logs to the location identified by the SCVP_OUTPUT_PA
 
 During the execution of the GSTP, the test SCVP client will be executed hundreds of times. To simplify execution of the test cases, a set of scripts are provided that reference a target certificate or collection of target certificates and provide a set of appropriate command line parameters. These scripts can be modified for the environment in which the test client will be used. Scripts may be manually altered or regenerated to change paths to test artifacts, to change output folder location or to change the list of wantBacks.
 
----------------------|------------------------**_ScvpScriptGenerator v1.0.0 Usage_**-------------------------------------|
+--------------------------|---------------------**_ScvpScriptGenerator v1.0.0 Usage_**-----------------------------------|
 ---|---|
 -h [ --help ]|Print usage instructions|
 -l [ --logging_conf ] arg|Logging configuration to support report generation|
