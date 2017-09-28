@@ -1,27 +1,46 @@
 ---
 layout: default
 title: Server-based Certificate Validation Protocol (SCVP) Test Program User's Guide
-permalink: /1_scvpuser/
+permalink: /scvpuserguide/
 ---
-### Revision History <!--Normally for a Revision History, aka Change Notice/Record, the first and only entry is the first official (final) publication (i.e., Version 1.0). Revisions prior to the final version should not be listed. In the future, if additional versions are released to correct, update, or substantially change the information, the next official version would be listed on the Revision History (i.e., Version 1.1, if a minor revision, or Version 2.0, if a major revision). In this case, it looks like the 8/11/2017 version is potentially the first, final publication.-->
+### Revision History 
 
-&nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp;|Revision No.|Pages Revised|
----|---|---|
-2017-06-08|0|First draft|
-2017-07-13|0|Edited draft|
-2017-08-08|0|Added notes about setting SCVP_OUTPUT_PATH environment variable and alternative vss.properties file location|
-2017-08-11|1.0<!--?-->|Merged in sections on virtual machines and artifact hosting|
+Date|Version|Changes|
+:---:|:---:|---|
+08/11/2017|1.0|Final Publication|
+|||
 
-## Table of Contents (Add in)
+### Table of Contents
 
-Space for Table of Contents
+* [**1 Overview**](#1-overview)
+* [**2 GSTP Components**](#2-gstp-components)
+* [2.1 Test SCVP Client](#2.1-test-scvp-client)
+* [2.2 Test SCVP Client Scripts and Script Generator](#2.2-test-scvp-client-scripts-and-script-generator)
+* [2.3 Test SCVP Client Script Runner](#2.3-test-scvp-client-script-runner)
+* [2.4 Test Artifacts](#2.4-test-artifacts)
+* [2.5 Sample Environment](#2.5-sample-environment)
+* [2.6 Hosts File for Sample Environment](#2.6-hosts-file-for-sample-environment)
+* [**3 GSTP Usage**](#3-gstp-usage)
+* [3.1 Generating Test Scripts](#3.1-generating-test-scripts)
+* [3.2 Executing GSTP Test Cases](#3.2-executing-gstp-test-cases)
+* [3.3 Reviewing Logs](#3.3-reviewing-logs)
+  * [3.3.1 Summary Results](#3.3.1-summary-results)
+  * [3.3.2 Client Log](#3.3.2-client-log)
+  * [3.3.3 Validation Failures Re-execution Script](#3.3.3-validation-failures-re-execution-script)
+  * [3.3.4 Profile Evaluation Failures Re-execution Script](#3.3.4-profile-evaluation-failures-re-execution-script)
+  * [3.3.5 Artifacts](#3.3.5-artifacts)
+  * [3.3.6 Debug](#3.3.6-debug)
+* [**4 Deploying Artifacts**](#4-deploying-artifacts)
+* [4.1 Local Virtual Machines](#4.1-local-virtual-machines)
+* [4.2 Amazon Web Services Image](#4.2-amazon-web-services)
+* [4.3 Artifact Archives](#4.3-artifact-archives)
+* [**Bibliography**](#bibliography)
 
-
-## Overview
+## 1 Overview
 
 This document provides an overview of the artifacts and utilities employed by the U.S. General Services Administration (GSA) Server-based Certificate Validation Protocol (SCVP) Test Program (GSTP). The GSTP's goal is to confirm whether an Server-based Certificate Validation Protocol (SCVP) responder is capable of providing accurate certification path validation results in environments with comparable complexity to the U.S. Federal Public Key Infrastructure (FPKI). The test materials do not facilitate confirmation that a product is conformant with all aspects of the SCVP, as defined in Request for Comment (RFC) 5005. Instead, conformance to the SCVP profiles identified for use by GSA [TREAS] is demonstrated.
 
-The GSTP is composed of seven primary components that are used to exercise an SCVP responder under test (RUT):
+The GSTP is composed of seven primary components that are used to exercise an SCVP Responder under Test (RUT):
 
 *	Test SCVP client
 *	Test SCVP client scripts 
@@ -39,9 +58,9 @@ Three distinct sets of test artifacts will be used to test certification path de
 
 1. NIST’s Public Key Infrastructure (PKI) Interoperability Test Suite v2 (PKITSv2)
 2. NIST’s Path Development Test Suite v2 (PDTSv2)
-3. Mock Federal PKI (MFPKI)
+3. Mock-Federal PKI (MFPKI)
 
-All AIA and CRL DP URIs included in the test artifacts feature names that are not routable on the public Internet. A Linux virtual machine that hosts artifacts via HTTP server and OCSP responder instances is available, along with a host file that can be tailored for use in resolving names during certification path processing.
+All AIA and Certificate Revocation List (CRL) Distribution Point (DP) URIs included in the test artifacts feature names that are not routable on the public Internet. A Linux virtual machine that hosts artifacts via HTTP server and OCSP responder instances is available, along with a host file that can be tailored for use in resolving names during certification path processing.
 
 ## 2 GSTP Components
 
@@ -137,7 +156,7 @@ The following script can be tailored to regenerate a full complement of scripts 
 ./ScvpScriptGenerator --pkits_p384_folder /<path>/PKITS_P256/Renamed 
 --output_folder /<path>/GSTP --want_back BestCertPath --want_back RevocationInfo
 ```
-The resulting output will be a set of scripts, as listed below. For the MFPKI and each PKITSv2 edition, a script targeting the default SCVP validation policy will be emitted both with and without trust anchor inclusion in the request for each SCVP profile type. PDTS will receive similar, except no batch scripts are emitted for PDTS. Similarly, for the MFPKI and each PKITSv2 edition, a script targeting a non-default SCVP validation policy will be emitted for each profile type. PDTS will receive similar, except no batch script is emitted. Fifty-one scripts are generated in total.
+The resulting output will be a set of scripts, as listed below. For the MFPKI and each PKITSv2 edition, a script targeting the default SCVP validation policy will be emitted both with and without trust anchor inclusion in the request for each SCVP profile type. PDTS will receive similar<!--Receive similar what?-->, except no batch scripts are emitted for PDTS. Similarly, for the MFPKI and each PKITSv2 edition, a script targeting a non-default SCVP validation policy will be emitted for each profile type. PDTS will receive similar<!--Receive similar what?-->, except no batch script is emitted. Fifty-one scripts are generated in total:
 
 *	MFPKI_DEFAULT_OMIT_TA_batch.sh
 *	MFPKI_DEFAULT_OMIT_TA_lightweight.sh
@@ -193,7 +212,7 @@ The resulting output will be a set of scripts, as listed below. For the MFPKI an
 
 ### 2.3	Test SCVP Client Script Runner
 
-The following script can be used to execute all GSTP test cases when run from a folder containing the test SCVP client with all logs collecting in one location.
+The following script can be used to execute all GSTP test cases when run from a folder containing the test SCVP client with all logs collecting in one location:
 
 ```
 bash /<path>/MFPKI_DEFAULT_OMIT_TA_batch.sh
@@ -249,7 +268,7 @@ bash /<path>/PKITS_P384_NON_DEFAULT_lightweight.sh
 bash /<path>/PKITS_P384_NON_DEFAULT_longterm.sh
 ```
 
-The following Python code (provided as GSTPScriptRunner.py) can be used to run the scripts listed above with logs moved in between each script.
+The following Python code (provided as GSTPScriptRunner.py) can be used to run the scripts listed above with logs moved in between each script:
 
 ```
 import glob2
@@ -364,7 +383,7 @@ This script will run all available scripts in the designated folder. To refrain 
 PKITSv2 and PDTSv2 are updates to the existing NIST test suites. PKITS was updated to add AIA and CRL DP extensions to avoid the need to make all artifacts available locally to the product being tested. Additionally, editions were prepared using alternative public key and hash algorithms. PDTS was updated to feature unexpired artifacts, to drop LDAP-centric tests and to use RSA 2048 keys with SHA256 (instead of RSA 1024 with SHA1). While these were generated to support the GSTP, the artifacts are suitable for testing any RFC5280 compliant certification path validation implementation.
 
 Test Suite|Public Key Details|Hash Algorithm|
----|---|---|
+:---:|:---:|:---:|
 PKITSv2|RSA 2048|SHA256|
 PKITSv2|RSA 4096|SHA512|
 PKITSv2|EC p256|SHA256|
@@ -380,7 +399,7 @@ A Linux virtual machine is available that features artifacts from the MFPKI, var
 
 ### 2.6	Hosts File for Sample Environment
 
-A sample hosts file for the URIs included in artifacts that comprise the MFPKI, various PKITSv2 editions and PDTS is below. 
+A sample hosts file for the URIs included in artifacts that comprise the MFPKI, various PKITSv2 editions and PDTS is below: 
 
 ```
 # ********** Hosts added by PCP VM preparation scripts **********
@@ -631,7 +650,7 @@ The test PKI artifacts are supplied in three forms:
 * Installed on Virtual Machines (VMs) intended to be deployed locally
 * Installed on an Amazon Web Services (AWS) image, suitable for deployment as an Elastic Compute Cloud (EC2) instance.
 
-### 4.1	Local VMs
+### 4.1	Local Virtual Machines
 
 Two VMs intended for local use are supplied. One includes the PKI Copy and Paste (PCP) tool used to generate the artifacts along with assorted other tools suitable for inspecting and testing them. It also includes a copy of the test harness and related utilities, ready to run to test an SCVP service.
 
@@ -706,7 +725,7 @@ If the RUT will be using OCSP as well as CRLs to check status, open a command pr
 # bash startall.sh 
 ```
 
-### 4.2	AWS Image
+### 4.2	Amazon Web Services Image
 
 The AWS image is functionally identical to the local VM. Responders installed in the same AWS cloud can use its private IP address to access artifacts. Responders installed elsewhere can be added to the scvp-artifact-hosting security group and use the public IP of the ficam-scvp-artifacts VM.
 
