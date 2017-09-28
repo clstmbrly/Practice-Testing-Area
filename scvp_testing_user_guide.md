@@ -71,7 +71,7 @@ The GSTP test client is based on an SCVP client available from GitHub.com/GSA at
 Parameter Name|Parameter Type|Description|
 ---|---|---|
 -h, --help|None|Show help message and exit|
-&nbsp;&nbsp;---------------------|----------------**_Basic Logistics_**----------------|----------------------------------&nbsp;&nbsp;|
+&nbsp;&nbsp;---------------------|---------------**_Basic Logistics_**----------------|----------------------------------&nbsp;&nbsp;|
 --scvp_profile|{lightweight, long-term-record, batch}|Name of SCVP profile|
 -x, --expectSuccess|Boolean value {true, false}|Indicates whether success is expected when validating the --target_cert. Defaults to true|
 -l, --logging_conf|Full path and filename of log4j configuration file|Used to customize default logging behavior|
@@ -98,9 +98,9 @@ Logging output is written to a location identified by the SCVP_OUTPUT_PATH envir
 
 Generally, the client need not be interacted with directly to execute test cases. A set of scripts are provided that drive execution of test scenarios in a variety of contexts. However, prior to using the scripts, the test client itself must be configured to interact with the RUT. A configuration file must be edited to provide the URL of the SCVP interface and a key store must be updated to include keys necessary to verify the SCVP responses. The configuration file is named vss.properties and is located in the /usr/local/tomcat/conf folder. The table below shows the settings that must be modified for test purposes.
 
-Configuration Element|Purpose|Example value|
----|---|---|
-VSS_TRUSTSTORE_SCVP_SIGNER_ISSUER_LABEL|Provides label of SCVP responder’s certificate in the keystore|some responder|
+Configuration Element|Purpose|Example Value|
+---|---|:---:|
+VSS_TRUSTSTORE_SCVP_SIGNER_ISSUER_LABEL|Provides label of SCVP responder’s certificate in the keystore|Some Responder|
 VSS_SCVP_SERVER_URI|Provides the URI to which SCVP requests are sent|http://example.com/scvp|
 VSS_SCVP_DER_ENCODE_DEFAULTS|Determines whether the client DER encodes default fields (some responders require presence of fields the DER requires to be absent)|False|
 VSS_SCVP_TEST_CLIENT|Governs custom test client behavior that is only appropriate in a test client|True|
@@ -156,7 +156,7 @@ The following script can be tailored to regenerate a full complement of scripts 
 ./ScvpScriptGenerator --pkits_p384_folder /<path>/PKITS_P256/Renamed 
 --output_folder /<path>/GSTP --want_back BestCertPath --want_back RevocationInfo
 ```
-The resulting output will be a set of scripts, as listed below. For the MFPKI and each PKITSv2 edition, a script targeting the default SCVP validation policy will be emitted both with and without trust anchor inclusion in the request for each SCVP profile type. PDTS will receive similar<!--Receive similar what?-->, except no batch scripts are emitted for PDTS. Similarly, for the MFPKI and each PKITSv2 edition, a script targeting a non-default SCVP validation policy will be emitted for each profile type. PDTS will receive similar<!--Receive similar what?-->, except no batch script is emitted. Fifty-one scripts are generated in total:
+The resulting output will be a set of scripts, as listed below. For the MFPKI and each PKITSv2 edition, a script targeting the default SCVP validation policy will be emitted both with and without trust anchor inclusion in the request for each SCVP profile type. PDTS will receive similar<!--Receive similar what?-->, except no batch scripts are emitted for PDTS. Similarly, for the MFPKI and each PKITSv2 edition, a script targeting a non-default SCVP validation policy will be emitted for each profile type. PDTS will receive similar<!--Receive similar what?-->, except no batch script is emitted. Fifty-one scripts are generated:
 
 *	MFPKI_DEFAULT_OMIT_TA_batch.sh
 *	MFPKI_DEFAULT_OMIT_TA_lightweight.sh
@@ -606,7 +606,7 @@ Use the script generator to generate test scripts targeting the desired artifact
 ./ScvpScriptGenerator --pkits_p256_folder /home/user/gstp/PKITS_p256/renamed --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
 ./ScvpScriptGenerator --pkits_p384_folder /home/user/gstp/PKITS_p384/renamed --output_folder /home/user/test --want_back BestCertPath --want_back RevocationInfo
 ```
-Delete any test scripts that are not of interest. For example, if not testing non-default validation policies, delete those scripts.
+Delete any test scripts that are not of interest. For example, if not testing non-default validation policies, delete those scripts. (See section 2.3 scripts.)
 
 ### 3.2	Executing GSTP Test Cases
 
@@ -660,8 +660,8 @@ The second VM includes a copy of all the artifacts and software configured to ho
 
 The SCVP Tools VM is supplied in Open Virtualization Format (OVF). In addition to being used to generate artifacts, it can be used to administer the artifacts VM.
 
-* User: _pcpadmin_
-* Password: _aqswdefr1234!_
+* User:&nbsp;&ngsp;_pcpadmin_
+* Password:&nbsp;&ngsp;_aqswdefr1234!_
 
 The Tools VM should be deployed to the same virtual network as the artifact hosting VM. The _pcpadmin_ user has an SSH keypair installed which can be used to administer the artifact hosting VM.
 
@@ -685,8 +685,8 @@ The artifact-hosting VM supplied in OVF. It is intended to be run without a grap
 
 Once the artifact-hosting VM is connected, log into the console using the following credentials:
 
-* User: _vmadmin_
-* Password: _aqswdefr1234!_
+* User:&nbsp;&ngsp;_vmadmin_
+* Password:&nbsp;&ngsp;_aqswdefr1234!_
 
 Use the `ip` command to find the current address of the network adapter connected to the RUT network:
 
@@ -711,7 +711,7 @@ Use the `ip` command to find the current address of the network adapter connecte
     inet6 fe80::20c:29ff:febe:31ff/64 scope link
        valid_lft forever preferred_lft forever
 ```
-And update the addresses in the hosts file installed on the RUT accordingly.
+Also, update the addresses in the hosts file installed on the RUT accordingly.
 
 Start the httpd service by running the command:  
 
