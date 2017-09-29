@@ -108,7 +108,7 @@ VSS_SCVP_DER_ENCODE_DEFAULTS|Determines whether the client DER encodes default f
 VSS_SCVP_TEST_CLIENT|Governs custom test client behavior that is only appropriate in a test client|True|
 
 
-Alternatively, the location of the `vss.properties file` can be provided as a Java system variable when the client is launched as shown below (which also shows temporarily reassignment of the SCVP_OUTPUT_PATH environment variable for a single run):
+Alternatively, the location of the `vss.properties` file can be provided as a Java system variable when the client is launched as shown below (which also shows temporarily reassignment of the `SCVP_OUTPUT_PATH` environment variable for a single run):
 
 ```
 SCVP_OUTPUT_PATH=/<some path>/SCVP_OUTPUT_PATH2 java -Dvss.configLocation=/<some path>/vss.properties -jar vss2.jar --scvp_profile lightweight -n 4.1.1 -c /<some path>/ValidCertificatePathTest1EE.crt --wantBacks BestCertPath
@@ -343,7 +343,7 @@ def main():
             bash_process.wait()
 
 
-# noinspection PyUnusedLocal
+            # noinspection PyUnusedLocal
             process = None
 
             dest_log_folder = os.path.join(orig_dest_log_folder, product + "_" +
@@ -738,7 +738,7 @@ Use the `ip` command to find the current address of the network adapter connecte
 ```
 Also, update the addresses in the hosts file installed on the RUT accordingly.
 
-Start the httpd service by running the command:  
+Start the `httpd` service by running the command:  
 
 ```
 # systemctl start httpd
