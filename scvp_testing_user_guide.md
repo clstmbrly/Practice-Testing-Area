@@ -67,7 +67,7 @@ All Authority Information Access (AIA) and Certificate Revocation List (CRL) Dis
 
 ### 2.1 Test SCVP Client
 
-The GSTP test client is based on an SCVP client available from GitHub.com/GSA at: [GSA/VSS](https://github.com/GSA/vss){:target="_blank"}._ <!--This link gives 404 error--Private Repo.-->The GSTP client will also be available via GitHub at a TBD location. The command line parameters accepted by the client are as follows:
+The GSTP test client is based on an SCVP client available from GitHub.com/GSA at: [GSA/VSS](https://github.com/GSA/vss){:target="_blank"}._ <!--This link gives 404 error due to Private Repo.-->The GSTP client will also be available via GitHub at a TBD location. The command line parameters accepted by the client are as follows:
 
 Parameter Name|Parameter Type|Description|
 ---|---|---|
