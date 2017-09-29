@@ -736,8 +736,6 @@ Artifacts are also supplied in zip archives within the Tools VM, as well as publ
 
 ## Bibliography
 
-Abbreviation|Referenced Document|
----|---|
-[RFC 5055] (Proposed Standard) Freeman, T., Housley, R., Malpani, A., Cooper, D. and W. Polk, "Server-Based Certificate Validation Protocol (SCVP)," December 2007.
-[RFC 5280] Cooper, D., et al., "Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile," May 2008. 
-[TREAS]|Treasury Validation Services: SCVP Request and Response Profile, October 7, 2016.
+* [RFC 5055] Freeman, T., Housley, R., Malpani, A., Cooper, D., and W. Polk, "Server-Based Certificate Validation Protocol (SCVP)," December 2007.
+* [RFC 5280] Cooper, D., Santesson, S., Farrell, S., Boeyen, S., Housley, R., and Polk, W., "Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile," May 2008. 
+* [TREAS]|Treasury Validation Services: SCVP Request and Response Profile, October 7, 2016.
