@@ -37,7 +37,7 @@ Date|Version|Changes|
 
 ## 1 Overview
 
-This document provides an overview of the artifacts and utilities employed by the U.S. General Services Administration's (GSA) Server-based Certificate Validation Protocol (SCVP) Test Program (GSTP). The GSTP's goal is to confirm whether an SCVP Responder is capable of providing accurate certification path validation results in environments with comparable complexity to the U.S. Federal Public Key Infrastructure (FPKI). The test materials do not facilitate confirmation that a product is conformant with all aspects of the SCVP, as defined in [Request for Comment (RFC) 5055].<!--This said "5005," which assume to be incorrect. Bibliography says "5055."--> Instead, conformance to the SCVP profiles identified for use by GSA [TREAS] is demonstrated.
+This document provides an overview of the artifacts and utilities employed by the U.S. General Services Administration's (GSA) Server-based Certificate Validation Protocol (SCVP) Test Program (GSTP). The GSTP's goal is to confirm whether an SCVP Responder is capable of providing accurate certification path validation results in environments with comparable complexity to the U.S. Federal Public Key Infrastructure (FPKI). The test materials do not facilitate confirmation that a product is conformant with all aspects of the SCVP, as defined in [Request for Comment (RFC) 5055].<!--Fixed. Bibliography says "5055."--> Instead, conformance to the SCVP profiles identified for use by GSA [TREAS] is demonstrated.
 
 The GSTP is composed of seven primary components that are used to exercise an SCVP Responder under Test (RUT):
 
@@ -59,18 +59,20 @@ Three distinct sets of test artifacts will be used to test certification path de
 2. NIST’s Path Development Test Suite v2 (PDTSv2)
 3. Mock-Federal PKI (MFPKI)
 
-All Authority Information Access (AIA) and Certificate Revocation List (CRL) Distribution Point (DP) Uniform Resource Identifiers (URIs) included in the test artifacts' feature names <!--missing sentence verb-->that are not routable on the public Internet. A Linux virtual machine that hosts artifacts via HTTP server and OCSP responder instances is available, along with a host file that can be tailored for use in resolving names during certification path processing.
+All Authority Information Access (AIA) and Certificate Revocation List (CRL) Distribution Point (DP) Uniform Resource Identifiers (URIs) included in the test artifacts' feature names <!--missing verb-->that are not routable on the public Internet. A Linux virtual machine that hosts artifacts via HTTP server and OCSP responder instances is available, along with a host file that can be tailored for use in resolving names during certification path processing.
+
+* [Back to Table of Contents](#table-of-contents)
 
 ## 2 GSTP Components
 
 ### 2.1 Test SCVP Client
 
-The GSTP test client is based on an SCVP client available from GitHub.com/GSA at: [GSA/VSS](https://github.com/GSA/vss){:target="_blank"}._ <!--This link gives 404 error since this is a Private Repo.-->The GSTP client will also be available via GitHub at a TBD location. The command line parameters accepted by the client are as follows:
+The GSTP test client is based on an SCVP client available from GitHub.com/GSA at: [GSA/VSS](https://github.com/GSA/vss){:target="_blank"}._ <!--This link gives 404 error--Private Repo.-->The GSTP client will also be available via GitHub at a TBD location. The command line parameters accepted by the client are as follows:
 
 Parameter Name|Parameter Type|Description|
 ---|---|---|
 -h, --help|None|Show help message and exit|
-&nbsp;&nbsp;---------------------|---------------**_Basic Logistics_**----------------|----------------------------------&nbsp;&nbsp;|
+&nbsp;&nbsp;---------------------|--------------**_Basic Logistics_**---------------|----------------------------------&nbsp;&nbsp;|
 --scvp_profile|{lightweight, long-term-record, batch}|Name of SCVP profile|
 -x, --expectSuccess|Boolean value {true, false}|Indicates whether success is expected when validating the --target_cert. Defaults to true|
 -l, --logging_conf|Full path and filename of log4j configuration file|Used to customize default logging behavior|
@@ -96,7 +98,7 @@ Parameter Name|Parameter Type|Description|
 
 Logging output is written to a location identified by the SCVP_OUTPUT_PATH environment variable.
 
-Generally, the client need not be interacted with directly to execute test cases. A set of scripts are provided that drive execution of test scenarios in a variety of contexts. However, prior to using the scripts, the test client itself must be configured to interact with the RUT. A configuration file must be edited to provide the URL of the SCVP interface and a key store must be updated to include keys necessary to verify the SCVP responses. The configuration file is named `vss.properties` and is located in the `/usr/local/tomcat/conf folder`. The table below shows the settings that must be modified for test purposes.
+Generally, the client need not be interacted with directly to execute test cases. A set of scripts are provided that drive execution of test scenarios in a variety of contexts. However, prior to using the scripts, the test client itself must be configured to interact with the RUT. A configuration file must be edited to provide the URL of the SCVP interface and a key store must be updated to include keys necessary to verify the SCVP responses. The configuration file is named `vss.properties` and is located in the `/usr/local/tomcat/conf` folder. The table below shows the settings that must be modified for test purposes.
 
 Configuration Element|Purpose|Example Value|
 ---|---|:---:|
@@ -111,7 +113,7 @@ Alternatively, the location of the `vss.properties file` can be provided as a Ja
 ```
 SCVP_OUTPUT_PATH=/<some path>/SCVP_OUTPUT_PATH2 java -Dvss.configLocation=/<some path>/vss.properties -jar vss2.jar --scvp_profile lightweight -n 4.1.1 -c /<some path>/ValidCertificatePathTest1EE.crt --wantBacks BestCertPath
 ```
-Once the configuration file edits have been performed, the RUT’s certificate must be added to the `keystore.ks file` located in the `/usr/local/tomcat/conf folder`. If the RUT’s certificate is not handy and the RUT supports validation policy requests, the test client can be used to retrieve the certificate via the following command:
+Once the configuration file edits have been performed, the RUT’s certificate must be added to the `keystore.ks` file located in the `/usr/local/tomcat/conf` folder. If the RUT’s certificate is not handy and the RUT supports validation policy requests, the test client can be used to retrieve the certificate via the following command:
 
 ```
 java –jar vss2.jar –s /path/to/receive/certificate.der 
@@ -131,10 +133,10 @@ During the execution of the GSTP, the test SCVP client will be executed hundreds
 :---|---|
 -h&nbsp;[&nbsp;--help&nbsp;]|Print usage instructions|
 -l&nbsp;[&nbsp;&#8209;&#8209;logging_conf&nbsp;]&nbsp;arg|Logging configuration to support report generation|
-&#8209;&#8209;pkits_2048_folder&nbsp;arg|Folder containing PKITS 2048 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
-&#8209;&#8209;pkits_4096_folder&nbsp;arg|Folder containing PKITS 4096 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
-&#8209;&#8209;pkits_p256_folder&nbsp;arg|Folder containing PKITS p256 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
-&#8209;&#8209;pkits_p384_folder&nbsp;arg|Folder containing PKITS p384 edition (root of Renamed folder containing 0, 1, 2, etc. folders and all certificates)|
+&#8209;&#8209;pkits_2048_folder&nbsp;arg|Folder containing PKITS 2048 edition (root of Renamed folder containing 0, 1, 2, etc., folders and all certificates)|
+&#8209;&#8209;pkits_4096_folder&nbsp;arg|Folder containing PKITS 4096 edition (root of Renamed folder containing 0, 1, 2, etc., folders and all certificates)|
+&#8209;&#8209;pkits_p256_folder&nbsp;arg|Folder containing PKITS p256 edition (root of Renamed folder containing 0, 1, 2, etc., folders and all certificates)|
+&#8209;&#8209;pkits_p384_folder&nbsp;arg|Folder containing PKITS p384 edition (root of Renamed folder containing 0, 1, 2, etc., folders and all certificates)|
 --pdts_folder&nbsp;arg|Folder containing PDTS edition|
 --mfpki_folder&nbsp;arg|Folder containing MFPKI edition|
 --mfpki_ta&nbsp;arg|File containing the MFPKI trust anchor|
@@ -611,7 +613,7 @@ Delete any test scripts that are not of interest. For example, if not testing no
 
 ### 3.2	Executing GSTP Test Cases
 
-The RUT must be configured with all necessary trust anchors, any non-default validation policies, and the hosts file targeting the hosting environment that will be used. The test client must be configured to interact with the responder (in the vss.properties file) and save logs to an appropriate location (via the `SCVP_OUTPUT_PATH` environment variable). 
+The RUT must be configured with all necessary trust anchors, any non-default validation policies, and the hosts file targeting the hosting environment that will be used. The test client must be configured to interact with the responder (in the `vss.properties` file) and save logs to an appropriate location (via the `SCVP_OUTPUT_PATH` environment variable). 
 
 After the RUT and client are configured, simply execute the desired test scripts and review the results. Make sure to delete any output files prior to test execution, if desired, because output files will be appended to throughout execution. The test runner script can be used to handle log file management.
 
@@ -637,7 +639,7 @@ The profile failures re-execution script is written to `profile_failures.txt`. I
 
 #### 3.3.5 Artifacts
 
-Base64-encoded SCVP requests and responses corresponding to failed test cases are written to `artifacts.csv` to facilitate detailed analysis using a utility like _dumpasn1_. To capture all request and responses, pass the `--log_all_messages` flag to the client.
+Base64-encoded SCVP requests and responses corresponding to failed test cases are written to `artifacts.csv` to facilitate detailed analysis using a utility like `dumpasn1`. To capture all request and responses, pass the `--log_all_messages` flag to the client.
 
 #### 3.3.6 Debug
 
@@ -738,4 +740,4 @@ Artifacts are also supplied in zip archives within the Tools VM, as well as publ
 
 * [RFC 5055] Freeman, T., Housley, R., Malpani, A., Cooper, D., and W. Polk, "Server-Based Certificate Validation Protocol (SCVP)," December 2007.
 * [RFC 5280] Cooper, D., Santesson, S., Farrell, S., Boeyen, S., Housley, R., and Polk, W., "Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile," May 2008. 
-* [TREAS]|Treasury Validation Services: SCVP Request and Response Profile, October 7, 2016.
+* [TREAS] Treasury Validation Services: SCVP Request and Response Profile, October 7, 2016.
