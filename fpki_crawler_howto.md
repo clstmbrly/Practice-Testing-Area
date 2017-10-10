@@ -33,7 +33,7 @@ The [FPKI Crawler](https://fpki-graph.fpki-lab.gov/crawler/){:target="_blank"}_ 
 
 > **Note:**&nbsp;&nbsp;The Crawler categorizes CA certificates by _Type_ (_U.S. Government_, _State_, or _Company_) and _Organization_ (_Agency_, _State Name_, and _Company Name_), which is extracted from the Distinguished Name (DN).
 
-#### 1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)
+**1. Federal Common Policy Tree File (_FederalCommonPolicyTree.csv_)**
 
 The _FederalCommonPolicyTree.csv_ (Microsoft Excel) is a data view of all CAs that validate to COMMON and the cross-certified CAs. 
 
