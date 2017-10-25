@@ -8,5 +8,5 @@ Your agency provides network accounts to government users on detail and those wh
 * [List of PIV Issuers](#list-of-piv-issuers)
 
 ## 1 Network Ports and Protocols
-** 1. Network Ports and Protocols**
+**1. Network Ports and Protocols**
 
