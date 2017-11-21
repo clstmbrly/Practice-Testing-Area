@@ -4,7 +4,11 @@
 
 | **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<sup>[1](#1)</sup>**  | **Federal<BR>Bridge<BR>Certification<BR>Authority (FBCA)<sup>[2](#2)</sup>**     | **Personal<BR>Identity<BR>Verification<BR>- Interoperable<BR>(PIV-I)<sup>[3](#3)</sup>**     | **Current**   |
 | :----------------------------------  | :---------:  | :-----------:    | :-----------:      | :-----------:      |
-|                       | **Worksheet Numbers**             |
+<table>
+  <tr>
+    <td colspan="2">Worksheet Numbers</td>
+  </tr>
+</table>
 | Self-Signed CA                       | 1            | 1                |               | 1             |
 | Key Rollover CA                      | 2             | 2               |  1            | 2             |
 | Peer-to-Peer Cross-Certificate       | 3             | 3                |  2            | 3             |
