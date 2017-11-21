@@ -4,6 +4,7 @@
 
 | **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<BR>[x]**  | **FBCA[x]**     | **PIV-I[x]**     | **Current**   |
 | :----------------------------------  | :---------:  | :-----------:    | :-----------:      | :-----------:      |
+|                       | **Worksheet Numbers**             |
 | Self-Signed CA                       | 1            | 1                |               | 1             |
 | Key Rollover CA                      | 2             | 2               |  1            | 2             |
 | Peer-to-Peer Cross-Certificate       | 3             | 3                |  2            | 3             |
