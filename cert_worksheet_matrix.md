@@ -2,7 +2,7 @@
 
 ## Worksheet Traceability Matrix
 
-| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<sup>[1](#1)</sup> <BR>Worksheet  | **Federal<BR>Bridge<BR>Certification<BR>Authority (FBCA)<sup>[2](#2)</sup> <BR>Worksheet**     | **Personal<BR>Identity<BR>Verification<BR>Interoperable<BR>(PIV-I)<sup>[3](#3)</sup> Worksheet**     | **Current**   |
+| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<sup>[1](#1)</sup> <BR>Worksheet**  | **Federal<BR>Bridge<BR>Certification<BR>Authority (FBCA)<sup>[2](#2)</sup> <BR>Worksheet**     | **Personal<BR>Identity<BR>Verification<BR>Interoperable<BR>(PIV-I)<sup>[3](#3)</sup> Worksheet**     | **Current**   |
 | :----------------------------------  | :---------:  | :-----------:    | :-----------:      | :-----------:      |
 | Self-Signed CA                       | 1            | 1                |               | 1             |
 | Key Rollover CA                      | 2             | 2               |  1            | 2             |
