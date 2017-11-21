@@ -2,7 +2,7 @@
 
 ## Worksheet Traceability Matrix
 
-| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<BR>[x]**  | **FBCA[x]**     | **PIV-I[x]**     | **Current**   |
+| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<BR><sup>[1](#RFC 5280)</sup>**  | **FBCA<sup>[2](#NIST SP 800-78-4)</sup>**     | **PIV-I<sup>[1](#Another Doc)</sup>**     | **Current**   |
 | :----------------------------------  | :---------:  | :-----------:    | :-----------:      | :-----------:      |
 |                       | **Worksheet Numbers**             |
 | Self-Signed CA                       | 1            | 1                |               | 1             |
