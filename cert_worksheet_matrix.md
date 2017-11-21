@@ -2,7 +2,7 @@
 
 ## Worksheet Traceability Matrix
 
-| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<BR><sup>[1](#RFC 5280)</sup>**  | **FBCA<sup>[2](#NIST SP 800-78-4)</sup>**     | **PIV-I<sup>[1](#Another Doc)</sup>**     | **Current**   |
+| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<BR><sup>[1](#RFC 5280)</sup>**  | **FBCA**     | **PIV-I**     | **Current**   |
 | :----------------------------------  | :---------:  | :-----------:    | :-----------:      | :-----------:      |
 |                       | **Worksheet Numbers**             |
 | Self-Signed CA                       | 1            | 1                |               | 1             |
@@ -25,3 +25,7 @@
 | PIV-I Content Signing       |                |             |  8             | 18             |
 | Computing and Communications Devices       | 7               |             |               | 19             |
 | Delegated OCSP Responder       | 12               |             | 9             | 20             |
+
+
+------------
+<a name="myfootnote1">1</a>. RFC 5280, _Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile_, D. Cooper, S. Santessen
