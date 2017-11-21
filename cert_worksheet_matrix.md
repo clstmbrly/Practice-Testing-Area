@@ -28,5 +28,5 @@
 
 
 ------------
-<a name="1">1</a>. RFC 5280, _Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile_, D. Cooper, S. Santessen
+<a name="1">1</a>. RFC 5280, _Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile_, D. Cooper, S. Santessen<BR>
 <a name="2">2</a>. FBCA Certification Policy
