@@ -2,7 +2,7 @@
 
 ## Worksheet Traceability Matrix
 
-| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<sup>[1](#1)</sup>**  | **Federal<BR>Bridge<BR>Certification<BR>Authority (FBCA)<sup>[2](#2)</sup>**     | **PIV-I**     | **Current**   |
+| **Certificate Profile**           | **Shared<BR>Service<BR>Provider (SSP)<sup>[1](#1)</sup>**  | **Federal<BR>Bridge<BR>Certification<BR>Authority (FBCA)<sup>[2](#2)</sup>**     | **Personal<BR>Identity<BR>Verification<BR>- Interoperable (PIV-I)<sup>[3](#3)</sup>**     | **Current**   |
 | :----------------------------------  | :---------:  | :-----------:    | :-----------:      | :-----------:      |
 |                       | **Worksheet Numbers**             |
 | Self-Signed CA                       | 1            | 1                |               | 1             |
@@ -29,4 +29,5 @@
 
 ------------
 <a name="1">1</a>. RFC 5280, _Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile_, D. Cooper, S. Santessen<BR>
-<a name="2">2</a>. FBCA Certification Policy
+<a name="2">2</a>. FBCA Certificate Profile
+<a name="3">3</a>. PIV-I Certificate Profile
