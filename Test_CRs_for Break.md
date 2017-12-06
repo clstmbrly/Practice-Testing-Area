@@ -3,11 +3,7 @@
 | **Field** |       |       | **Value**                             |
 | :-------- | :---: | :---: | :-------------------------------     |
 | Version   |       |       | V2 (1)                                 |
-| Issuer Signature Algorithm   |       |       |  Must match the issuer Signature Algorithm of the CA’s certificate. One of the following:  
-sha256 WithRSAEncryption {1 2 840 113549 1 1 11}  
-ecdsa-with-SHA256 {1.2.840.10045.4.3.2}  
-ecdsa-with-SHA384 {1.2.840.10045.4.3.3} 
-ecdsa-with-SHA512 {1.2.840.10045.4.3.4}. | 
+| Issuer Signature Algorithm   |       |       |  Must match the issuer Signature Algorithm of the CA’s certificate. One of the following:  sha256 WithRSAEncryption {1 2 840 113549 1 1 11}  ecdsa-with-SHA256 {1.2.840.10045.4.3.2}  ecdsa-with-SHA384 {1.2.840.10045.4.3.3}  ecdsa-with-SHA512 {1.2.840.10045.4.3.4}. | 
 | Issuer   |       |       |  Unique X.500 Issuing CA DN.<BR>Issuer name should be encoded exactly as encoded in the issuer fields of the certificates that are covered by this CRL. 
 PrintableString encoding should be used whenever possible for Issuer Distinguished Names. |
 | Effective Date   |       |       |  Expressed in UTCTime for dates until end of 2049 and GeneralizedTime for dates thereafter.  |
