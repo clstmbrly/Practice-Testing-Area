@@ -1,10 +1,10 @@
 ---
 layout: default
 title: PIV Authentication
-permalink: profiles/pivauth/
+permalink: profiles/combinedauth/
 ---
 
-## Worksheet 14:&nbsp;&nbsp;PIV Authentication Certificate Profile
+## Worksheet XX:&nbsp;&nbsp;Combined PIV, PIV-I, and Derived PIV Authentication Certificate Profile
 
 | **Field** |       |       | **Value**                             |
 | :-------- | :---: | :---: | :-------------------------------     |
@@ -16,7 +16,7 @@ permalink: profiles/pivauth/
 | Subject   |       |       |   Must use one of the name forms specified in the _X.509 Certificate Policy for the U.S. Federal PKI Common Policy Framework_ (aka, Common Policy CP), Section 3.1.1.<br>PrintableString encoding should be used whenever possible for Issuer and Subject DNs.   |
 | Subject Public Key Information   |       |       |   For RSA, must be at least 2048 bit modulus, rsaEncryption {1.2.840.113549.1.1.1}.<br>For ECC, implicitly specify parameters through an OID associated with a NIST-approved curve referenced in NIST SP 800-78-4.<sup>[1](#1)</sup>   |
 | Signature   |       |       |   sha256WithRSAEncryption {1.2.840.113549.1.1.11}<br>or ECDSA with appropriate Hash.   |
-|               |                 |              |                                       |
+
 | **Extension** |  **Required**   | **Critical** | **Value**                             |
 | Key Usage  | Mandatory | True |  digitalSignature  |
 | Authority Information Access   | Mandatory  |  | id-ad-caIssuers {1.3.6.1.5.5.7.48.2} access method entry that contains HTTP URL for .p7c file containing certificates issued to Issuing CA.<br>id-ad-ocsp {1.3.6.1.5.5.7.48.1} access method entry that contains HTTP URL for the Issuing CA OCSP Responder. OCSP is required for common Authentication.  | 
