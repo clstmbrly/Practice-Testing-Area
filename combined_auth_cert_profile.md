@@ -1,10 +1,10 @@
 ---
 layout: default
 title: PIV Authentication
-permalink: profiles/combinedauth/
+permalink: profiles/allpivauth/
 ---
 
-## Worksheet XX:&nbsp;&nbsp;Combined PIV, PIV-I, and Derived PIV Authentication Certificate Profile
+## Worksheet XX:&nbsp;&nbsp;PIV, PIV-I, and Derived PIV Authentication Certificate Profile
 
 | **Field**  | **Value**                             |
 | :--------  | :-------------------------------     |
