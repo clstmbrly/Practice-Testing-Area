@@ -18,6 +18,7 @@ permalink: profiles/combinedauth/
 | Signature   |       |       |   sha256WithRSAEncryption {1.2.840.113549.1.1.11}<br>or ECDSA with appropriate Hash.   |
 
 | **Extension** |  **Required**   | **Critical** | **Value**                             |
+| :-------- | :---: | :---: | :-------------------------------     |
 | Key Usage  | Mandatory | True |  digitalSignature  |
 | Authority Information Access   | Mandatory  |  | id-ad-caIssuers {1.3.6.1.5.5.7.48.2} access method entry that contains HTTP URL for .p7c file containing certificates issued to Issuing CA.<br>id-ad-ocsp {1.3.6.1.5.5.7.48.1} access method entry that contains HTTP URL for the Issuing CA OCSP Responder. OCSP is required for common Authentication.  | 
 | Subject Key Identifier   | Mandatory |  | Octet string  |
