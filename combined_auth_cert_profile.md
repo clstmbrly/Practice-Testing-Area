@@ -6,9 +6,9 @@ permalink: profiles/combinedauth/
 
 ## Worksheet XX:&nbsp;&nbsp;Combined PIV, PIV-I, and Derived PIV Authentication Certificate Profile
 
-| **Field** | **Value**                             |
-| :-------- | :-------------------------------     |
-| Version   |  V3 (2)                                 |
+| **Field** |       |       | **Value**                             |
+| :-------- | :---: | :---: | :-------------------------------     |
+| Version   |       |       | V3 (2)                                 |
 | Serial Number   |       |       | Must be a unique, positive number. |
 | Issuer Signature Algorithm   |       |       |  One of the following:<br>sha256WithRSAEncryption {1.2.840.113549.1.1.11}<br>ecdsa-with-SHA256 {1.2.840.10045.4.3.2}<br>ecdsa-with-SHA384 {1.2.840.10045.4.3.3}<br>ecdsa-with-SHA512 {1.2.840.10045.4.3.4} | 
 | Issuer   |       |       |  Unique X.500 Issuing CA Distinguished Name (DN).<br>PrintableString encoding should be used whenever possible for Issuer and Subject DNs. |
@@ -16,6 +16,7 @@ permalink: profiles/combinedauth/
 | Subject   |       |       |   Must use one of the name forms specified in the _X.509 Certificate Policy for the U.S. Federal PKI Common Policy Framework_ (aka, Common Policy CP), Section 3.1.1.<br>PrintableString encoding should be used whenever possible for Issuer and Subject DNs.   |
 | Subject Public Key Information   |       |       |   For RSA, must be at least 2048 bit modulus, rsaEncryption {1.2.840.113549.1.1.1}.<br>For ECC, implicitly specify parameters through an OID associated with a NIST-approved curve referenced in NIST SP 800-78-4.<sup>[1](#1)</sup>   |
 | Signature   |       |       |   sha256WithRSAEncryption {1.2.840.113549.1.1.11}<br>or ECDSA with appropriate Hash.   |
+
 
 | **Extension** |  **Required**   | **Critical** | **Value**                             |
 | :-------- | :---: | :---: | :-------------------------------     |
