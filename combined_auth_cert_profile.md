@@ -6,9 +6,9 @@ permalink: profiles/combinedauth/
 
 ## Worksheet XX:&nbsp;&nbsp;Combined PIV, PIV-I, and Derived PIV Authentication Certificate Profile
 
-| **Field** |       |       | **Value**                             |
-| :-------- | :---: | :---: | :-------------------------------     |
-| Version   |       |       | V3 (2)                                 |
+| **Field**  | **Value**                             |
+| :--------  | :-------------------------------     |
+| Version   | V3 (2)                                 |
 | Serial Number    | Must be a unique, positive number. |
 | Issuer Signature Algorithm   |  One of the following:<br>sha256WithRSAEncryption {1.2.840.113549.1.1.11}<br>ecdsa-with-SHA256 {1.2.840.10045.4.3.2}<br>ecdsa-with-SHA384 {1.2.840.10045.4.3.3}<br>ecdsa-with-SHA512 {1.2.840.10045.4.3.4} | 
 | Issuer   |  Unique X.500 Issuing CA Distinguished Name (DN).<br>PrintableString encoding should be used whenever possible for Issuer and Subject DNs. |
