@@ -44,7 +44,7 @@ This profile supersedes 3 previously published profiles:
 * _These mandatory extensions are **common** to all PIV, Derived PIV, and PIV-I Authentication certificates._
 
 | **Mandatory<br>Extension** |  **Critical** | **Value** | 
-| :-------- | :-----: | :----- | 
+| :-------- | :-----: | :----- | :----  | :---- |
 | **Key Usage**  | True |  digitalSignature. NonRepudiation is NOT allowed.  | 
 | **Authority Information Access**  |  | id-ad-caIssuers {1.3.6.1.5.5.7.48.2} access method entry that contains HTTP URI for .p7c file containing certificates issued to Issuing CA.<br>id-ad-ocsp {1.3.6.1.5.5.7.48.1} access method entry that contains HTTP URI for the Issuing CA OCSP Responder.<br>OCSP is required.  
 | **Subject Key Identifier**   |  | Octet string  | 
