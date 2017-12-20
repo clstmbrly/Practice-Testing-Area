@@ -5,16 +5,9 @@ permalink: profiles/allpivauth3/
 ---
 **AS OF 12/20/2017 11:56 AM**
 
-**Original intro:**  This profile specifies the unique settings required for X.509 PIV Authentication and Derived PIV Authentication certificates issued under the _Common Policy CP_,<sup>[1](#1)</sup> as well as PIV-I Authentication certificates issued under the _FBCA CP_.<sup>[2](#2)</sup> (For standard, detailed certificate information, see the _ITU-T X.509 Recommendation_<sup>[3](#3)</sup> and RFC 5280<sup>[4](#4)</sup>.)
+This profile specifies the unique settings required for X.509 **PIV Authentication** and **Derived PIV Authentication** certificates issued under the _Common Policy CP_,<sup>[1](#1)</sup> as well as **PIV-I Authentication** certificates issued under the _FBCA CP_.<sup>[2](#2)</sup> 
 
-**New intro** 
-This combined profile specifies the unique settings for these 3 certificate types:
-
-* **PIV Authentication** X.509 certificates issued under the _Common Policy CP_,<sup>[1](#1)</sup> 
-* **Derived PIV Authentication** X.509 certificates issued under the _Common Policy CP_
-* **PIV-I Authentication** X.509 certificates issued under the _FBCA CP_.<sup>[2](#2)</sup> 
-
-(For standard, detailed certificate information, see the _ITU-T X.509 Recommendation_<sup>[3](#3)</sup> and RFC 5280<sup>[4](#4)</sup>.)
+For standard, detailed certificate information, see the _ITU-T X.509 Recommendation_<sup>[3](#3)</sup> and RFC 5280<sup>[4](#4)</sup>.
 
 ## Treceability Matrix for PIV, Derived PIV, and PIV-I Authentication Certificate Profiles - Current Profile and Deprecated Versions
 
