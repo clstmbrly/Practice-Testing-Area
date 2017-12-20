@@ -43,16 +43,13 @@ This profile supersedes 3 previously published profiles:
 
 * _These mandatory extensions are **common** to all PIV, Derived PIV, and PIV-I Authentication certificates._
 
-| **Mandatory<br>Extension** |  **Critical** | **Value** | 
-| :-------- | :-----: | :----- | 
-| **Key Usage**  | True |  digitalSignature. NonRepudiation is NOT allowed.  | 
-| **Authority Information Access**  |  | id-ad-caIssuers {1.3.6.1.5.5.7.48.2} access method entry that contains HTTP URI for .p7c file containing certificates issued to Issuing CA.<br>id-ad-ocsp {1.3.6.1.5.5.7.48.1} access method entry that contains HTTP URI for the Issuing CA OCSP Responder.<br>OCSP is required.  
-| **Subject Key Identifier**   |  | Octet string  | 
-| **CRL Distribution Points**   | |  This extension must appear in all certificates and include at least one HTTP URI to a file containing a DER-encoded CRL with a file type of _application/pkix-crl_.<br>This profile prohibits CRLs segmented by reason code; therefore, omit the reasons and cRLIssuer fields. | 
-| **Authority Key Identifier**   |  | Octet string (same as Subject Key Identifier in Issuing CA certificate). |  
-
-* _These mandatory extensions have **unique** values for PIV, Derived PIV, and PIV-I Authentication certificates._
-
+| **Mandatory<br>Extension** |  **Critical** | **Value** |   |    |
+| :-------- | :-----: | :----- |  :----- |  :----- | 
+| **Key Usage**  | True |  digitalSignature. NonRepudiation is NOT allowed.  |  |    |
+| **Authority Information Access**  |  | id-ad-caIssuers {1.3.6.1.5.5.7.48.2} access method entry that contains HTTP URI for .p7c file containing certificates issued to Issuing CA.<br>id-ad-ocsp {1.3.6.1.5.5.7.48.1} access method entry that contains HTTP URI for the Issuing CA OCSP Responder.<br>OCSP is required.  |   |    |
+| **Subject Key Identifier**   |  | Octet string  |  |    |
+| **CRL Distribution Points**   | |  This extension must appear in all certificates and include at least one HTTP URI to a file containing a DER-encoded CRL with a file type of _application/pkix-crl_.<br>This profile prohibits CRLs segmented by reason code; therefore, omit the reasons and cRLIssuer fields. |   |    |
+| **Authority Key Identifier**   |  | Octet string (same as Subject Key Identifier in Issuing CA certificate). |   |    |
 | **Mandatory<br>Extension**  | **Critical** | **PIV Value** | **Derived PIV Value**  |  **PIV-I Value** |
 | :-------- | :------ | :----- | :-----  | :-----     |
 | **Certificate Policies**   |  | Applicable certificate policy:<br>id-fpki-common-authentication {2.16.840.1.101.3.2.1.3.13}  |  Applicable certificate policy:<br>id-fpki-common-derived-pivAuth {2.16.840.1.101.3.2.1.3.40} <br>id-fpki-common-derived-pivAuth-hardware {2.16.840.1.101.3.2.1.3.41}  | Applicable certificate policy:<br>id-fpki-certpcy-pivi-hardware {2.16.840.1.101.3.2.1.3.18}   |
