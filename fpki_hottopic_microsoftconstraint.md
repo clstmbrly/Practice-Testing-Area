@@ -6,9 +6,15 @@ permalink: /announcements/
 
 ## Microsoft Government Domain Constraints
 
-Microsoft has released Public Key Infrastructure (PKI) policy requirements that impact Federal Government Agencies from an operational and cost perspective. One of the requirements will take effect in April 2018 and will impact SSL certificates issued by CAs in the Federal PKI. Agencies use SSL certificates to secure internal and public-facing websites to implement HTTPS as per DHS Binding Operational Directive 18-01. As a result, by April 2018, agency employees and contractors may receive errors when browsing to internal (intranet) websites that uses SSL certificates from Federal PKI CAs, Windows 10, and Microsoft Internet Explorer. 
+Microft announced policy changes that affect the Federal PKI's CA-issued SSL certificates. We expect impacts to operations and budget.
 
-Summaries of the requirement and two options are below. Please send your feedback on the recommendation to proceed with Option 1, and any additional agency impacts or concerns, to fpki@gsa.gov by January 26, 2018.  
+Starting April 2018, federal employees and contractors may get 404 errors when going to internal websites that use FPKI CA-issued, SSL certificates from Windows 10, Internet Explorer, and Edge? 
+
+{% include alert-info.html heading="Agencies use SSL certificates to secure internal and public-facing websites to implement HTTPS, per BOD 18-01.<sup>[1](#1)</sup>" %} 
+
+ 
+
+Summaries of Microsoft's new requirements and two FPKI options are below. Please send your feedback on the recommendation to proceed with Option 1, and any additional agency impacts or concerns, to fpki@gsa.gov by January 26, 2018.  
 
 ### Summary: 
 The Federal Government COMMON root CA Certificate is globally distributed in Microsoft products through their trust store. To continue having our root CA certificate distributed in the Microsoft trust store, the Federal PKI is required to meet Microsoft’s policy requirements for how we operate, maintain, and issue certificates from our Federal PKI Certification Authorities.  
@@ -37,6 +43,10 @@ This constraint will display a browser error in Microsoft Edge/IE or Google Chro
 - Yes, this impacts any certificate asserting Server Authentication.
 
 #### Microsoft Certificate Trust Lists (CTL) Recommended Reading
+
+To prepare for these changes, please review these targeted Microsoft documents:
 1. [Microsoft Trusted Root Government CA Requirements](https://social.technet.microsoft.com/wiki/contents/articles/31635.microsoft-trusted-root-certificate-program-audit-requirements.aspx#Government_CA_Requirements)
 2. [CTL Overview](https://msdn.microsoft.com/en-us/library/windows/desktop/aa376545(v=vs.85).aspx)
 2. [How to configure CTL](https://technet.microsoft.com/en-us/library/dn265983.aspx)
+-------
+<a name="1">1</a>. Binding Operational Operational Directive 18-01,_Enhance Email and Web Security_, U.S. Department of Homeland Security, October 16, 2017, [BOD 18-01](https://cyber.dhs.gov/assets/report/bod-18-01.pdf){:target=_"blank"}. Additional information at: [https://cyber.dhs.gov/]{:target=_"blank"}<br>
