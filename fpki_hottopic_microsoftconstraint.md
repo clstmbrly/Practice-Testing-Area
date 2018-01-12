@@ -6,13 +6,15 @@ permalink: /announcements/
 
 ## Microsoft Government Domain Constraints
 
-Microft announced policy changes that affect the Federal PKI's CA-issued SSL certificates. We expect impacts to operations and budget.
+[What?] Microft announced policy changes that affect the Federal PKI's CA-issued SSL certificates. We expect impacts to operations and budget.
 
-Starting April 2018, federal employees and contractors may get 404 errors when going to internal websites that use FPKI CA-issued, SSL certificates from Windows 10, Internet Explorer, and Edge? 
+[When?] Starting April 2018, [Who?] federal employees and contractors may get 404 errors when going to internal websites that use FPKI CA-issued, SSL certificates from Windows 10, Internet Explorer, and Edge?
+
+[Where] Intranet and Internet(?)
 
 {% include alert-info.html heading="Agencies use SSL certificates to secure internal and public-facing websites to implement HTTPS, per BOD 18-01.<sup>[1](#1)</sup>" %} 
 
- 
+[What Do We Do about this?]
 
 Summaries of Microsoft's new requirements and two FPKI options are below. Please send your feedback on the recommendation to proceed with Option 1, and any additional agency impacts or concerns, to fpki@gsa.gov by January 26, 2018.  
 
