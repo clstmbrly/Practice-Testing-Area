@@ -8,8 +8,8 @@ permalink: /announcements/
 
 * [Affected federal agencies](#affected-federal-agencies)
 * [When](#when)
-* [Potential impacts](#potential-impacts)
-* [Description of changes](#description-of-changes)
+* [Potential impact](#potential-impact)
+* [Change description](#change-description)
 * [Options for agency response and required action](#options-for-agency-response-and-required-action)
 
 ### Affected Federal Agencies
