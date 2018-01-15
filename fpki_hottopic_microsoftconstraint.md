@@ -4,40 +4,43 @@ title: Announcements
 permalink: /announcements/
 ---
 
-### Microsoft and Google Changes Impact Federal PKI Agencies' Access to Intranet/Internet Websites
+### Microsoft and Google Changes Impact Intranet/Internet Access to Mission-Critical Systems
 
-* [When will these changes occur?](#when-will-these-changes-occur?) 
-* Who is affected
-* What are the technical issues
-* What are the potential impacts on the Federal Government
-* Two options for federal response
-* Required agency actions due by **January 26, 2018**.
+* [Affected federal agencies](#affected-federal-agencies)
+* [When](#when)
+* [Potential impacts](#potential-impacts)
+* [Description of changes](#description-of-changes)
+* [Options for agency response and required action](#options-for-agency-response-and-required-action)
 
-### When will these changes occur?
+### Affected Federal Agencies
 
-Starting April 2018
+If your agency uses the following, it is affected:
 
-### Affected Agencies
+* Microsoft Edge/Internet Explorer (IE)
+* Google Chrome
+* FPKI CA-issued server authentication (Secure Sockets Layer [SSL]) certificates for intranet or internet websites
 
-These changes could affect 14 Federal Executive Branch Agencies<!--correct?-->. Any agency is affected that uses Microsoft Edge/Internet Explorer (IE) and/or Google Chrome AND that uses FPKI CA-issued server authentication (Secure Sockets Layer [SSL]) certificates for intranet or internet websites.  
+These changes could impact 14 Federal Executive Branch Agencies<!--correct?-->.  
 
-### Technical Issues
+### When
+
+Starting April 2018.
+
+### Potential Impacts
+
+With these changes, federal employees who use Windows OSs could lose access to intranet/internet websites (i.e., 404 errors) and mission-critical systems. Lack of access to critical resources could affect agency mission, operations, and budget.
+
+### Description of Changes
 <!--This doesn't say anything about Google's technical issue, if there is one.-->
-Microsoft globally distributes the Federal Government's FPKI Federal Common Policy Certificate Authority (FCPCA) Root (aka, COMMON) certificate for Microsoft products through its trust store. Microsoft will continue distributing the FCPCA Root CA certificate only if the FPKI meets new Microsoft policy requirements relating to how our CAs operate, maintain, and issue certificates. 
+Microsoft globally distributes the Federal Government's FPKI Federal Common Policy Certificate Authority (FCPCA) Root (aka, COMMON) certificate for its products through the Microsoft trust store. Microsoft will continue doing this if the FPKI meets new policy requirements for how our CAs operate, maintain, and issue certificates. **Relates to Secure Sockets Layer [SSL] server auth certs** 
 
 {% include alert-info.html heading="Agencies use SSL certificates to secure intranet and internet (public-facing) websites to implement HTTPS, per BOD 18-01.<sup>[1](#1)</sup>" %} 
 
-### Impact on Agencies
-
-Federal employees who use Windows OSs may be denied access to intranet/internet websites (i.e., get a 404 error) and mission-critical systems/applications. Lack of access to critical resources could affect agency mission, operations, and budget.
-
-### Options for Responding to Microsoft and Google
+### Options for Agency Response and Required Action
 <!--This information doesn't say anything about responding to Google.-->
-**REQUIRED ACTION:&nbsp;&nbsp;Please send your feedback and any agency impacts or concerns, no later than _January 26, 2018_, to _fpki@gsa.gov_.**
+Agencies must respond to one of two options. Please send your feedback and any agency impacts or concerns, no later than **_January 26, 2018_**, to **_fpki@gsa.gov_**. 
 
-Agencies must comply with one of two options. 
-
-#### OPTION 1 (Recommended)
+#### Option 1 (Recommended)
 
 **FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
@@ -46,7 +49,7 @@ Agencies must comply with one of two options.
 * **What actions must agencies take to limit impacts on operations and access to mission-critical systems/applications?**
 Agency network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment.  
 
-##### FAQs for OPTION 1
+##### OPTION 1 FAQs
 
 1. _Do I need to remove the baked-in version of the FCPCA Root certificate somehow?_  No, do not remove FCPCA Root certificate if it is already installed.
 2. _Do I need only add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?_  If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if COMMON is not installed, follow the _PIV Guides_' "Network Authentication" steps: <https://piv.idmanagement.gov/networkconfig/>
