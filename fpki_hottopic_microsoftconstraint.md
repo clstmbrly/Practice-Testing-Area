@@ -4,35 +4,15 @@ title: Announcements
 permalink: /announcements/
 ---
 
-### Microsoft and Google Changes Impact Intranet/Internet Access to Mission-Critical Systems
+## Microsoft and Google Changes Impact Federal Government Agencies
 
-* [Affected federal agencies](#affected-federal-agencies)
-* [When](#when)
-* [Potential impact](#potential-impact)
-* [Change description](#change-description)
-* [Options for agency response and required action](#options-for-agency-response-and-required-action)
+Microsoft has released Public Key Infrastructure (PKI) policy requirements that impact Federal Government agencies' missions, operations, and budget. By April 2018, federal users may receive errors from Windows when using Microsoft Edge/IE and Google Chrome to browse to intranet <!--and internet?-->websites that use FPKI CA-issued SSL certificates. Lack of access to mission-critical systems could affect missions, operations, and budgets. These changes will start in April 2018 and could impact 14 Federal Executive Branch Agencies<!--correct?-->. We propose two options for responding to Microsoft and Google.  (See below.)
 
-### Affected Federal Agencies
-
-These changes could impact 14 Federal Executive Branch Agencies<!--correct?-->. Your agency is affected if it uses:
-
-* Microsoft Edge/Internet Explorer (IE)
-* Google Chrome
-* FPKI CA-issued server authentication (Secure Sockets Layer [SSL]) certificates for intranet or internet websites
-
-### When
-
-Starting April 2018.
-
-### Potential Impact
-
-Federal employees who use Windows OSs could lose access to intranet/internet websites (i.e., 404 errors) and mission-critical systems. Lack of access to critical resources could affect agency mission, operations, and budget.
+{% include alert-info.html heading="Agencies use SSL certificates to secure intranet and internet (public-facing) websites to implement HTTPS, per BOD 18-01.<sup>[1](#1)</sup>" %} 
 
 ### Description of Changes
 <!--This doesn't say anything about Google's technical issue, if there is one.-->
 Microsoft globally distributes the Federal Government's FPKI Federal Common Policy Certificate Authority (FCPCA) Root (aka, COMMON) certificate for its products through the Microsoft trust store. Microsoft will continue doing this if the FPKI meets new policy requirements for how our CAs operate, maintain, and issue certificates. **Relates to Secure Sockets Layer [SSL] server auth certs** 
-
-{% include alert-info.html heading="Agencies use SSL certificates to secure intranet and internet (public-facing) websites to implement HTTPS, per BOD 18-01.<sup>[1](#1)</sup>" %} 
 
 ### Options for Agency Response and Required Action
 <!--This information doesn't say anything about responding to Google.-->
