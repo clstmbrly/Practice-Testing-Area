@@ -18,7 +18,9 @@ Microsoft globally distributes the Federal Government's FPKI Federal Common Poli
 <!--This information doesn't say anything about responding to Google.-->
 Agencies must respond to one of two options. Please send your feedback and any agency impacts or concerns, no later than **_January 26, 2018_**, to **_fpki@gsa.gov_**. 
 
-**Option 1. FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store. (Recommended)**
+#### Option 1. 
+
+**(Recommended) FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
 * **What affect could this have on agency operations and missions?** Federal users may get 404 errors when trying to access intranet/ internet websites _for which SSL certificates have historically been used_.
 
@@ -32,7 +34,9 @@ Agencies must respond to one of two options. Please send your feedback and any a
 4. _Is only Windows 10 affected? What about Windows Server 2016 or other legacy client-server OSs?_ All versions of Windows are affected. 
 5. _Could the GPO distribution affect IPSec certificates when the server authentication bit is enabled and when used with Microsoft OSs?_ Yes, this could affect any certificate asserting server authentication.<!--Correct interpretation? What does engineer do if there is a problem?-->
 
-**Option 2. Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_. (Greatest potential impact on operations and mission-critical systems.)**
+#### Option 2 
+
+**(Greatest potential impact on operations and mission-critical systems) Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_.**
 
 The added _domain constraint_ will display a browser error in Microsoft Edge/IE or Google Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. Agency network domain administrators cannot modify this constraint. It would be enforced globally through the Microsoft Certificate Trust List (CTL). Some agencies have identified Option 2 as detrimental to mission operations in the near-term, because intranet domain name aliases are used in currently issued certificates (e.g., intranetapp vs. intranetapp.agency.gov).
 
