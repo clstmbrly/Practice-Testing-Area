@@ -14,19 +14,17 @@ permalink: /announcements/
 
 ### Affected Federal Agencies
 
-If your agency uses the following, it is affected:
+These changes could impact 14 Federal Executive Branch Agencies<!--correct?-->. Your agency is affected if it uses:
 
 * Microsoft Edge/Internet Explorer (IE)
 * Google Chrome
 * FPKI CA-issued server authentication (Secure Sockets Layer [SSL]) certificates for intranet or internet websites
 
-These changes could impact 14 Federal Executive Branch Agencies<!--correct?-->.  
-
 ### When
 
 Starting April 2018.
 
-### Potential Impacts
+### Potential Impact
 
 With these changes, federal employees who use Windows OSs could lose access to intranet/internet websites (i.e., 404 errors) and mission-critical systems. Lack of access to critical resources could affect agency mission, operations, and budget.
 
@@ -44,20 +42,19 @@ Agencies must respond to one of two options. Please send your feedback and any a
 
 **FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
-* **What affect could this have on agency operations and missions?** Federal users will get 404 errors when trying to access intranet and internet websites _for which SSL certificates historically been used_.
+* **What affect could this have on agency operations and missions?** Federal users may get 404 errors when trying to access intranet/ internet websites _for which SSL certificates have historically been used_.
 
-* **What actions must agencies take to limit impacts on operations and access to mission-critical systems/applications?**
-Agency network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment.  
+* **What actions can we take to limit impacts?** Agency network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment. (See below for _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.)  
 
-##### OPTION 1 FAQs
+##### Option 1 FAQs
 
-1. _Do I need to remove the baked-in version of the FCPCA Root certificate somehow?_  No, do not remove FCPCA Root certificate if it is already installed.
-2. _Do I need only add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?_  If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if COMMON is not installed, follow the _PIV Guides_' "Network Authentication" steps: <https://piv.idmanagement.gov/networkconfig/>
-3. _Does any trust bit manipulation need to be done for the GPO?_ **Specific instructions to follow.**
-4. _Is only Windows 10 affected, or is Windows Server 2016 or other legacy client-server OS affected?_ All versions of Windows are affected. 
-5. _Could this affect IPSec certificates when the server authentication bit is enabled and when used with Microsoft OSs?_ Yes, this affects any certificate asserting server authentication.
+1. _Do I need to remove the baked-in version of the FCPCA Root certificate?_  No, don't remove this certificate if it's already installed.
+2. _Do I only need to add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?_  If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the _PIV Guides_' "Network Authentication" steps: <https://piv.idmanagement.gov/networkconfig/>
+3. _Do I need to change any trust bit for the GPO?_ **NOTE: Specific instructions to follow.**<!--Will these be added?-->
+4. _Is only Windows 10 affected? What about Windows Server 2016 or other legacy client-server OSs?_ All versions of Windows are affected. 
+5. _Could the GPO distribution affect IPSec certificates when the server authentication bit is enabled and when used with Microsoft OSs?_ Yes, this could affect any certificate asserting server authentication.<!--Correct interpretation? What does engineer do if there is a problem?-->
 
-#### Option 2 (Greatest potential impact on agency operations and mission-critical systems)  
+#### Option 2 (Greatest potential impact on operations and mission-critical systems)  
 
 **Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_.**
 
