@@ -4,51 +4,73 @@ title: Announcements
 permalink: /announcements/
 ---
 
-## Microsoft Government Domain Constraints
+### Microsoft and Google Changes Impact Federal PKI Agencies' Access to Intranet/Internet Websites
 
-[What?] Microft announced policy changes that affect the Federal PKI's CA-issued SSL certificates. We expect impacts to operations and budget.
+* [When will these changes occur?](#when-will-these-changes-occur?) 
+* Who is affected
+* What are the technical issues
+* What are the potential impacts on the Federal Government
+* Two options for federal response
+* Required agency actions due by **January 26, 2018**.
 
-[When?] Starting April 2018, [Who?] federal employees and contractors may get 404 errors when going to internal websites that use FPKI CA-issued, SSL certificates from Windows 10, Internet Explorer, and Edge?
+### When will these changes occur?
 
-[Where] Intranet and Internet(?)
+Starting April 2018
 
-{% include alert-info.html heading="Agencies use SSL certificates to secure internal and public-facing websites to implement HTTPS, per BOD 18-01.<sup>[1](#1)</sup>" %} 
+### Affected Agencies
 
-[What Do We Do about this?]
+These changes could affect 14 Federal Executive Branch Agencies<!--correct?-->. Any agency is affected that uses Microsoft Edge/Internet Explorer (IE) and/or Google Chrome AND that uses FPKI CA-issued server authentication (Secure Sockets Layer [SSL]) certificates for intranet or internet websites.  
 
-Summaries of Microsoft's new requirements and two FPKI options are below. Please send your feedback on the recommendation to proceed with Option 1, and any additional agency impacts or concerns, to fpki@gsa.gov by January 26, 2018.  
+### Technical Issues
+<!--This doesn't say anything about Google's technical issue, if there is one.-->
+Microsoft globally distributes the Federal Government's FPKI Federal Common Policy Certificate Authority (FCPCA) Root (aka, COMMON) certificate for Microsoft products through its trust store. Microsoft will continue distributing the FCPCA Root CA certificate only if the FPKI meets new Microsoft policy requirements relating to how our CAs operate, maintain, and issue certificates. 
 
-### Summary: 
-The Federal Government COMMON root CA Certificate is globally distributed in Microsoft products through their trust store. To continue having our root CA certificate distributed in the Microsoft trust store, the Federal PKI is required to meet Microsoft’s policy requirements for how we operate, maintain, and issue certificates from our Federal PKI Certification Authorities.  
+{% include alert-info.html heading="Agencies use SSL certificates to secure intranet and internet (public-facing) websites to implement HTTPS, per BOD 18-01.<sup>[1](#1)</sup>" %} 
 
-There are two options agencies can implement to comply by April 2018. Based on initial agency feedback, Option 1 will have the least impact on mission-critical applications and operations. Option 1 will require agency network domain administrators to distribute new group policies to government managed Microsoft OS devices.  
+### Impact on Agencies
 
-**Option 1: The Federal PKI instructs Microsoft to remove the server authentication trust bit from the Federal Government COMMON root CA certificate that is distributed through the Microsoft trust store.** 
+Federal employees who use Windows OSs may be denied access to intranet/internet websites (i.e., get a 404 error) and mission-critical systems/applications. Lack of access to critical resources could affect agency mission, operations, and budget.
 
-This change impacts agencies who have issued and use server authentication (SSL) certificates for internal (intranet) websites or public websites if the server authentication certificates were issued from any of the Federal PKI Certificate Authorities that validate to COMMON. The Federal PKI community estimates there are fourteen (14) agencies impacted.  The impacted agencies will have the ability to use network domain group policies to restore the pre-change behavior for government managed equipment, and limit impact to mission operations. 
+### Options for Responding to Microsoft and Google
+<!--This information doesn't say anything about responding to Google.-->
+**REQUIRED ACTION:&nbsp;&nbsp;Please send your feedback and any agency impacts or concerns, no later than _January 26, 2018_, to _fpki@gsa.gov_.**
 
-**Option 2:  Microsoft continues to distribute COMMON root CA certificate with the server authentication trust bit enabled but with the addition of a domain constraint.**
+Agencies must comply with one of two options. 
 
-This constraint will display a browser error in Microsoft Edge/IE or Google Chrome for any server authentication certificates validating to COMMON if it does not include fully qualified domain names ending in .gov, .us, or .mil or an IP addresses. This constraint can not be modified by agency network domain administrators and would be enforced globally through the Microsoft Certificate Trust List (CTL). Some of the fourteen (14) impacted agencies have identified Option 2 as detrimental to mission operations in the near-term due to the use of intranet domain name aliases in currently issued certificates (for example: intranetapp versus intranetapp.agency.gov).
+#### OPTION 1 (Recommended)
 
-### Frequently Asked Questions for Option 1 - Disable Server Authentication for COMMON
-1. Do we need to remove the baked in version of the FCPCA root somehow?
-- No, do not remove COMMON if it is already installed.
-2. Do we only need to add the FCPCA root to “Trust Root Certification Authorities” store via GPO or do we need to add it to the Enterprise Trust store?
-- If COMMON is already installed, no need to reinstall or change its root store.
-- If COMMON is not installed, follow the PIV Guide - Network Authentication directions <https://piv.idmanagement.gov/networkconfig/>
-3. Is there some specific trust bit manipulation that needs to occur for the GPO?
-- Specific instructions to follow.
-4. Is only Windows 10 affected or is Server 2016 and other legacy client/server operating systems affected?
-- All versions of Windows is affected. 
-5. Can this affect IPSec certificates that have the Server Authentication bit enabled and that are used with Microsoft Operating Systems?
-- Yes, this impacts any certificate asserting Server Authentication.
+**FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
-#### Microsoft Certificate Trust Lists (CTL) Recommended Reading
+* **What affect could this have on agency operations and missions?** Federal users will get 404 errors when trying to access intranet and internet websites _for which SSL certificates historically been used_.
 
-To prepare for these changes, please review these targeted Microsoft documents:
+* **What actions must agencies take to limit impacts on operations and access to mission-critical systems/applications?**
+Agency network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment.  
+
+##### FAQs for OPTION 1
+
+1. _Do I need to remove the baked-in version of the FCPCA Root certificate somehow?_  No, do not remove FCPCA Root certificate if it is already installed.
+2. _Do I need only add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?_  If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if COMMON is not installed, follow the _PIV Guides_' "Network Authentication" steps: <https://piv.idmanagement.gov/networkconfig/>
+3. _Does any trust bit manipulation need to be done for the GPO?_ **Specific instructions to follow.**
+4. _Is only Windows 10 affected, or is Windows Server 2016 or other legacy client-server OS affected?_ All versions of Windows are affected. 
+5. _Could this affect IPSec certificates when the server authentication bit is enabled and when used with Microsoft OSs?_ Yes, this affects any certificate asserting server authentication.
+
+#### Option 2 (Greatest potential impact on agency operations and mission-critical systems)  
+
+**Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_.**
+
+The added _domain constraint_ will display a browser error in Microsoft Edge/IE or Google Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. Agency network domain administrators cannot modify this constraint. It would be enforced globally through the Microsoft Certificate Trust List (CTL). Some agencies have identified Option 2 as detrimental to mission operations in the near-term, because intranet domain name aliases are used in currently issued certificates (e.g., intranetapp vs. intranetapp.agency.gov).
+
+#### Microsoft Certificate Trust Lists (CTL) recommended reading
+
+To prepare for these changes, please review these Microsoft documents:
 1. [Microsoft Trusted Root Government CA Requirements](https://social.technet.microsoft.com/wiki/contents/articles/31635.microsoft-trusted-root-certificate-program-audit-requirements.aspx#Government_CA_Requirements)
 2. [CTL Overview](https://msdn.microsoft.com/en-us/library/windows/desktop/aa376545(v=vs.85).aspx)
 2. [How to configure CTL](https://technet.microsoft.com/en-us/library/dn265983.aspx)
+
 -------
 <a name="1">1</a>. Binding Operational Operational Directive 18-01,_Enhance Email and Web Security_, U.S. Department of Homeland Security, October 16, 2017, [BOD 18-01](https://cyber.dhs.gov/assets/report/bod-18-01.pdf){:target=_"blank"}. Additional information at: [https://cyber.dhs.gov/]{:target=_"blank"}<br>
+
+
+
+
+
