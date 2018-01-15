@@ -18,7 +18,7 @@ Microsoft globally distributes the Federal Government's FPKI Federal Common Poli
 <!--This information doesn't say anything about responding to Google.-->
 Agencies must respond to one of two options. Please send your feedback and any agency impacts or concerns, no later than **_January 26, 2018_**, to **_fpki@gsa.gov_**. 
 
-#### Option 1. 
+### OPTION 1 
 
 **(Recommended) FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
@@ -26,7 +26,7 @@ Agencies must respond to one of two options. Please send your feedback and any a
 
 * **What actions can we take to limit impacts?** Agency network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment. (See below for _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.)  
 
-**FAQs for Option 1**
+**FAQs for OPTION 1**
 
 1. _Do I need to remove the baked-in version of the FCPCA Root certificate?_  No, don't remove this certificate if it's already installed.
 2. _Do I only need to add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?_  If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the _PIV Guides_' "Network Authentication" steps: <https://piv.idmanagement.gov/networkconfig/>
@@ -34,7 +34,7 @@ Agencies must respond to one of two options. Please send your feedback and any a
 4. _Is only Windows 10 affected? What about Windows Server 2016 or other legacy client-server OSs?_ All versions of Windows are affected. 
 5. _Could the GPO distribution affect IPSec certificates when the server authentication bit is enabled and when used with Microsoft OSs?_ Yes, this could affect any certificate asserting server authentication.<!--Correct interpretation? What does engineer do if there is a problem?-->
 
-#### Option 2 
+### OPTION 2 
 
 **(Greatest potential impact on operations and mission-critical systems) Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_.**
 
