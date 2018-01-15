@@ -20,9 +20,9 @@ Agencies must respond to one of two options. Please send your feedback and any a
 
 ### OPTION 1 
 
-**(Recommended) FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
+> **(Recommended) FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
-* **What affect could this have on agency operations and missions?** Federal users may get 404 errors when trying to access intranet/ internet websites _for which SSL certificates have historically been used_.
+* **What affect could this have on agency operations and missions?** Federal users may get errors when trying to access intranet/ internet websites _for which SSL certificates have historically been used_.
 
 * **What actions can we take to limit impacts?** Agency network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment. (See below for _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.)  
 
@@ -36,7 +36,7 @@ Agencies must respond to one of two options. Please send your feedback and any a
 
 ### OPTION 2 
 
-**(Greatest potential impact on operations and mission-critical systems) Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_.**
+> **(Greatest potential impact on operations and mission-critical systems) Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_.**
 
 The added _domain constraint_ will display a browser error in Microsoft Edge/IE or Google Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. Agency network domain administrators cannot modify this constraint. It would be enforced globally through the Microsoft Certificate Trust List (CTL). Some agencies have identified Option 2 as detrimental to mission operations in the near-term, because intranet domain name aliases are used in currently issued certificates (e.g., intranetapp vs. intranetapp.agency.gov).
 
