@@ -18,7 +18,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 > **Option 1 (Recommended).&nbsp;&nbsp;FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
-**Result:** Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet<!--internet also?--> websites that use FPKI CA-issued SSL certificates.
+* **Result:** Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet<!--internet also?--> websites that use FPKI CA-issued SSL certificates.
 
 * **How can we limit this impact?** Network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment. (See _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.) 
 
@@ -32,9 +32,9 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 > **Option 2 (Greatest potential impact on operations and mission-critical systems).&nbsp;&nbsp;Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the enabled server authentication trust bit, but with an added _domain constraint_.**
 
-* With the added _domain constraint_, a user will get an error from Microsoft Edge/IE or Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. The Microsoft Certificate Trust List (CTL) globally enforces this constraint through the Microsoft Certificate Trust List (CTL). Network domain administrators can't modify this constraint. 
+* **Result 1:** With the added _domain constraint_, your users will get errors from Microsoft Edge/IE or Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. The Microsoft Certificate Trust List (CTL) globally enforces this constraint through the Microsoft Certificate Trust List (CTL). Network domain administrators can't modify this constraint. 
 
-* Some agencies have identified Option 2 as detrimental to mission operations in the near-term, because issued certificates use intranet domain name aliases (e.g., intranetapp vs. intranetapp.agency.gov).
+* **Result 2:** Some agencies have identified Option 2 as detrimental to mission operations in the near-term, because issued certificates use intranet domain name aliases (e.g., intranetapp vs. intranetapp.agency.gov).
 
 #### Microsoft Certificate Trust Lists (CTL) recommended reading
 
