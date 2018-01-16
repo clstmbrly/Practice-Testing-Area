@@ -12,7 +12,7 @@ Microsoft recently issued new Public Key Infrastructure (PKI) policy requirement
 
 We propose two options for responding to Microsoft and Google. 
 
-### Options for Agency Response to Microsoft and Required Action
+### 2 Options for Agency Response to Microsoft and Required Action
 <!--This information doesn't say anything about responding to Google.-->
 Please respond to one of two options below. We recommend Option 1. Send any agency impacts or concerns, no later than **_January 26, 2018_**, to **_fpki@gsa.gov_**. 
 
