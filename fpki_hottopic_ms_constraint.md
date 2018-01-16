@@ -15,7 +15,7 @@ Microsoft has issued new Public Key Infrastructure (PKI) policy requirements tha
 Please recommend Option 1 or 2 and send any agency impacts or concerns by **January 26, 2018** to **_fpki@gsa.gov_**. 
 
 ### Option 1
-#### (Recommended)&nbsp;The FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store
+#### (Recommended)&nbsp;The FPKI instructs Microsoft to remove the Federal Common Policy Certification Authority (FCPCA) (aka, COMMON) Root certificate trust bit from the Microsoft trust store
 
 * **Result 1:**&nbsp;&nbsp;Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet and internet websites that use FPKI CA-issued, SSL certificates.
 
@@ -27,8 +27,8 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 1. Do I need to remove the baked-in version of the FCPCA Root certificate?
 * _No, don't remove this certificate if it's already installed._
-2. Do I need to add the FCPCA (COMMON) Root certificate to the Trust Root Certification Authorities store via GPO, or should I add it to the enterprise trust store?
-* _If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the PIV Guides_ steps for [Network Authentication](https://piv.idmanagement.gov/networkconfig/){:target= "_blank"}.
+2. Do I need to add the FCPCA Root certificate to the Trust Root Certification Authorities store via GPO, or should I add it to the enterprise trust store?
+* _If the FCPCA Root certificate is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the PIV Guides_ steps for [Network Authentication](https://piv.idmanagement.gov/networkconfig/){:target= "_blank"}.
 3. Do I need to change any trust bit for the GPO?
 * **NOTE: TBD.**
 4. What Windows versions are affected?
@@ -37,7 +37,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 * _Yes, this could affect any certificate asserting server authentication._
 
 ### Option 2
-#### (Greatest potential impact on operations and mission-critical systems)&nbsp;Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the server authentication trust bit enabled, but with an added _Domain Constraint_
+#### (Greatest potential impact on operations and mission-critical systems)&nbsp;Microsoft continues to distribute the FCPCA Root CA certificate with the server authentication trust bit enabled, but with an added _Domain Constraint_
 
 * **Result 1:**&nbsp;&nbsp;With the added _domain constraint_, your users will get errors from Microsoft Edge/IE or Chrome for any FPKI CA-issued, SSL certificate, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. The Microsoft Certificate Trust List (CTL) globally enforces this constraint through the Microsoft Certificate Trust List (CTL). Network domain administrators can't modify this constraint. 
 
