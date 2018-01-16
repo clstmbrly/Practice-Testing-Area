@@ -20,7 +20,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 * **Result 1:**&nbsp;&nbsp;Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet<!--internet also?--> websites that use FPKI CA-issued SSL certificates.
 
-* **How can we limit this impact?**&nbsp;&nbsp;Network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment. (See _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.)
+> **How can we limit this impact?**&nbsp;&nbsp;Network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment. (See _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.)
 
 * **Result 2:**&nbsp;&nbsp;Agency feedback suggests that Option 1 would have the least impact on mission-critical applications and operations. 
 
