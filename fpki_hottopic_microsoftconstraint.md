@@ -25,7 +25,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 **Network Admnistrator's FAQs for Option 1**
 
 1. Do I need to remove the baked-in version of the FCPCA Root certificate?&nbsp;&nbsp;_No, don't remove this certificate if it's already installed._
-2. Do I need to add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?&nbsp;&nbsp;_If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the PIV Guides_ steps for [Network Authentication](https://piv.idmanagement.gov/networkconfig/){:target= "_blank"}.
+2. Do I need to add the FCPCA (COMMON) Root certificate to the Trust Root Certification Authorities store via GPO, or should I add it to the enterprise trust store?&nbsp;&nbsp;_If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the PIV Guides_ steps for [Network Authentication](https://piv.idmanagement.gov/networkconfig/){:target= "_blank"}.
 3. Do I need to change any trust bit for the GPO?&nbsp;&nbsp;**NOTE: Specific instructions to follow.**<!--Will these be added?-->
 4. What Windows versions are affected?&nbsp;&nbsp;_All Windows versions (e.g., Windows 10, Server 2016, legacy client-server OSs)._
 5. Will the GPO distribution affect IPSec certificates if the server authentication bit is enabled and when used with Microsoft OSs?&nbsp;&nbsp;_Yes, this could affect any certificate asserting server authentication._
