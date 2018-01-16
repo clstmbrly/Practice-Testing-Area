@@ -15,7 +15,7 @@ Microsoft has issued new Public Key Infrastructure (PKI) policy requirements tha
 Please recommend Option 1 or 2 and send any agency impacts or concerns by **January 26, 2018** to **_fpki@gsa.gov_**. 
 
 ### Option 1
-#### (Recommended)&nbsp;&nbsp;FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store
+#### (Recommended)&nbsp;The FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store
 
 * **Result 1:**&nbsp;&nbsp;Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet and internet websites that use FPKI CA-issued, SSL certificates.
 
@@ -37,7 +37,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 * _Yes, this could affect any certificate asserting server authentication._
 
 ### Option 2
-#### (Greatest potential impact on operations and mission-critical systems)&nbsp;&nbsp;Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the server authentication trust bit enabled, but with an added _Domain Constraint_
+#### (Greatest potential impact on operations and mission-critical systems)&nbsp;Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the server authentication trust bit enabled, but with an added _Domain Constraint_
 
 * **Result 1:**&nbsp;&nbsp;With the added _domain constraint_, your users will get errors from Microsoft Edge/IE or Chrome for any FPKI CA-issued, SSL certificate, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. The Microsoft Certificate Trust List (CTL) globally enforces this constraint through the Microsoft Certificate Trust List (CTL). Network domain administrators can't modify this constraint. 
 
