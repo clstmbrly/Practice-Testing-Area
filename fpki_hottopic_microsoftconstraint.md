@@ -29,7 +29,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 1. Do I need to remove the baked-in version of the FCPCA Root certificate?<br>
 > _No, don't remove this certificate if it's already installed._
 2. Do I need to add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?<br> 
-> _If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the PIV Guides_' "Network Authentication" steps: <https://piv.idmanagement.gov/networkconfig/>
+> _If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the PIV Guides_' "Network Authentication" steps: [Network Authentication](https://piv.idmanagement.gov/networkconfig/){:target= "_blank"}
 3. Do I need to change any trust bit for the GPO?<br>
 > **NOTE: Specific instructions to follow.**<!--Will these be added?-->
 4. What Windows versions are affected?<br> 
@@ -45,14 +45,9 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 #### Microsoft Certificate Trust Lists (CTL) recommended reading
 
 To prepare for these changes, please review these Microsoft documents:
-1. [Microsoft Trusted Root Government CA Requirements](https://social.technet.microsoft.com/wiki/contents/articles/31635.microsoft-trusted-root-certificate-program-audit-requirements.aspx#Government_CA_Requirements)
-2. [CTL Overview](https://msdn.microsoft.com/en-us/library/windows/desktop/aa376545(v=vs.85).aspx)
-2. [How to configure CTL](https://technet.microsoft.com/en-us/library/dn265983.aspx)
+1. [Microsoft Trusted Root Government CA Requirements](https://social.technet.microsoft.com/wiki/contents/articles/31635.microsoft-trusted-root-certificate-program-audit-requirements.aspx#Government_CA_Requirements){:target= "_blank"}
+2. [CTL Overview](https://msdn.microsoft.com/en-us/library/windows/desktop/aa376545(v=vs.85).aspx){:target= "_blank"}
+2. [How to Configure CTL](https://technet.microsoft.com/en-us/library/dn265983.aspx){:target= "_blank"}
 
 -------
-<a name="1">1</a>. Binding Operational Operational Directive 18-01,_Enhance Email and Web Security_, U.S. Department of Homeland Security, October 16, 2017, [BOD 18-01](https://cyber.dhs.gov/assets/report/bod-18-01.pdf){:target=_"blank"}. Additional information at: [https://cyber.dhs.gov/]{:target=_"blank"}<br>
-
-
-
-
-
+<a name="1">1</a>. Binding Operational Operational Directive 18-01,_Enhance Email and Web Security_, U.S. Department of Homeland Security, October 16, 2017, [BOD 18-01](https://cyber.dhs.gov/assets/report/bod-18-01.pdf){:target=_"blank"}. Additional information at: [https://cyber.dhs.gov/]{:target=_"blank"}
