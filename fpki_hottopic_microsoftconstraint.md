@@ -32,7 +32,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 > **NOTE: Specific instructions to follow.**<!--Will these be added?-->
 4. What Windows versions are affected?<br> 
 > _All Windows versions (e.g., Windows 10, Server 2016, legacy client-server OSs)._
-5. Will the GPO distribution affect IPSec certificates if the server authentication bit is enabled and when used with Microsoft OSs?<br> > _Yes, this could affect any certificate asserting server authentication._<!--Correct interpretation? What does engineer do if there is a problem?-->
+5. Will the GPO distribution affect IPSec certificates if the server authentication bit is enabled and when used with Microsoft OSs?<br> > _Yes, this could affect any certificate asserting server authentication._
 
 > **Option 2 (Greatest potential impact on operations and mission-critical systems).&nbsp;&nbsp;Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the server authentication trust bit enabled, but with an added _domain constraint_.**
 
