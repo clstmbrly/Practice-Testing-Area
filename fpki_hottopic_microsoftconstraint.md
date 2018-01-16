@@ -16,7 +16,7 @@ We propose two options for responding to Microsoft and Google.
 <!--This information doesn't say anything about responding to Google.-->
 Please recommend Option 1 or 2 and send any agency impacts or concerns by **January 26, 2018** to **_fpki@gsa.gov_**. 
 
-> **Option 1 (Recommended).&nbsp;&nbsp;FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
+#### Option 1 (Recommended).&nbsp;&nbsp;FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.
 
 * **Result:** Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet<!--internet also?--> websites that use FPKI CA-issued SSL certificates.
 
@@ -34,7 +34,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 > _All Windows versions (e.g., Windows 10, Server 2016, legacy client-server OSs)._
 5. Will the GPO distribution affect IPSec certificates if the server authentication bit is enabled and when used with Microsoft OSs?<br> > _Yes, this could affect any certificate asserting server authentication._
 
-> **Option 2 (Greatest potential impact on operations and mission-critical systems).&nbsp;&nbsp;Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the server authentication trust bit enabled, but with an added _domain constraint_.**
+#### Option 2 (Greatest potential impact on operations and mission-critical systems).&nbsp;&nbsp;Microsoft continues to distribute the FCPCA (COMMON) Root CA certificate with the server authentication trust bit enabled, but with an added _domain constraint_.
 
 * **Result 1:** With the added _domain constraint_, your users will get errors from Microsoft Edge/IE or Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. The Microsoft Certificate Trust List (CTL) globally enforces this constraint through the Microsoft Certificate Trust List (CTL). Network domain administrators can't modify this constraint. 
 
