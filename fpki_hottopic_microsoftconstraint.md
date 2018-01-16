@@ -6,7 +6,7 @@ permalink: /announcements/
 
 ## New Microsoft Policies Set To Impact the Federal Government
 <!--Don't see any requirements from Google.-->
-Microsoft recently issued new Public Key Infrastructure (PKI) policy requirements set to impact an estimated 14 federal agencies' operations and budgets.<!--Missions also?--> The FPKI must meet Microsoft's requirements for how we operate, maintain, and issue certificates from our Federal PKI Certification Authorities. If the FPKI does not comply, in April 2018, Windows users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet websites that use FPKI CA-issued SSL certificates.
+Microsoft recently issued new Public Key Infrastructure (PKI) policy requirements set to impact an estimated 14 federal agencies' operations and budgets.<!--Missions also?--> The FPKI must meet Microsoft's requirements for how we operate, maintain, and issue certificates from our Federal PKI Certification Authorities. If the FPKI does not comply, in April 2018, Windows users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet websites that use FPKI CA-issued SSL certificates.<!--server authentication certificates?-->
 
 {% include alert-info.html heading="Agencies use SSL certificates to secure intranet and public-facing, internet websites, per HTTPS mandate (BOD 18-01.<sup>[1](#1)</sup>)" %} 
 
@@ -18,11 +18,13 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 #### Option 1 (Recommended):&nbsp;&nbsp;FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.
 
-* **Result 1:**&nbsp;&nbsp;Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet<!--internet also?--> websites that use FPKI CA-issued SSL certificates.
+* **Result 1:**&nbsp;&nbsp;Impacts agencies that use SSL certificates for intranet and internet websites, if an FPKI CA(s) issued the server authentication certificate(s). 
 
-> **How can we limit this impact?**&nbsp;&nbsp;Network domain administrators can distribute new group policies to restore the _pre-change_ behavior for Microsoft OS-based, government-managed equipment. (See _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.)
+* **Result 2:**&nbsp;&nbsp;Your users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet or internet<!--internet also?--> websites that use FPKI CA-issued, SSL certificates.<!--server authentication certs?-->
 
-* **Result 2:**&nbsp;&nbsp;Based on agency feedback, Option 1 would have the least impact on mission-critical operations and systems. 
+> **How can we limit this impact?**&nbsp;&nbsp;Network domain administrators can distribute new group policies to restore the _pre-change_ behavior for Microsoft OS-based, government-managed equipment. (See _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_ below.)
+
+* **Result 3:**&nbsp;&nbsp;Based on agency feedback, Option 1 would have the least impact on mission-critical operations and systems. 
 
 **FAQs for Option 1**
 
@@ -36,7 +38,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 * **Result 1:**&nbsp;&nbsp;With the added _domain constraint_, your users will get errors from Microsoft Edge/IE or Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. The Microsoft Certificate Trust List (CTL) globally enforces this constraint through the Microsoft Certificate Trust List (CTL). Network domain administrators can't modify this constraint. 
 
-* **Result 2:**&nbsp;&nbsp;Based on agency feedback, Option 2 is detrimental to mission operations in the near-term, because issued certificates use intranet domain name aliases (e.g., intranetapp vs. intranetapp.agency.gov).
+* **Result 2:**&nbsp;&nbsp;Based on agency feedback, Option 2 is detrimental to mission operations in the near-term, because issued certificates use intranet domain name aliases (e.g., intranetapp vs. intranetapp.agency.gov).<!--SSL, server authentication certs?-->
 
 #### Microsoft Certificate Trust Lists (CTL) recommended reading
 
