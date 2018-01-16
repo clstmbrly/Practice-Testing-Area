@@ -6,7 +6,7 @@ permalink: /announcements/
 
 ## New Microsoft Policies Set To Impact the Federal Government
 <!--Don't see any requirements from Google.-->
-Microsoft recently issued new Public Key Infrastructure (PKI) policy requirements that will impact an estimated 14 federal agencies' operations and budgets.<!--Missions also?--> The FPKI must meet Microsoft's requirements for how we operate, maintain, and issue certificates from our Federal PKI Certification Authorities. If it does not, in April 2018, Windows users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet/internet websites that use FPKI CA-issued SSL certificates.<!--server authentication certificates?-->
+Microsoft recently issued new Public Key Infrastructure (PKI) policy requirements that could impact 14 federal agencies. The FPKI must meet Microsoft's requirements for how we operate, maintain, and issue certificates from our Federal PKI Certification Authorities. If it does not, in April 2018, Windows users will get errors when browsing with Microsoft Edge/IE or Chrome to intranet/internet websites that use FPKI CA-issued SSL certificates.<!--server authentication certificates?-->
 
 {% include alert-info.html heading="Agencies use SSL certificates to secure intranet and internet (public-facing) websites, per HTTPS mandate (BOD 18-01.<sup>[1](#1)</sup>)" %} 
 
