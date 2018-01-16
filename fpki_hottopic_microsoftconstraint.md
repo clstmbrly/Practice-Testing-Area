@@ -26,7 +26,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 1. Do I need to remove the baked-in version of the FCPCA Root certificate?<br>
 > _No, don't remove this certificate if it's already installed._
-2. Do I only need to add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?<br> 
+2. Do I need to add the FCPCA (COMMON) Root certificate to the “Trust Root Certification Authorities” store via GPO, or should I add it to the enterprise trust store?<br> 
 > _If FCPCA (COMMON) is already installed, you don't need to reinstall or change its root store. However, if it's not installed, follow the PIV Guides_' "Network Authentication" steps: <https://piv.idmanagement.gov/networkconfig/>
 3. Do I need to change any trust bit for the GPO?<br>
 > **NOTE: Specific instructions to follow.**<!--Will these be added?-->
