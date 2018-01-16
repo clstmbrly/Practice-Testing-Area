@@ -12,7 +12,7 @@ Microsoft recently issued new Public Key Infrastructure (PKI) policy requirement
 
 We propose two options for responding to Microsoft. 
 
-### Two Options for Responding to Microsoft<!--Does this have to be a unified government response?-->
+### Two Options for Federal PKI Response to Microsoft<!--Does this have to be a unified government response?-->
 <!--This information doesn't say anything about responding to Google.-->
 Please recommend Option 1 or 2 and send any agency impacts or concerns by **January 26, 2018** to **_fpki@gsa.gov_**. 
 
