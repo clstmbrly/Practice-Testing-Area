@@ -22,7 +22,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 > **How can we limit this impact?**&nbsp;&nbsp;Network domain administrators must distribute new group policies to restore the _pre-change_ behavior to Microsoft OS-based, government-managed equipment. (See _Option 1 FAQs_ and _Microsoft Certificate Trust Lists [CTL] recommended reading_.)
 
-* **Result 2:**&nbsp;&nbsp;Agency feedback suggests that Option 1 would have the least impact on mission-critical applications and operations. 
+* **Result 2:**&nbsp;&nbsp;Agency feedback suggests that Option 1 would have the least impact on mission-critical operations and systems. 
 
 **FAQs for Option 1**
 
@@ -36,7 +36,7 @@ Please recommend Option 1 or 2 and send any agency impacts or concerns by **Janu
 
 * **Result 1:**&nbsp;&nbsp;With the added _domain constraint_, your users will get errors from Microsoft Edge/IE or Chrome for any server authentication certificate that validates to FCPCA (COMMON) Root, if it doesn't include a fully qualified domain name: _.gov_, _.us_, _.mil_, or IP address. The Microsoft Certificate Trust List (CTL) globally enforces this constraint through the Microsoft Certificate Trust List (CTL). Network domain administrators can't modify this constraint. 
 
-* **Result 2:**&nbsp;&nbsp;Agency feedback suggests that Option 2 as detrimental to mission operations in the near-term, because issued certificates use intranet domain name aliases (e.g., intranetapp vs. intranetapp.agency.gov).
+* **Result 2:**&nbsp;&nbsp;Agency feedback suggests that Option 2 is detrimental to mission operations in the near-term, because issued certificates use intranet domain name aliases (e.g., intranetapp vs. intranetapp.agency.gov).
 
 #### Microsoft Certificate Trust Lists (CTL) recommended reading
 
