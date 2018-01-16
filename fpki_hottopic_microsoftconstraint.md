@@ -14,7 +14,7 @@ We propose two options for responding to Microsoft and Google.
 
 ### Two Options for Federal Agencies' Response to Microsoft<!--Does this have to be a unified government response?-->
 <!--This information doesn't say anything about responding to Google.-->
-Please respond to one of two options below. We recommend Option 1. Send any agency impacts or concerns, no later than **_January 26, 2018_**, to **_fpki@gsa.gov_**. 
+Please recommend Option 1 or 2 and send any agency impacts or concerns by **January 26, 2018** to **_fpki@gsa.gov_**. 
 
 > **Option 1 (Recommended).&nbsp;&nbsp;FPKI instructs Microsoft to remove the FCPCA (COMMON) Root certificate trust bit from the Microsoft trust store.**
 
