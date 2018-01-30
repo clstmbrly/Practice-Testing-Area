@@ -1,6 +1,5 @@
 
 
-|  **Federal Common Policy CA (COMMON)**  | **Information** | 
 | :---- | :---- |
 | Federal Common Policy CA Root Certificate |	http://http.fpki.gov/fcpca/fcpca.crt |
 | Distinguished Name | **cn=Federal Common Policy CA, ou=FPKI, o=U.S. Government, c=US** |
