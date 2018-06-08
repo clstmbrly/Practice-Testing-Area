@@ -50,7 +50,7 @@ When downloading the COMMON root CA certificate by using the options below, you'
 	$ shasum -a 256 {DOWNLOAD_LOCATION}/fcpca.crt
     ```
 
-#### Option 3:&nbsp;&nbsp;Email Us
+#### Option 3. Email Us
 
 To request an out-of-band copy of the COMMON root CA certificate to download, email us at fpki@gsa.gov.
 
