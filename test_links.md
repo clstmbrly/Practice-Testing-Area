@@ -2,7 +2,13 @@
 
 These procedures are intended for Enterprise Administrators and/or Network Engineers. 
 
-You will need to download the COMMON root CA certificate and install it on government-furnished Apple devices.
+### macOS&nbsp;&mdash;&nbsp;Download COMMON Options
+
+You will need to download the COMMON root CA certificate and install it on government-furnished Apple devices using one of these options:
+
+* [Option 1. Download COMMON Using a Web Browser](#option-1-download-common-using-a-web-browser)
+* [Option 2. Download COMMON Using Terminal](#option-2-download-common-using-terminal)
+* [Option 3. Email Us](#option-3-email-us)
 
 When downloading the COMMON root CA certificate by using the options below, you'll need to verify that it contains these details:
 
@@ -14,12 +20,6 @@ When downloading the COMMON root CA certificate by using the options below, you'
 | SHA-256 Thumbprint | 89 4e bc 0b 23 da 2a 50 c0 18 6b 7f 8f 25 ef 1f 6b 29 35 af 32 a9 45 84 ef 80 aa f8 77 a3 a0 6e |
 
 {% include alert-warning.html content="You should never install a root certificate without verifying it." %}
-
-### macOS&nbsp;&mdash;&nbsp;Download COMMON Options
-
-[Option 1. Download COMMON Using a Web Browser](#option-1-download-common-using-a-web-browser)
-
-You can download COMMON to your macOS device by using one of these options: 
 
 **Note:**&nbsp;&nbsp;For all options, replace _{DOWNLOAD_LOCATION}_ with your preferred file download location (e.g., `/Users/Sam.Jackson/Downloads`).
 
@@ -35,7 +35,7 @@ You can download COMMON to your macOS device by using one of these options:
 	$ shasum -a 256 {DOWNLOAD_LOCATION}/fcpca.crt
     ```
 
-#### Option 2:&nbsp;&nbsp;Download COMMON Using Terminal
+#### Option 2. Download COMMON Using Terminal
 1. Click the *Spotlight* icon and search for _terminal_.
 2. Double-click the Terminal icon (black monitor icon with white ">_") to open a window.
 3. Download a copy of the COMMON root CA certificate:
