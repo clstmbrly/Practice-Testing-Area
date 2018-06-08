@@ -7,6 +7,8 @@ collection: announcements
 permalink: announcements/applepkichanges/
 description: Upcoming changes regarding Apple's Root Certificate Program could impact your agency. The Federal PKI Policy Authority has elected to remove our U.S. Government Root CA certificate (Federal Common Policy CA) from the Apple Operating System Trust Stores.  This change will impact government users of Apple iOS, macOS, and tvOS, starting in **September-October 2018**. <br><br> This change will cause government users to receive errors when encountering instances of a Federal PKI CA-issued certificate. You can mitigate the impact for government intranets and government-furnished equipment by using configuration management tools for federal devices.
 ---
+MY CHANGED VERSION.  LACHELLE WAS MAKING CHANGES AT THE SAME TIME, SO THIS VERSION WAS NOT COMMITTED.
+REVIEWED HER CHANGES WITH RYAN AND AGREED.
 
 Upcoming changes regarding Apple's Root Certificate Program could impact your agency. The Federal PKI Policy Authority (FPKIPA) has elected to remove our U.S. Government Root CA certificate (Federal Common Policy CA [FCPCA/COMMON]) from Apple's pre-installed Operating System Trust Stores. 
 
@@ -289,6 +291,10 @@ You can use the macOS configuration profile procedures above to install COMMON o
 If you would like to install COMMON on tvOS government-furnished equipment, email us at fpki@gsa.gov.
 
 ## Frequently Asked Questions
+
+1) Now is the time
+2) And now is the time
+3) Now is always the time
 
 ### 1.&nbsp;&nbsp;Is PIV network login impacted?
 Yes. 
