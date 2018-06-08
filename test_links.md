@@ -17,7 +17,7 @@ When downloading the COMMON root CA certificate by using the options below, you'
 
 ### macOS&nbsp;&mdash;&nbsp;Download COMMON Options
 
-[Option 1: Download COMMON Using a Web Browser](#option-1-download-common-using-a-web-browser)
+[Option 1 Download COMMON Using a Web Browser](#option-1-download-common-using-a-web-browser)
 
 You can download COMMON to your macOS device by using one of these options: 
 
