@@ -17,12 +17,12 @@ When downloading the COMMON root CA certificate by using the options below, you'
 
 ### macOS&nbsp;&mdash;&nbsp;Download COMMON Options
 
-[Option 1 Download COMMON Using a Web Browser](#option-1-download-common-using-a-web-browser)
+[1. Download COMMON Using a Web Browser](#1-download-common-using-a-web-browser)
 
 You can download COMMON to your macOS device by using one of these options: 
 
 **Note:**&nbsp;&nbsp;For all options, replace _{DOWNLOAD_LOCATION}_ with your preferred file download location (e.g., `/Users/Sam.Jackson/Downloads`).
-#### Option 1:&nbsp;&nbsp;Download COMMON Using a Web Browser
+#### Option 1.&nbsp;&nbsp;Download COMMON Using a Web Browser
 1. Open your web browser.
 2. Navigate to the [COMMON root CA certificate](http://http.fpki.gov/fcpca/fcpca.crt){:target="_blank"}.
 3. When prompted, save the certificate file to your download location.
