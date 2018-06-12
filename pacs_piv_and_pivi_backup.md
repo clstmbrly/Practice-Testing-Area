@@ -5,7 +5,7 @@ permalink: /pivandpivi/
 ---
 **6/12/2018 - The "PIV and PIV-I Considerations" section is being removed entirely, based on LaChelle's 11/16/2017 comments on the "ACC Playbook v6"**
 
-**NOTE:**  A backup copy of this "PIV and PIV-I Considerations" section has been archived. -- Celeste 
+**NOTE:**  A backup copy of this "PIV and PIV-I Considerations" section has been archived. **Deletion History in GSA ficam-pacs** repo: https://github.com/GSA/ficam-pacs/commit/b5f6ea60a5b433f0e2974ab4d48414e7415cbac6
 
 **LaChelle's comments:**
 * "Suggestion: remove (entire "PIV and PIV-I Considerations" section), for background on PIV there are existing resources."
