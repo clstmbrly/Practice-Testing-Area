@@ -5,7 +5,7 @@ permalink: /deploy/
 ---
 **6/12/2018 - The "Deploy a PACS" section (ACC Playbook's "Deploying a PIV-PACS") is being removed entirely, based on LaChelle's 11/16/2017 comments on the "ACC Playbook v6"**
 
-**NOTE:**  A copy of this "Deploy a PACS" section has been archived. **Deletion History in GSA ficam-pacs** repo: 
+**NOTE:**  A copy of this "Deploy a PACS" section has been archived. **Deletion History in GSA ficam-pacs** repo: https://github.com/GSA/ficam-pacs/commit/fe26b4717eb7cf5af40468d85ae721c0afa6387a
 
 **Reviewer comments:**
 * Celeste: This section focuses on standards, not deployment, per se.
