@@ -40,7 +40,7 @@ permalink: docs/userguide/
 
 <h2 id="how">How Does This Work?</h2>
 
-<p style="color:blue;"><b><i>In-depth experience with Federal PKI certificates and certificate profiles is recommended.</b></i></p>
+<p style="color:blue;"><b><i>Note:&nbsp;&nbsp;In-depth experience with Federal PKI certificates and certificate profiles is recommended.</b></i></p>
 
 <p>The basic steps are:</p>
 
@@ -76,7 +76,7 @@ permalink: docs/userguide/
 <li>Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></li>
 </ul>
 
-<p style="color:blue;"><b><i>Notice that the Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</i></b></p>
+<p style="color:blue;"><b><i>Note:&nbsp;&nbsp;The Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</i></b></p>
 
 <h4>3. Review Certificate Test Results</h4>
 <p>The status banner at the top of the screen will be either <i>green</i> (certificate conforms) or <i>red</i> (doesn't conform). It will also state the certificate's test summary:</p>
@@ -100,23 +100,24 @@ permalink: docs/userguide/
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 
-<h3>Possible Certificate Errors</h3>
+<h3>Certificate Failures</h3>
 
 <ul>
-<li><b>Tested [n] fields: [n] problems detected</b>. Possible causes:</li></ul>
+<li><b>Tested [n] fields: [n] problems detected</b>. Possible causes:</li>
+</ul>
 <ol>
 <li>One or more fields or extensions do not conform. 
 <li>The wrong Profile Document, Document Version, and/or Certificate Profile were selected. 
 <li>Another problem exists.</li>
 </ol>
 
-<li><b>The <b>Analysis</b> column indicates a <b>FAIL (with explanation)</b>. The explanation gives the reason(s) for the failure.</li>
+<li><b>The <b>Analysis</b> column states <b>FAIL (with explanation)</b>. The explanation gives the reason(s) for the failure.</li>
 </ul>
 
 <h3>Possible Error Messages</h3>
 
 <ul>
-<li><b>You can't upload files of this type.</b> <i>CPCT doesn't recognize the certificate file type. The allowable file types are: .crt, .cer, .pem, and .der.</i></li>
+<li><b>You can't upload files of this type.</b> <i>The allowable file types are: .crt, .cer, .pem, and .der.</i></li>
 </ul>
 
 <h3>Other Problems or Discrepancies</h3>
@@ -126,19 +127,16 @@ permalink: docs/userguide/
 <ul>
 <li>Check to ensure that you've selected the right Profile Document, Document Version, and Certificate Profile.
 
-<li>CPCT doesn't recognize the certificate file type. Allowable file types are: .ctr, .pem, cer., and .der.
-
 <li>Check the certificate's Validity Period. The test certificate may have expired.<!--Would this show up as a "problem" in the status banner with a "FAIL" for Validity Period"?--> </li>
 </ul>
-<li>Think there might be an application error?  Please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.</li>
 
-<li>Think a test result may be incorrect (e.g., "false positive" or "false negative")? Please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>. </li>
+<li>Think a test result may be incorrect (e.g., "false positive" or "false negative")? Please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>. </li>
 </ul>
 
 <h3>What If I Can't Resolve an Issue?</h3>
 
 <ul>
-<li>Create a GitHub issue in the <a href="https://github.com/GSA/fpkilint" target="_blank">CPCT Respository</a> and attach the certificate to the issue. (<strong>Note:</strong>&nbsp;&nbsp;You will need a GitHub account to do this: <a href="https://github.com/join" target="_blank">create a GitHub account link</a>.)</li></ul><br>
+<li>Create a GitHub issue in the <a href="https://github.com/GSA/fpkilint" target="_blank">CPCT Respository</a> and attach the certificate to the issue. (<strong>Note:</strong>&nbsp;&nbsp;You will need a GitHub account to do this: <a href="https://github.com/join" target="_blank">create a GitHub account link</a>.)</li></ul>
 <i>OR</i><br>
 <ul>
 <li>Email us at fpki@gsa.gov and attach your certificate. (<b>Note:</b>&nbsp;&nbsp;Please rename your certificate with <b>.txt</b> file extension.) </li>
