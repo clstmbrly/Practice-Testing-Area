@@ -85,13 +85,13 @@ permalink: docs/userguide/
 <h4 id="uploadacertificate">2. Upload a Certificate</h4>
 
 <ol type="a">
-<li><p>Next, upload your certificate (as a .ctr, .pem, .cer, or .der file) using either of these options:</ol>
+<li><p>Next, upload a certificate (.ctr, .pem, .cer, or .der file) using either of these options:</ol>
 <ul style="list-style-type:disc">
 <li><b>Drag-and-drop</b> your certificate to anywhere on the CPCT main screen. <i>The Test Results display for the uploaded certificate.</i><br>
 <li>Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></p></li>
 </ul>
 
-<p style="color:blue;">Notice that the Test Results screen includes the CPCT drop-downs for easy upload of more certificates.</p>
+<p style="color:blue;"><b>Notice that the Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</b></p>
 
 <h4 id="reviewcertificatetestresults">3. Review Certificate Test Results</h4>
 
@@ -117,12 +117,12 @@ permalink: docs/userguide/
 <h4 id="downloadatestreport">4. Download a Test Report</h4>
 
 <ul>
-<li>To download a formatted Test Report, click the <strong>XLS</strong> or <strong>PDF</strong> button below the status banner. </li>
+<li>To download a formatted Test Report, click the <strong>XLS</strong> or <strong>PDF</strong> button below the green or red status banner. </li>
 </ul>
 
 <h2>Troubleshooting</h2>
 
-<h3>Certificate Errors</h3>
+<h3>Possible Certificate Errors</h3>
 
 <ul>
 <li><strong>Tested [n] fields: [n] problems detected</strong>. <em>1. One or more fields or extensions do not conform; 2. The wrong Profile Document, Document Version, and/or Certificate Profile were selected.</em>; or 3. Another problem exists.</li>
