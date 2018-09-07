@@ -14,13 +14,12 @@ permalink: docs/userguide/
 <p>CPCT is a friendly tool that instantly analyzes a certificate and displays conformance test results. Not only that&nbsp;-&nbsp;CPCT clearly explains the reason for any nonconformance. What's more, you can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or retain for your organization's needs.</p>
 
 <ul style="list-style-type:disc">
-<li> <a href="#who">Who Needs CPCT?</a>
-<li>[Who Needs CPCT?](#who-needs-cpct)</li>
-<li>[Operating System Requirements](#operating-system-requirements)</li>
-<li>[How Does This Work?](#how-does-this-work)</li>
-<li>[Detailed Steps](#detailed-steps)</li>
-<li>[Troubleshooting](#troubleshooting)</li>
-<li>[Feature Request](#feature-request)</li></ul>
+<li><a href="#who">Who Needs CPCT?</a>
+<li><a href="#operating">Operating System Requirements</li>
+<li><a href="#how">How Does This Work?</li>
+<li><a href="#detailed">Detailed Steps</li>
+<li><a href="#troubleshooting">Troubleshooting</li>
+<li><a href="#featurerequest">Feature Request</h2>
 
 <h2 id="who">Who Needs CPCT?</h2>
 
@@ -31,7 +30,7 @@ permalink: docs/userguide/
 <li><b>Anyone who analyzes FPKI certificates for conformance</b>.</li>
 </ol>
 
-<h2>Operating System Requirements</h2>
+<h2 id="operating">Operating System Requirements</h2>
 
 <ul style="list-style-type:disc"> 
 <li>Windows or macOS</li>
@@ -39,7 +38,7 @@ permalink: docs/userguide/
 <li>Android - Not recommended for CPCT</li>
 </ul>
 
-<h2>How Does This Work?</h2>
+<h2 id="how">How Does This Work?</h2>
 
 <p style="color:blue;"><b><i>In-depth experience with Federal PKI certificates and certificate profiles is recommended.</b></i></p>
 
@@ -53,7 +52,7 @@ permalink: docs/userguide/
 <li>You can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or to retain for your organization's needs.</li> 
 </ul>
 
-<h2>Detailed Steps</h2>
+<h2 id="detailed">Detailed Steps</h2>
 <!--The short names aren't ideal. "Common Policy" and "Federal Bridge" don't appear in the actual policies' titles. For normal publications, ideally prior to short name use (or at least in a footnote as I have added at the end), the full titles should be defined.-->
 
 <h4 id="selectprofiledocuments">1. Select Profile Documents</h4>
@@ -106,7 +105,7 @@ permalink: docs/userguide/
 <li>To download a formatted Test Report, click the <strong>XLS</strong> or <strong>PDF</strong> button below the green or red status banner. </li>
 </ul>
 
-<h2>Troubleshooting</h2>
+<h2 id="troubleshooting">Troubleshooting</h2>
 
 <h3>Possible Certificate Errors</h3>
 
@@ -149,7 +148,7 @@ permalink: docs/userguide/
 
 <p>We will respond as soon as possible.</p>
 
-<h2>Feature Request</h2>
+<h2 id="featurerequest">Feature Request</h2>
 
 <p>If you would like to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>.</p>
 
