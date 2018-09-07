@@ -14,7 +14,7 @@ permalink: docs/userguide/
 <p>CPCT is a friendly tool that instantly analyzes a certificate and displays conformance test results. Not only that&nbsp;-&nbsp;CPCT clearly explains the reason for any nonconformance. What's more, you can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or retain for your organization's needs.</p>
 
 <ul style="list-style-type:disc">
-<li> <a href="whoneedscpct">Who Needs CPCT?</a>
+<li> <a href="#who">Who Needs CPCT?</a>
 <li>[Who Needs CPCT?](#who-needs-cpct)</li>
 <li>[Operating System Requirements](#operating-system-requirements)</li>
 <li>[How Does This Work?](#how-does-this-work)</li>
@@ -22,7 +22,7 @@ permalink: docs/userguide/
 <li>[Troubleshooting](#troubleshooting)</li>
 <li>[Feature Request](#feature-request)</li></ul>
 
-<h2 id="whoneedscpct">Who Needs CPCT?</h2>
+<h2 id="who">Who Needs CPCT?</h2>
 
 <ol>
 <li><b>Agencies/organizations submitting FPKI Annual Review Packages</b> - Use it to test certificates and download Test Reports.</li>
