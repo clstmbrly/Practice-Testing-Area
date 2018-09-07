@@ -19,9 +19,9 @@ permalink: docs/userguide/
 <li><a href="#how">How Does This Work?</a>
 <li><a href="#detailed">Detailed Steps</a>
 <li><a href="#troubleshooting">Troubleshooting</a>
-<li><a href="#featurerequest">Feature Request</a>
+<li><a href="#feature">Feature Request</a>
 </li>
-<br>
+
 <h2 id="who">Who Needs CPCT?</h2>
 
 <ol>
@@ -149,7 +149,7 @@ permalink: docs/userguide/
 
 <p>We will respond as soon as possible.</p>
 
-<h2 id="featurerequest">Feature Request</h2>
+<h2 id="feature">Feature Request</h2>
 
 <p>If you would like to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>.</p>
 
