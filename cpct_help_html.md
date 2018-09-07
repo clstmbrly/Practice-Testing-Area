@@ -79,7 +79,7 @@ permalink: docs/userguide/
 <h4>3. Review Certificate Test Results</h4>
 <p style="color:blue;"><b><i>Note:&nbsp;&nbsp;The Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</i></b></p>
 
-<p>The status banner at the top of the screen will be either <i>green</i> (certificate conforms) or <i>red</i> (doesn't conform). It will also state the certificate's test summary:</p>
+<p>The status banner will be <i>green</i> (certificate conforms) or <i>red</i> (doesn't conform) and will give a test summary:</p>
 
 <ul style="list-style-type:disc">
 <li><b>Tested [n] fields: No Problems detected</b>
@@ -103,36 +103,23 @@ permalink: docs/userguide/
 
 <h3>Certificate Failures</h3>
 
-<ul>
-<li><b>Tested [n] fields: [n] problems detected</b>. Possible causes:</li>
-</ul>
-<ol>
-<li>One or more fields or extensions do not conform. 
-<li>The wrong Profile Document, Document Version, and/or Certificate Profile were selected. 
-<li>Another problem exists.</li>
-</ol>
+<p>If the <b>Analysis</b> column states <b>FAIL</b>, an explanation is given.</p>
 
-<li><b>The <b>Analysis</b> column states <b>FAIL (with explanation)</b>. The explanation gives the reason(s) for the failure.</li>
-</ul>
+<p>If you think a test result may be a "false positive"/"false negative," please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.
+</p>
 
-<h3>Possible Error Messages</h3>
+<h3>Application Error Messages</h3>
 
 <ul>
 <li><b>You can't upload files of this type.</b> <i>The allowable file types are: .crt, .cer, .pem, and .der.</i></li>
 </ul>
 
-<h3>Other Problems or Discrepancies</h3>
+<h3>Other Problems or Discrepancies?</h3>
 
 <p>If you encounter a problem or discrepancy:</p>
 
 <ul>
-<li>Check to ensure that you've selected the right Profile Document, Document Version, and Certificate Profile.
-
-<li>Check the certificate's Validity Period. The test certificate may have expired.<!--Would this show up as a "problem" in the status banner with a "FAIL" for Validity Period"?--> </li>
-</ul>
-
-<li>Think a test result may be incorrect (e.g., "false positive" or "false negative")? Please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>. </li>
-</ul>
+<li>Check to ensure that the right Profile Document, Document Version, and Certificate Profile have been selected.
 
 <h3>What If I Can't Resolve an Issue?</h3>
 
