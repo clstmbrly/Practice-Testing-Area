@@ -76,10 +76,11 @@ permalink: docs/userguide/
 <li>Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></li>
 </ul>
 
+<h4>3. Review Certificate Test Results</h4>
 <p style="color:blue;"><b><i>Note:&nbsp;&nbsp;The Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</i></b></p>
 
-<h4>3. Review Certificate Test Results</h4>
 <p>The status banner at the top of the screen will be either <i>green</i> (certificate conforms) or <i>red</i> (doesn't conform). It will also state the certificate's test summary:</p>
+
 <ul style="list-style-type:disc">
 <li><b>Tested [n] fields: No Problems detected</b>
 <li><b>Tested [n] fields: [n] problems detected</b></li>
