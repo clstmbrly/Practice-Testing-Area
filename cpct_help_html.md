@@ -47,7 +47,7 @@ permalink: docs/userguide/
 <ul style="list-style-type:disc">
 <li>At the <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT main screen</a>, pick the <b>Profile Document</b>, <b>Document Version</b>, and <b>Certificate Profile</b> related to a specific certificate that you need to test. Then, upload the certificate.</li> 
 
-<li>CPCT displays the certificate's test results. A status banner will be <i>green</i> if the certificate conforms to the Certificate Profile or <i>red</i> if it doesn't. The <b>Analysis</b> column will display <i>a <b>checkmark</b> for "PASS"</i> or state <i>"FAIL" (with explanation)</i> for each field and extension.</i></li> 
+<li>CPCT displays the certificate's test results. A status banner will be <i>green</i> if the certificate conforms to the Certificate Profile or <i>red</i> if it doesn't. The <b>Analysis</b> column will display a <b>checkmark</b> for <i>"PASS"</i> or state <b>"FAIL" (with explanation)</b> for each field and extension.</li> 
 
 <li>You can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or to retain for your organization's needs.</li> 
 </ul>
@@ -55,54 +55,52 @@ permalink: docs/userguide/
 <h2 id="detailed">Detailed Steps</h2>
 <!--The short names aren't ideal. "Common Policy" and "Federal Bridge" don't appear in the actual policies' titles. For normal publications, ideally prior to short name use (or at least in a footnote as I have added at the end), the full titles should be defined.-->
 
-<h4 id="selectprofiledocuments">1. Select Profile Documents</h4>
+<h4>1. Select Profile Documents</h4>
 
 <ol type="a">
 <li>Navigate to <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT</a>.
 
 <li>From the 3 drop-downs, pick:</li></ol>
 <ul style="list-style-type:disc">
-<li><b>Profile Document -</b> This list contains short names for the FPKI Profile Documents: <i>Common Policy SSP Program</i><sup><a href="#1">1</a></sup>; <i>Federal PKI/Federal Bridge</i><sup><a href="#2">2</a></sup>; and <i>PIV Interoperable (PIV-I)</i><sup><a href="#3">3</a></sup>.
+<li><b>Profile Document -</b> This list contains short names for the FPKI Profile Documents: <i>Common Policy SSP Program</i><sup><a href="#1">1</a></sup>; <i>Federal PKI/Federal Bridge</i><sup><a href="#2">2</a></sup>; and <i>PIV Interoperable (PIV-I)</i><sup><a href="#3">.3</a></sup>
 <li><b>Document Version -</b> The most recent Version is automatically set when you select the Profile Document.
 <li><b>Certificate Profile -</b> For example, PIV Authentication.</li>
 </ul>
 
-<h4 id="uploadacertificate">2. Upload a Certificate</h4>
+<h4>2. Upload a Certificate</h4>
 
 <ol type="a">
-<li><p>Next, upload a certificate (.ctr, .pem, .cer, or .der file) using either of these options:</ol>
+<li>Next, upload a certificate (.ctr, .pem, .cer, or .der file) using either of these options:</ol>
 <ul style="list-style-type:disc">
 <li><b>Drag-and-drop</b> your certificate to anywhere on the CPCT main screen. <i>The Test Results display for the uploaded certificate.</i><br>
-<li>Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></p></li>
+<li>Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></li>
 </ul>
 
 <p style="color:blue;"><b><i>Notice that the Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</i></b></p>
 
-<h4 id="reviewcertificatetestresults">3. Review Certificate Test Results</h4>
-
-<ul>
-<li><p>At the top of the Test Results screen, a status banner in <em>green</em> (conforms) or <em>red</em> (doesn't conform) gives the test summary: </p></li>
-
-<li><p><strong>Tested [n] fields: No Problems detected</strong> 
-<em>OR</em> </p></li>
-
-<li><p><strong>Tested [n] fields: [n] problems detected</strong></p></li>
+<h4>3. Review Certificate Test Results</h4>
+<ol type="a">
+<li>At the top of the Test Results screen, the status banner will be <i>green</i> (certificate conforms) or <i>red</i> (doesn't conform). It also gives a test summary:</li></ol>
+<ul style="list-style-type:disc">
+<li><b>Tested [n] fields: No Problems detected</b></li>
+</ul>
+<br>
+<p><i>OR</i></p>
+<ul style="list-style-type:disc">
+<li><b>Tested [n] fields: [n] problems detected</b></li>
 </ul>
 
 <p>The Test Results columns are:</p>
-
 <ul>
-<li><strong>Field</strong> - Lists fields AND extensions.</li>
-
-<li><strong>Content</strong> - Lists field and extension details.</li>
-
-<li><strong>Analysis</strong> - For each field and extension, this column shows a checkmark (for <em>PASS</em>) or <em>FAIL (with an explanation)</em>.</li>
+<li><b>Field -</b> Lists fields AND extensions.
+<li><b>Content -</b> Lists field and extension details.
+<li><b>Analysis -</b> Displays a <b>checkmark</b> for <i>"PASS"</i> or state <b>"FAIL" (with explanation)</b> for each field and extension.</li>
 </ul>
 
-<h4 id="downloadatestreport">4. Download a Test Report</h4>
+<h4>4. Download a Test Report</h4>
 
 <ul>
-<li>To download a formatted Test Report, click the <strong>XLS</strong> or <strong>PDF</strong> button below the green or red status banner. </li>
+<li>To download a formatted Test Report, click the <b>XLS</b> or <b>PDF</b> button below the status banner. </li>
 </ul>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
@@ -110,7 +108,12 @@ permalink: docs/userguide/
 <h3>Possible Certificate Errors</h3>
 
 <ul>
-<li><strong>Tested [n] fields: [n] problems detected</strong>. <em>1. One or more fields or extensions do not conform; 2. The wrong Profile Document, Document Version, and/or Certificate Profile were selected.</em>; or 3. Another problem exists.</li>
+<li><b>Tested [n] fields: [n] problems detected</b>. Possible causes:</li></ul>
+<ol>
+<li>One or more fields or extensions do not conform. 
+<li>The wrong Profile Document, Document Version, and/or Certificate Profile were selected. 
+<li>Another problem exists.</li>
+</ol>
 
 <li><strong>FAIL (with explanation)</strong> shown in the <strong>Analysis</strong> column. <em>The field or extension doesn't conform.</em></li>
 </ul>
