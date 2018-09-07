@@ -9,7 +9,7 @@ permalink: docs/userguide/
  
 <h2>What is the Certificate Profile Conformance Tool (CPCT)?</h2>
 
-<p>Do you often need to analyze Federal PKI certificates for conformance to certificate profiles? If your answer is _yes_, then the Certificate Profile Conformance Tool (CPCT) is for you.</p>
+<p>Do you often need to analyze Federal PKI certificates for conformance to certificate profiles? If your answer is <i>yes</i>, then the Certificate Profile Conformance Tool (CPCT) is for you.</p>
 
 <p>CPCT is a friendly tool that instantaneously analyzes a certificate and displays its conformance results. Not only that&nbsp;-&nbsp;CPCT clearly explains the reason for any nonconformance. What's more, you can download a formatted Test Report (.xls or .pdf) to submit as part of an Federal PKI Annual Review package or retain for your organization's needs.</p>
 
@@ -70,7 +70,7 @@ permalink: docs/userguide/
 
 <!--The short names aren't ideal. Neither "Common Policy" nor "Federal Bridge" appear in the actual policies' titles. For normal publications, ideally prior to short name use (or at least in a footnote as I have added at the end), the full titles should be defined.-->
 
-<h4 id="selectprofiledocuments">Select Profile Documents</h4>
+<h4 id="selectprofiledocuments">1. Select Profile Documents</h4>
 
 <ol>
 <li>Navigate to <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT</a>.
@@ -82,18 +82,18 @@ permalink: docs/userguide/
 <li><b>Certificate Profile -</b> For example, PIV Authentication.</li>
 </ul>
 
-<h4 id="uploadacertificate">Upload a Certificate</h4>
+<h4 id="uploadacertificate">2. Upload a Certificate</h4>
 
 <ul>
 <li><p>Next, upload your certificate (as a .ctr, .pem, .cer, or .der file) using either of these options:</p>
 
-<p>o <strong>Drag-and-drop</strong> your certificate to anywhere on the CPCT main screen. <em>Test results display for the uploaded certificate.</em><br>
- o Click the <strong>Upload Certificate</strong> button and browse to the certificate. Click it, and then click <strong>Open.</strong> <em>Test results display for the uploaded certificate.</em><br></p></li>
+<p>o <b>Drag-and-drop</b> your certificate to anywhere on the CPCT main screen. <i>The Test Results display for the uploaded certificate.</i><br>
+ o Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></p></li>
 </ul>
 
 <p style="color:blue;">Notice that the Test Results screen includes the CPCT drop-downs for easy upload of more certificates.</p>
 
-<h4 id="reviewcertificatetestresults">Review Certificate Test Results</h4>
+<h4 id="reviewcertificatetestresults">3. Review Certificate Test Results</h4>
 
 <ul>
 <li><p>At the top of the Test Results screen, a status banner in <em>green</em> (conforms) or <em>red</em> (doesn't conform) banner gives the test summary: </p></li>
@@ -114,7 +114,7 @@ permalink: docs/userguide/
 <li><strong>Analysis</strong> - For each field and extension, this column shows a checkmark (for <em>PASS</em>) or <em>FAIL (with an explanation)</em>.</li>
 </ul>
 
-<h4 id="downloadatestreport">Download a Test Report</h4>
+<h4 id="downloadatestreport">4. Download a Test Report</h4>
 
 <ul>
 <li>To download a formatted Test Report, click the <strong>XLS</strong> or <strong>PDF</strong> button below the status banner. </li>
