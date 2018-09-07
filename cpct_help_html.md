@@ -45,9 +45,9 @@ permalink: docs/userguide/
 <p>The basic steps are:</p>
 
 <ul style="list-style-type:disc">
-<li>At the <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT main screen</a>, pick the <b>Profile Document</b>, <b>Document Version</b>, and <b>Certificate Profile</b> related to a certificate you want to test. Then, upload the certificate.</li> 
+<li>At the <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT main screen</a>, pick the <b>Profile Document</b>, <b>Document Version</b>, and <b>Certificate Profile</b> related to a specific certificate that you need to test. Then, upload the certificate.</li> 
 
-<li>CPCT displays the certificate's test results. A status banner displays as <i>green</i> (certificate conforms) or <i>red</i> (certificate doesn't conform). For each field and extension, the <b>Analysis</b> column indicates <i>PASS</i> (a checkmark) or <i>FAIL (with explanation)</i>.</li> 
+<li>CPCT displays the certificate's test results. A status banner will be <i>green</i> if the certificate conforms to the Certificate Profile or <i>red</i> if it doesn't. The <b>Analysis</b> column will display <i>a <b>checkmark</b> for "PASS"</i> or state <i>"FAIL" (with explanation)</i> for each field and extension.</i></li> 
 
 <li>You can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or to retain for your organization's needs.</li> 
 </ul>
@@ -76,7 +76,7 @@ permalink: docs/userguide/
 <li>Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></p></li>
 </ul>
 
-<p style="color:blue;"><b>Notice that the Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</b></p>
+<p style="color:blue;"><b><i>Notice that the Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</i></b></p>
 
 <h4 id="reviewcertificatetestresults">3. Review Certificate Test Results</h4>
 
