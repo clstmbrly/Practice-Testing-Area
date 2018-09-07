@@ -112,13 +112,13 @@ permalink: docs/userguide/
 <h3>Application Error Messages</h3>
 
 <ul>
-<li><b>You can't upload files of this type.</b> <i>The allowable file types are: .crt, .cer, .pem, and .der.</i></li>
+<li><i>You can't upload files of this type.</i> The allowable file types are: .crt, .cer, .pem, and .der.</li>
 </ul>
 
 <h3>What If I Can't Resolve an Issue?</h3>
 
 <ul>
-<li>Create a GitHub issue in the <a href="https://github.com/GSA/fpkilint" target="_blank">CPCT Respository</a> and attach the certificate to the issue. (<strong>Note:</strong>&nbsp;&nbsp;You will need a GitHub account to do this: <a href="https://github.com/join" target="_blank">create a GitHub account link</a>.)</li></ul>
+<li>Create a GitHub issue in the <a href="https://github.com/GSA/fpkilint" target="_blank">CPCT Repository</a> and attach the certificate to the issue. (<strong>Note:</strong>&nbsp;&nbsp;You will need a GitHub account to do this: <a href="https://github.com/join" target="_blank">create a GitHub account link</a>.)</li></ul>
 <i>OR</i><br>
 <ul>
 <li>Email us at fpki@gsa.gov and attach your certificate. (<b>Note:</b>&nbsp;&nbsp;Please rename your certificate with <b>.txt</b> file extension.) </li>
