@@ -11,13 +11,10 @@ permalink: docs/userguide/
 
 <p>Do you often need to analyze Federal PKI certificates for conformance to certificate profiles? If your answer is <i>yes</i>, then the Certificate Profile Conformance Tool (CPCT) is for you.</p>
 
-<p>CPCT is a friendly tool that instantaneously analyzes a certificate and displays its conformance results. Not only that&nbsp;-&nbsp;CPCT clearly explains the reason for any nonconformance. What's more, you can download a formatted Test Report (.xls or .pdf) to submit as part of an Federal PKI Annual Review package or retain for your organization's needs.</p>
-
-<p></p>
-
-<h2>Unordered List with Disc Bullets</h2>
+<p>CPCT is a friendly tool that instantly analyzes a certificate and displays conformance test results. Not only that&nbsp;-&nbsp;CPCT clearly explains the reason for any nonconformance. What's more, you can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or retain for your organization's needs.</p>
 
 <ul style="list-style-type:disc">
+<li> <a href="whoneedscpct">Who Needs CPCT?</a>
 <li>[Who Needs CPCT?](#who-needs-cpct)</li>
 <li>[Operating System Requirements](#operating-system-requirements)</li>
 <li>[How Does This Work?](#how-does-this-work)</li>
@@ -25,9 +22,7 @@ permalink: docs/userguide/
 <li>[Troubleshooting](#troubleshooting)</li>
 <li>[Feature Request](#feature-request)</li></ul>
 
-<p></p>
-
-<h2>Who Needs CPCT?</h2>
+<h2 id="whoneedscpct">Who Needs CPCT?</h2>
 
 <ol>
 <li><b>Agencies/organizations submitting FPKI Annual Review Packages</b> - Use it to test certificates and download Test Reports.</li>
@@ -35,8 +30,6 @@ permalink: docs/userguide/
 <li><b>Subscribers</b> - Use it to determine who should correct certificate failures.</li>
 <li><b>Anyone who analyzes FPKI certificates for conformance</b>.</li>
 </ol>
-
-<p></p>
 
 <h2>Operating System Requirements</h2>
 
@@ -46,15 +39,11 @@ permalink: docs/userguide/
 <li>Android - Not recommended for CPCT</li>
 </ul>
 
-<p></p>
-
 <h2>How Does This Work?</h2>
 
-<p style="color:blue;">In-depth experience with Federal PKI certificates and certificate profiles is recommended.</p>
+<p style="color:blue;"><b><i>In-depth experience with Federal PKI certificates and certificate profiles is recommended.</b></i></p>
 
 <p>The basic steps are:</p>
-
-<p></p>
 
 <ul style="list-style-type:disc">
 <li>At the <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT main screen</a>, pick the <b>Profile Document</b>, <b>Document Version</b>, and <b>Certificate Profile</b> related to a certificate you want to test. Then, upload the certificate.</li> 
@@ -64,11 +53,8 @@ permalink: docs/userguide/
 <li>You can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or to retain for your organization's needs.</li> 
 </ul>
 
-<p></p>
-
 <h2>Detailed Steps</h2>
-
-<!--The short names aren't ideal. Neither "Common Policy" nor "Federal Bridge" appear in the actual policies' titles. For normal publications, ideally prior to short name use (or at least in a footnote as I have added at the end), the full titles should be defined.-->
+<!--The short names aren't ideal. "Common Policy" and "Federal Bridge" don't appear in the actual policies' titles. For normal publications, ideally prior to short name use (or at least in a footnote as I have added at the end), the full titles should be defined.-->
 
 <h4 id="selectprofiledocuments">1. Select Profile Documents</h4>
 
