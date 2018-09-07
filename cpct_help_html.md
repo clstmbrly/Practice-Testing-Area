@@ -19,7 +19,7 @@ permalink: docs/userguide/
 <li><a href="#detailed">Detailed Steps</a>
 <li><a href="#troubleshooting">Troubleshooting</a>
 <li><a href="#feature">Feature Request</a>
-</li>
+</ul>
 
 <h2 id="who">Who Needs CPCT?</h2>
 
