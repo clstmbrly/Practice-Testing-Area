@@ -1,11 +1,12 @@
-<hr />
-
-<p>layout: default
+---
+layout: default
 title: Certificate Profile Conformance Tool (CPCT) Help
-collection: docs</p>
-
-<h2 id="permalinkdocsuserguide">permalink: docs/userguide/</h2>
-
+collection: docs
+permalink: docs/userguide/
+---
+<html>
+<body>
+ 
 <h2>What is the Certificate Profile Conformance Tool (CPCT)?</h2>
 
 <p>Do you often need to analyze Federal PKI certificates for conformance to certificate profiles? If your answer is _yes_, then the Certificate Profile Conformance Tool (CPCT) is for you.</p>
@@ -35,8 +36,7 @@ collection: docs</p>
 <li><b>Anyone who analyzes FPKI certificates for conformance</b>.</li>
 </ol>
 
-<p>
-<br></p>
+<p></p>
 
 <h2>Operating System Requirements</h2>
 
@@ -166,8 +166,10 @@ collection: docs</p>
 
 <p>If you would like to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>.</p>
 
-<hr />
 
 <p><a name="1">1</a>. Short name for <em>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for the Shared Service Providers (SSP) Program Policy</em>.<br>
 <a name="2">2</a>. Short name for <em>Federal Public Key Infrastructure (PKI) X.509 Certificate and CRL Extensions Profile</em>.<br>
 <a name="3">3</a>. Short name for <em>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for Personal Identity Verification Interoperable (PIV-I) Cards</em>.<br></p>
+
+</body>
+</html>
