@@ -59,9 +59,9 @@ permalink: docs/userguide/
 <ul style="list-style-type:disc">
 <li>At the <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT main screen</a>, pick the <b>Profile Document</b>, <b>Document Version</b>, and <b>Certificate Profile</b> related to a certificate you want to test. Then, upload the certificate.</li> 
 
-<li>CPCT displays the certificate's test results. A status banner displays as <i>green</i> (if the certificate conforms) or <i>red</i> (if the certificate doesn't conform). Each field and extension will show either a <i>PASS</i> (a checkmark) or <i>FAIL (with explanation)</i>.</li> 
+<li>CPCT displays the certificate's test results. A status banner displays as <i>green</i> (certificate conforms) or <i>red</i> (certificate doesn't conform). For each field and extension, the <b>Analysis</b> column indicates <i>PASS</i> (a checkmark) or <i>FAIL (with explanation)</i>.</li> 
 
-<li>You can download a formatted Test Report (.xls or .pdf) to submit as part of an Federal PKI Annual Review packages or to retain for your organization's needs.</li> 
+<li>You can download a formatted Test Report (.xls or .pdf) to submit as part of a Federal PKI Annual Review package or to retain for your organization's needs.</li> 
 </ul>
 
 <p></p>
@@ -96,7 +96,7 @@ permalink: docs/userguide/
 <h4 id="reviewcertificatetestresults">3. Review Certificate Test Results</h4>
 
 <ul>
-<li><p>At the top of the Test Results screen, a status banner in <em>green</em> (conforms) or <em>red</em> (doesn't conform) banner gives the test summary: </p></li>
+<li><p>At the top of the Test Results screen, a status banner in <em>green</em> (conforms) or <em>red</em> (doesn't conform) gives the test summary: </p></li>
 
 <li><p><strong>Tested [n] fields: No Problems detected</strong> 
 <em>OR</em> </p></li>
