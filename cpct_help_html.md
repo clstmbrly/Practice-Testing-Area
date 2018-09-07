@@ -6,8 +6,7 @@ permalink: docs/userguide/
 ---
 <html>
 <body>
- 
-<h2>What is the Certificate Profile Conformance Tool (CPCT)?</h2>
+<h2 id="what">What is the Certificate Profile Conformance Tool (CPCT)?</h2>
 
 <p>Do you often need to analyze Federal PKI certificates for conformance to certificate profiles? If your answer is <i>yes</i>, then the Certificate Profile Conformance Tool (CPCT) is for you.</p>
 
