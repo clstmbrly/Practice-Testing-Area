@@ -50,7 +50,7 @@ permalink: docs/userguide/
 
 <h2>How Does This Work?</h2>
 
-<p>{% include alert-info.html content="In-depth experience with Federal PKI certificates and certificate profiles is recommended." %}</p>
+<p style="color:blue;">In-depth experience with Federal PKI certificates and certificate profiles is recommended.</p>
 
 <p>The basic steps are:</p>
 
@@ -72,13 +72,14 @@ permalink: docs/userguide/
 
 <h4 id="selectprofiledocuments">Select Profile Documents</h4>
 
-<ul>
-<li>Navigate to <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT</a>.</li>
+<ol>
+<li>Navigate to <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT</a>.
 
-<li>From the 3 drop-downs, pick:
- o    <strong>Profile Document</strong> (The options are short names for the Profile Documents: <em>Common Policy SSP Program</em><sup><a href="#1">1</a></sup>; <em>Federal PKI/Federal Bridge</em><sup><a href="#2">2</a></sup>; <em>PIV Interoperable (PIV-I)</em><sup><a href="#3">3</a></sup>.)<br>
- o    <strong>Document Version</strong> (The most recent Version will set automatically when you select the Profile Document.)<br>
- o    <strong>Certificate Profile</strong> (e.g., PIV Authentication)<br></li>
+<li>From the 3 drop-downs, pick:</li></ol>
+<ul style="list-style-type:disc">
+<li><b>Profile Document -</b> This list contains short names for the FPKI Profile Documents: <i>Common Policy SSP Program</i><sup><a href="#1">1</a></sup>; <i>Federal PKI/Federal Bridge</i><sup><a href="#2">2</a></sup>; and <i>PIV Interoperable (PIV-I)</i><sup><a href="#3">3</a></sup>.
+<li><b>Document Version -</b> The most recent Version is automatically set when you select the Profile Document.
+<li><b>Certificate Profile -</b> For example, PIV Authentication.</li>
 </ul>
 
 <h4 id="uploadacertificate">Upload a Certificate</h4>
@@ -90,7 +91,7 @@ permalink: docs/userguide/
  o Click the <strong>Upload Certificate</strong> button and browse to the certificate. Click it, and then click <strong>Open.</strong> <em>Test results display for the uploaded certificate.</em><br></p></li>
 </ul>
 
-<p>{% include alert-info.html content="Notice that the Test Results screen includes the CPCT drop-downs for easy upload of more certificates." %}</p>
+<p style="color:blue;">Notice that the Test Results screen includes the CPCT drop-downs for easy upload of more certificates.</p>
 
 <h4 id="reviewcertificatetestresults">Review Certificate Test Results</h4>
 
@@ -166,7 +167,7 @@ permalink: docs/userguide/
 
 <p>If you would like to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>.</p>
 
-
+<p><b>____________</b></p>
 <p><a name="1">1</a>. Short name for <em>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for the Shared Service Providers (SSP) Program Policy</em>.<br>
 <a name="2">2</a>. Short name for <em>Federal Public Key Infrastructure (PKI) X.509 Certificate and CRL Extensions Profile</em>.<br>
 <a name="3">3</a>. Short name for <em>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for Personal Identity Verification Interoperable (PIV-I) Cards</em>.<br></p>
