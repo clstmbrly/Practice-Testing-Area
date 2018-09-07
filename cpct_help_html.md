@@ -19,7 +19,8 @@ permalink: docs/userguide/
 <li><a href="#how">How Does This Work?</a>
 <li><a href="#detailed">Detailed Steps</a>
 <li><a href="#troubleshooting">Troubleshooting</a>
-<li><a href="#featurerequest">Feature Request</a></li>
+<li><a href="#featurerequest">Feature Request</a>
+</li>
 
 <h2 id="who">Who Needs CPCT?</h2>
 
