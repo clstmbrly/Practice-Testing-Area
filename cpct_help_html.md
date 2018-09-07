@@ -103,23 +103,17 @@ permalink: docs/userguide/
 
 <h3>Certificate Failures</h3>
 
-<p>If the <b>Analysis</b> column states <b>FAIL</b>, an explanation is given.</p>
-
-<p>If you think a test result may be a "false positive"/"false negative," please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.
-</p>
+<ul>
+<li> Please check to ensure that the right <b>Profile Document</b>, <b>Document Version</b>, and <b>Certificate Profile</b> have been selected.
+<li> If you have questions about a certificate failure explanation, or you believe that it could be a "false positive"/"false negative," please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.
+</li>
+</ul>
 
 <h3>Application Error Messages</h3>
 
 <ul>
 <li><b>You can't upload files of this type.</b> <i>The allowable file types are: .crt, .cer, .pem, and .der.</i></li>
 </ul>
-
-<h3>Other Problems or Discrepancies?</h3>
-
-<p>If you encounter a problem or discrepancy:</p>
-
-<ul>
-<li>Check to ensure that the right Profile Document, Document Version, and Certificate Profile have been selected.
 
 <h3>What If I Can't Resolve an Issue?</h3>
 
@@ -134,7 +128,7 @@ permalink: docs/userguide/
 
 <h2 id="feature">Feature Request</h2>
 
-<p>If you would like to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.</p>
+<p>If you would like us to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.</p>
 
 <p><b>____________</b></p>
 <p><a name="1">1</a>. Short name for <em>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for the Shared Service Providers (SSP) Program Policy</em>.<br>
