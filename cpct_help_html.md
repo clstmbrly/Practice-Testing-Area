@@ -87,7 +87,7 @@ permalink: docs/userguide/
 <ul>
 <li><p>Next, upload your certificate (as a .ctr, .pem, .cer, or .der file) using either of these options:</p>
 
-<p>o <b>Drag-and-drop</b> your certificate to anywhere on the CPCT main screen. <i>The Test Results display for the uploaded certificate.</i><br>
+<p>o <b>Drag-and-drop</b> your certificate to anywhere on the CPCT main screen. <i>The Test Results display for the uploaded certificate.</i><br><br>
  o Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></p></li>
 </ul>
 
