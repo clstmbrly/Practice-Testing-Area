@@ -79,18 +79,13 @@ permalink: docs/userguide/
 <p style="color:blue;"><b><i>Notice that the Test Results screen includes the CPCT drop-downs so you can easily upload more certificates.</i></b></p>
 
 <h4>3. Review Certificate Test Results</h4>
-<ol type="a">
-<li>At the top of the Test Results screen, the status banner will be <i>green</i> (certificate conforms) or <i>red</i> (doesn't conform). It also gives a test summary:</li></ol>
+<p>The status banner at the top of the screen will be either <i>green</i> (certificate conforms) or <i>red</i> (doesn't conform). It will also state the certificate's test summary:</p>
 <ul style="list-style-type:disc">
-<li><b>Tested [n] fields: No Problems detected</b></li>
-</ul>
-<br>
-<p><i>OR</i></p>
-<ul style="list-style-type:disc">
+<li><b>Tested [n] fields: No Problems detected</b>
 <li><b>Tested [n] fields: [n] problems detected</b></li>
 </ul>
 
-<p>The Test Results columns are:</p>
+<p>The Test Results columns provide the following:</p>
 <ul>
 <li><b>Field -</b> Lists fields AND extensions.
 <li><b>Content -</b> Lists field and extension details.
@@ -115,13 +110,13 @@ permalink: docs/userguide/
 <li>Another problem exists.</li>
 </ol>
 
-<li><strong>FAIL (with explanation)</strong> shown in the <strong>Analysis</strong> column. <em>The field or extension doesn't conform.</em></li>
+<li><b>The <b>Analysis</b> column indicates a <b>FAIL (with explanation)</b>. The explanation gives the reason(s) for the failure.</li>
 </ul>
 
 <h3>Possible Error Messages</h3>
 
 <ul>
-<li><strong>You can't upload files of this type.</strong> <em>CPCT doesn't recognize the certificate file type. The allowable file types are: .crt, .cer, .pem, and .der.</em></li>
+<li><b>You can't upload files of this type.</b> <i>CPCT doesn't recognize the certificate file type. The allowable file types are: .crt, .cer, .pem, and .der.</i></li>
 </ul>
 
 <h3>Other Problems or Discrepancies</h3>
@@ -129,13 +124,13 @@ permalink: docs/userguide/
 <p>If you encounter a problem or discrepancy:</p>
 
 <ul>
-<li>Check to make sure that you selected the right Profile Document, Document Version, and Certificate Profile.</li>
+<li>Check to ensure that you've selected the right Profile Document, Document Version, and Certificate Profile.
 
-<li>CPCT doesn't recognize the certificate file type. <em>Allowable file types are: .ctr, .pem, cer., and .der.</em></li>
+<li>CPCT doesn't recognize the certificate file type. Allowable file types are: .ctr, .pem, cer., and .der.
 
 <li>Check the certificate's Validity Period. The test certificate may have expired.<!--Would this show up as a "problem" in the status banner with a "FAIL" for Validity Period"?--> </li>
-
-<li>Think there might be an application error?  Please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>.</li>
+</ul>
+<li>Think there might be an application error?  Please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.</li>
 
 <li>Think a test result may be incorrect (e.g., "false positive" or "false negative")? Please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>. </li>
 </ul>
@@ -143,17 +138,17 @@ permalink: docs/userguide/
 <h3>What If I Can't Resolve an Issue?</h3>
 
 <ul>
-<li>Create a GitHub issue in the <a href="https://github.com/GSA/fpkilint" target="_blank">CPCT Respository</a> and attach the certificate to the issue. (<strong>Note:</strong>&nbsp;&nbsp;You will need a GitHub account to do this: <a href="https://github.com/join" target="_blank">create a GitHub account link</a>.)<br>
-<em>OR</em><br></li>
-
-<li>Email us at fpki@gsa.gov and attach your certificate. (<strong>Note:</strong>&nbsp;&nbsp;Please rename your certificate with <strong>.txt</strong> file extension.) </li>
+<li>Create a GitHub issue in the <a href="https://github.com/GSA/fpkilint" target="_blank">CPCT Respository</a> and attach the certificate to the issue. (<strong>Note:</strong>&nbsp;&nbsp;You will need a GitHub account to do this: <a href="https://github.com/join" target="_blank">create a GitHub account link</a>.)</li></ul><br>
+<i>OR</i><br>
+<ul>
+<li>Email us at fpki@gsa.gov and attach your certificate. (<b>Note:</b>&nbsp;&nbsp;Please rename your certificate with <b>.txt</b> file extension.) </li>
 </ul>
 
 <p>We will respond as soon as possible.</p>
 
 <h2 id="feature">Feature Request</h2>
 
-<p>If you would like to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact  us</a>.</p>
+<p>If you would like to request a new CPCT feature, please <a href="https://github.com/GSA/fpkilint/blob/dev/docs/cpct_contact_us.md" target="_blank">contact us</a>.</p>
 
 <p><b>____________</b></p>
 <p><a name="1">1</a>. Short name for <em>X.509 Certificate and Certificate Revocation List (CRL) Extensions Profile for the Shared Service Providers (SSP) Program Policy</em>.<br>
