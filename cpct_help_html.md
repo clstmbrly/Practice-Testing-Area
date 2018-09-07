@@ -72,7 +72,7 @@ permalink: docs/userguide/
 
 <h4 id="selectprofiledocuments">1. Select Profile Documents</h4>
 
-<ol>
+<ol type="a">
 <li>Navigate to <a href="https://cpct.app.cloud.gov/" target="_blank">CPCT</a>.
 
 <li>From the 3 drop-downs, pick:</li></ol>
@@ -84,11 +84,11 @@ permalink: docs/userguide/
 
 <h4 id="uploadacertificate">2. Upload a Certificate</h4>
 
-<ul>
-<li><p>Next, upload your certificate (as a .ctr, .pem, .cer, or .der file) using either of these options:</p>
-
-<p>o <b>Drag-and-drop</b> your certificate to anywhere on the CPCT main screen. <i>The Test Results display for the uploaded certificate.</i><br><br>
- o Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></p></li>
+<ol type="a">
+<li><p>Next, upload your certificate (as a .ctr, .pem, .cer, or .der file) using either of these options:</ol>
+<ul style="list-style-type:disc">
+<li><b>Drag-and-drop</b> your certificate to anywhere on the CPCT main screen. <i>The Test Results display for the uploaded certificate.</i><br>
+<li>Click the <b>Upload Certificate</b> button and browse to the certificate. Click it, and then click <b>Open</b>. <i>The Test Results display for the uploaded certificate.</i><br></p></li>
 </ul>
 
 <p style="color:blue;">Notice that the Test Results screen includes the CPCT drop-downs for easy upload of more certificates.</p>
