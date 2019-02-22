@@ -1,7 +1,7 @@
 
 Jump to:
 
-[Appendix A - Test Header](#appendix-a-test-header)
+[Appendix A-Test Header](#appendix-a-test-header)
 
 ### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)  From Markdown-it location but it doesn't work here.
 
